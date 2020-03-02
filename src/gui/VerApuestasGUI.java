@@ -23,11 +23,10 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JScrollPane;
 
-public class AdministrarUsuariosGUI extends JFrame {
+public class VerApuestasGUI extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTable tablaUsuarios;
-	private JButton botonBorrarUsuario;
+	private JTable tablaApuestas;
 	private JScrollPane scrollPane;
 
 	/**
@@ -49,7 +48,7 @@ public class AdministrarUsuariosGUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public AdministrarUsuariosGUI() {
+	public VerApuestasGUI() {
 		setTitle("AdministrarUsuarios");
 		addWindowListener(new WindowAdapter() {
 			@Override
@@ -63,55 +62,37 @@ public class AdministrarUsuariosGUI extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		contentPane.add(getBotonBorrarUsuario());
 		contentPane.add(getScrollPane());
 	}
 	
-	private JTable getTablaUsuarios() {
-		if (tablaUsuarios == null) {
-			tablaUsuarios = new JTable();
+	private JTable getTablaApuestas() {
+		if (tablaApuestas == null) {
+			tablaApuestas = new JTable();
 		}
-		return tablaUsuarios;
-	}
-	
-	private JButton getBotonBorrarUsuario() {
-		if (botonBorrarUsuario == null) {
-			botonBorrarUsuario = new JButton("Borrar Usuario");
-			botonBorrarUsuario.addActionListener(new ActionListener() {
-				public void actionPerformed(ActionEvent arg0) {
-					BLFacade facade = Inicio.getBusinessLogic();
-					ArrayList<Usuario> listaUsuarios = (ArrayList<Usuario>) facade.getAllUsers();
-					facade.deleteUser(listaUsuarios.get(tablaUsuarios.getSelectedRow()));
-					recargarTabla();
-				}
-			});
-			botonBorrarUsuario.setBounds(12, 192, 138, 25);
-		}
-		return botonBorrarUsuario;
+		return tablaApuestas;
 	}
 	
 	private void recargarTabla() {
 		BLFacade facade = Inicio.getBusinessLogic();
-		String[] columnNames = {"Usuario", "Pass", "Dinero"};
-		tablaUsuarios.getSelectedRow();
+		String[] columnNames = {"Usuario", "Question", "Apostado", "Dinero apostado"};
 	    Object[][] data = {};
-		Collection<Usuario> lista2 = facade.getAllUsers();
+		Collection<Apuesta> listaApuestas = facade.getApuestasUser(UsuarioGUI.getUsuario().getId());
 		DefaultTableModel modelo = new DefaultTableModel(data, columnNames);
-		tablaUsuarios.setModel(modelo);
-		for (Usuario u : lista2) {
-			Object [] fila = new Object[3];
-			fila[0] = u.getId();
-			fila[1] = u.getPass();
-			fila[2] = u.getMoney();
+		tablaApuestas.setModel(modelo);
+		for (Apuesta a : listaApuestas) {
+			Object [] fila = new Object[4];
+			fila[0] = a.getIdUsuario();
+			fila[1] = a.getQuestion();
+			fila[2] = a.getApostado();
+			fila[3] = a.getDineroApostado();
 			modelo.addRow(fila);
 		}
 	}
-	
 	private JScrollPane getScrollPane() {
 		if (scrollPane == null) {
 			scrollPane = new JScrollPane();
-			scrollPane.setBounds(12, 13, 408, 166);
-			scrollPane.setViewportView(getTablaUsuarios());
+			scrollPane.setBounds(12, 13, 408, 208);
+			scrollPane.setViewportView(getTablaApuestas());
 		}
 		return scrollPane;
 	}

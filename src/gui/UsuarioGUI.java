@@ -164,6 +164,8 @@ public class UsuarioGUI extends JFrame {
 					BLFacade facade = Inicio.getBusinessLogic();
 					Double saldo = (Double) modificadorSaldo.getValue();
 					facade.incrementarSaldo(usuario.getId(), saldo);
+					UsuarioGUI.setUsuario(facade.tryUser(usuario.getId(), usuario.getPass()));
+					mensajeSaldoUsuario.setText(Double.toString(usuario.getMoney()));
 				}
 			});
 			botonAumentarSaldo.setBounds(175, 84, 150, 25);

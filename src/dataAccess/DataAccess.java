@@ -16,6 +16,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
+import businessLogic.Apuesta;
 import configuration.ConfigXML;
 import configuration.UtilDate;
 import domain.Admin;
@@ -148,8 +149,7 @@ public class DataAccess  {
 			db.persist(q4);
 			db.persist(q5);
 			db.persist(q6);
-	
-	        
+	   
 			db.persist(ev1);
 			db.persist(ev2);
 			db.persist(ev3);
@@ -355,5 +355,19 @@ public class DataAccess  {
 			return user.get(0);
 		}
 		return null;
+	}
+
+	public void deleteUser(Usuario pUsuario) {
+		System.out.println(">> DataAccess: deleteUser: " + pUsuario.getId());
+		db.getTransaction().begin();
+		db.remove(pUsuario);
+		db.getTransaction().commit();
+	}
+
+	public Collection<Apuesta> getApuestasUser(String pId) {
+		System.out.println(">> DataAccess: getApuestasUser de " + pId);
+		TypedQuery<Apuesta> query = db.createQuery("SELECT ap FROM Apuesta ap WHERE ap.idUsuario=" + pId + "'", Apuesta.class);
+		List<Apuesta> apuestas = query.getResultList();
+		return apuestas;
 	}
 }

@@ -143,4 +143,16 @@ public class BLFacadeImplementation  implements BLFacade {
 		DataAccess dBManager=new DataAccess();
 		dBManager.incrementarSaldo(pId, pSaldo);
 	}
+	
+	@Override
+	public void deleteUser(Usuario pUsuario) {
+		DataAccess dBManager=new DataAccess();
+		dBManager.deleteUser(pUsuario);
+	}
+	
+	@Override
+	public Collection<Apuesta> getApuestasUser(String pId) {
+		DataAccess dBManager=new DataAccess();
+		return dBManager.getApuestasUser(pId);
+	}
 }
