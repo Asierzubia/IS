@@ -134,6 +134,12 @@ public class UsuarioGUI extends JFrame {
 	private JButton getBotonApostar() {
 		if (botonApostar == null) {
 			botonApostar = new JButton("Apostar");
+			botonApostar.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					ApostarGUI a = new ApostarGUI();
+					a.setVisible(true);
+				}
+			});
 			botonApostar.setBounds(11, 146, 97, 25);
 		}
 		return botonApostar;

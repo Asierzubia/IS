@@ -249,7 +249,7 @@ public class DataAccess  {
 	}
 	
 	/**
-	 * This method retrieves from the database an Usuario 
+	 * This method retrieves an Usuario from the database
 	 * 
 	 * @param an identifier and a pass 
 	 * @return an Usuario or null
@@ -265,7 +265,7 @@ public class DataAccess  {
 	}
 	
 	/**
-	 * This method retrieves from the database an Admin 
+	 * This method retrieves an Admin from the database 
 	 * 
 	 * @param an identifier and a pass 
 	 * @return an Admin or null
@@ -285,6 +285,12 @@ public class DataAccess  {
 		System.out.println("DataBase closed");
 	}
 
+	/**
+	 * This method return True if an Usuario exist in the database, and false if not 
+	 * 
+	 * @param an identifier and a pass 
+	 * @return an boolean
+	 */
 	public boolean existeUsuario(String pId, String pPass) {
 		System.out.println(">> DataAccess: existeUsuario: " + pId);
 		TypedQuery<Usuario> query = db.createQuery("SELECT us FROM Usuario us WHERE us.id='" + pId + "'", Usuario.class);
@@ -293,6 +299,12 @@ public class DataAccess  {
 		else return false;
 	}
 
+	/**
+	 * This method add an Usuario to the database. Return true if it was possible, false if not
+	 * 
+	 * @param an identifier and a pass 
+	 * @return an boolean
+	 */
 	public boolean registrarUsuario(String pId, String pPass) {
 		System.out.println(">> DataAccess: registrarUsuario: " + pId + " con contraseña: " + pPass);
 		db.getTransaction().begin();
@@ -301,6 +313,12 @@ public class DataAccess  {
 		return true;
 	}
 
+	/**
+	 * This method return all the Usuario from the database
+	 * 
+	 * @param an identifier and a pass 
+	 * @return a Collection of Usuario
+	 */
 	public Collection<Usuario> getAllUsers() {
 		System.out.println(">> DataAccess: getAllUsers");
 		TypedQuery<Usuario> query = db.createQuery("SELECT us FROM Usuario us", Usuario.class);
@@ -308,13 +326,26 @@ public class DataAccess  {
 		return usuarios;
 	}
 
+	/**
+	 * This method increments the money of an Usuario 
+	 * 
+	 * @param an identifier and a double 
+	 * @return 
+	 */
 	public void incrementarSaldo(String pId, Double pSaldo) {
+		System.out.println(">> DataAccess: incrementarSaldo de " + pId + " con " + pSaldo);
 		Usuario user = getUsuarioPorId(pId);
 		db.getTransaction().begin();
 		user.aumentarSaldo(pSaldo);
 		db.getTransaction().commit();
 	}
 	
+	/**
+	 * This method get an Usuario from the database, just searching by the id 
+	 * 
+	 * @param an identifier 
+	 * @return an Usuario or null
+	 */
 	private Usuario getUsuarioPorId(String pId) {
 		System.out.println(">> DataAccess: getUsuarioPorId: " + pId);
 		TypedQuery<Usuario> query = db.createQuery("SELECT us FROM Usuario us WHERE us.id='" + pId + "'", Usuario.class);

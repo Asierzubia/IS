@@ -129,7 +129,6 @@ public class MainGUI extends JFrame {
 			jButtonQueryQueries.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
 					JFrame a = new FindQuestionsGUI();
-
 					a.setVisible(true);
 				}
 			});
@@ -137,7 +136,6 @@ public class MainGUI extends JFrame {
 		return jButtonQueryQueries;
 	}
 	
-
 	private JLabel getLblNewLabel() {
 		if (jLabelSelectOption == null) {
 			jLabelSelectOption = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("SelectOption"));
@@ -148,6 +146,7 @@ public class MainGUI extends JFrame {
 		}
 		return jLabelSelectOption;
 	}
+	
 	private JRadioButton getRdbtnNewRadioButton() {
 		if (rdbtnNewRadioButton == null) {
 			rdbtnNewRadioButton = new JRadioButton("English");
@@ -161,6 +160,7 @@ public class MainGUI extends JFrame {
 		}
 		return rdbtnNewRadioButton;
 	}
+	
 	private JRadioButton getRdbtnNewRadioButton_1() {
 		if (rdbtnNewRadioButton_1 == null) {
 			rdbtnNewRadioButton_1 = new JRadioButton("Euskara");
@@ -174,6 +174,7 @@ public class MainGUI extends JFrame {
 		}
 		return rdbtnNewRadioButton_1;
 	}
+	
 	private JRadioButton getRdbtnNewRadioButton_2() {
 		if (rdbtnNewRadioButton_2 == null) {
 			rdbtnNewRadioButton_2 = new JRadioButton("Castellano");
@@ -188,6 +189,7 @@ public class MainGUI extends JFrame {
 		}
 		return rdbtnNewRadioButton_2;
 	}
+	
 	private JPanel getPanel() {
 		if (panel == null) {
 			panel = new JPanel();
@@ -205,6 +207,7 @@ public class MainGUI extends JFrame {
 		jButtonCreateQuery.setText(ResourceBundle.getBundle("Etiquetas").getString("CreateQuery"));
 		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("MainTitle"));
 	}
+	
 	private JButton getJButtonAdministrarUsuarios() {
 		if (jButtonAdministrarUsuarios == null) {
 			jButtonAdministrarUsuarios = new JButton();
