@@ -1,0 +1,23 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-02-22 16:05:41 #1 store] 
+Database 'C:\Users\unaia\OneDrive\Desktop\Bets\resources\bets.temp' is opened by 3444@MSI
+
+[2020-02-22 16:05:41 #2 type.registry] 
+New type domain.Question
+
+[2020-02-22 16:05:41 #3 type] 
+Type domain.Question is not enhanced.
+
+[2020-02-22 16:05:41 #4 type.registry] 
+New type domain.Event
+
+[2020-02-22 16:05:41 #5 type] 
+Type domain.Event is not enhanced.
+
+[2020-02-22 16:05:41 #6 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-02-22 16:05:41 #7 type.registry] 
+New type java.util.Vector<java.lang.Object>
+

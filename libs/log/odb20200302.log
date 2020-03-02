@@ -1,0 +1,315 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-02 14:34:17 #1 store] 
+Database 'C:\Users\unaia\OneDrive\Desktop\Bets\resources\bets.temp' is opened by 872@MSI
+
+[2020-03-02 14:34:17 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-02 14:34:17 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-02 14:34:17 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-02 14:34:17 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-02 14:34:17 #6 type.registry] 
+New type domain.Question
+
+[2020-03-02 14:34:17 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-02 14:34:17 #8 type.registry] 
+New type domain.Event
+
+[2020-03-02 14:34:17 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-02 14:34:17 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-02 14:34:17 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-02 14:34:31 #1 store] 
+Database 'C:\Users\unaia\OneDrive\Desktop\Bets\resources\bets.temp' is opened by 16904@MSI
+
+[2020-03-02 14:34:31 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-02 14:34:31 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-02 14:34:31 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-02 14:34:31 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-02 14:34:31 #6 type.registry] 
+New type domain.Question
+
+[2020-03-02 14:34:31 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-02 14:34:31 #8 type.registry] 
+New type domain.Event
+
+[2020-03-02 14:34:31 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-02 14:34:31 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-02 14:34:31 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-02 14:56:17 #1 store] 
+Database 'C:\Users\unaia\OneDrive\Desktop\Bets\resources\bets.temp' is opened by 16624@MSI
+
+[2020-03-02 14:56:17 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-02 14:56:17 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-02 14:56:17 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-02 14:56:17 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-02 14:56:17 #6 type.registry] 
+New type domain.Question
+
+[2020-03-02 14:56:17 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-02 14:56:17 #8 type.registry] 
+New type domain.Event
+
+[2020-03-02 14:56:17 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-02 14:56:17 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-02 14:56:17 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-02 15:15:39 #1 store] 
+Database 'C:\Users\unaia\OneDrive\Desktop\Bets\resources\bets.temp' is opened by 3932@MSI
+
+[2020-03-02 15:15:39 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-02 15:15:39 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-02 15:15:39 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-02 15:15:39 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-02 15:15:39 #6 type.registry] 
+New type domain.Question
+
+[2020-03-02 15:15:39 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-02 15:15:39 #8 type.registry] 
+New type domain.Event
+
+[2020-03-02 15:15:39 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-02 15:15:39 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-02 15:15:39 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-02 15:17:27 #1 store] 
+Database 'C:\Users\unaia\OneDrive\Desktop\Bets\resources\bets.temp' is opened by 8704@MSI
+
+[2020-03-02 15:17:27 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-02 15:17:27 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-02 15:17:27 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-02 15:17:27 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-02 15:17:27 #6 type.registry] 
+New type domain.Question
+
+[2020-03-02 15:17:27 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-02 15:17:27 #8 type.registry] 
+New type domain.Event
+
+[2020-03-02 15:17:27 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-02 15:17:27 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-02 15:17:27 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-02 15:20:50 #1 store] 
+Database 'C:\Users\unaia\OneDrive\Desktop\Bets\resources\bets.temp' is opened by 13092@MSI
+
+[2020-03-02 15:20:50 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-02 15:20:50 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-02 15:20:50 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-02 15:20:50 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-02 15:20:50 #6 type.registry] 
+New type domain.Question
+
+[2020-03-02 15:20:50 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-02 15:20:50 #8 type.registry] 
+New type domain.Event
+
+[2020-03-02 15:20:50 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-02 15:20:50 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-02 15:20:50 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-02 15:22:35 #1 store] 
+Database 'C:\Users\unaia\OneDrive\Desktop\Bets\resources\bets.temp' is opened by 984@MSI
+
+[2020-03-02 15:22:35 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-02 15:22:35 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-02 15:22:35 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-02 15:22:35 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-02 15:22:35 #6 type.registry] 
+New type domain.Question
+
+[2020-03-02 15:22:35 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-02 15:22:35 #8 type.registry] 
+New type domain.Event
+
+[2020-03-02 15:22:35 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-02 15:22:35 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-02 15:22:35 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-02 15:24:23 #1 store] 
+Database 'C:\Users\unaia\OneDrive\Desktop\Bets\resources\bets.temp' is opened by 3588@MSI
+
+[2020-03-02 15:24:23 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-02 15:24:23 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-02 15:24:23 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-02 15:24:23 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-02 15:24:23 #6 type.registry] 
+New type domain.Question
+
+[2020-03-02 15:24:23 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-02 15:24:23 #8 type.registry] 
+New type domain.Event
+
+[2020-03-02 15:24:23 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-02 15:24:23 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-02 15:24:23 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-02 15:26:39 #1 store] 
+Database 'C:\Users\unaia\OneDrive\Desktop\Bets\resources\bets.temp' is opened by 1740@MSI
+
+[2020-03-02 15:26:40 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-02 15:26:40 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-02 15:26:40 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-02 15:26:40 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-02 15:26:40 #6 type.registry] 
+New type domain.Question
+
+[2020-03-02 15:26:40 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-02 15:26:40 #8 type.registry] 
+New type domain.Event
+
+[2020-03-02 15:26:40 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-02 15:26:40 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-02 15:26:40 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
