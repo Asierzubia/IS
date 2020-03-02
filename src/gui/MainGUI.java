@@ -20,7 +20,6 @@ import java.util.Vector;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-
 public class MainGUI extends JFrame {
 	
 	private static final long serialVersionUID = 1L;
