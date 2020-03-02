@@ -137,4 +137,10 @@ public class BLFacadeImplementation  implements BLFacade {
 		DataAccess dBManager=new DataAccess();
 		return dBManager.getAllUsers();
 	}
+	
+	@Override
+	public void incrementarSaldo(String pId, Double pSaldo) {
+		DataAccess dBManager=new DataAccess();
+		dBManager.incrementarSaldo(pId, pSaldo);
+	}
 }

@@ -313,3 +313,143 @@ New type java.util.Vector<domain.Question>
 [2020-03-02 15:26:40 #11 type.registry] 
 New type java.util.Vector<java.lang.Object>
 
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-02 15:55:19 #1 store] 
+Database 'C:\Users\unaia\OneDrive\Desktop\ProyectoIS\resources\bets.temp' is opened by 2584@MSI
+
+[2020-03-02 15:55:19 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-02 15:55:19 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-02 15:55:19 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-02 15:55:19 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-02 15:55:19 #6 type.registry] 
+New type domain.Question
+
+[2020-03-02 15:55:19 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-02 15:55:19 #8 type.registry] 
+New type domain.Event
+
+[2020-03-02 15:55:19 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-02 15:55:19 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-02 15:55:19 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-02 15:55:25 #1 store] 
+Database 'C:\Users\unaia\OneDrive\Desktop\ProyectoIS\resources\bets.temp' is opened by 11816@MSI
+
+[2020-03-02 15:55:25 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-02 15:55:25 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-02 15:55:25 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-02 15:55:25 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-02 15:55:25 #6 type.registry] 
+New type domain.Question
+
+[2020-03-02 15:55:25 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-02 15:55:25 #8 type.registry] 
+New type domain.Event
+
+[2020-03-02 15:55:25 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-02 15:55:25 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-02 15:55:25 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-02 15:57:04 #1 store] 
+Database 'C:\Users\unaia\OneDrive\Desktop\ProyectoIS\resources\bets.temp' is opened by 4636@MSI
+
+[2020-03-02 15:57:05 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-02 15:57:05 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-02 15:57:05 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-02 15:57:05 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-02 15:57:05 #6 type.registry] 
+New type domain.Question
+
+[2020-03-02 15:57:05 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-02 15:57:05 #8 type.registry] 
+New type domain.Event
+
+[2020-03-02 15:57:05 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-02 15:57:05 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-02 15:57:05 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-02 16:00:51 #1 store] 
+Database 'C:\Users\unaia\OneDrive\Desktop\ProyectoIS\resources\bets.temp' is opened by 4316@MSI
+
+[2020-03-02 16:00:51 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-02 16:00:51 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-02 16:00:51 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-02 16:00:51 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-02 16:00:51 #6 type.registry] 
+New type domain.Question
+
+[2020-03-02 16:00:51 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-02 16:00:51 #8 type.registry] 
+New type domain.Event
+
+[2020-03-02 16:00:51 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-02 16:00:51 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-02 16:00:51 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+

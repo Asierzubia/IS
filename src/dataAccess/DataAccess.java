@@ -306,5 +306,22 @@ public class DataAccess  {
 		TypedQuery<Usuario> query = db.createQuery("SELECT us FROM Usuario us", Usuario.class);
 		List<Usuario> usuarios = query.getResultList();
 		return usuarios;
-	}	
+	}
+
+	public void incrementarSaldo(String pId, Double pSaldo) {
+		Usuario user = getUsuarioPorId(pId);
+		db.getTransaction().begin();
+		user.aumentarSaldo(pSaldo);
+		db.getTransaction().commit();
+	}
+	
+	private Usuario getUsuarioPorId(String pId) {
+		System.out.println(">> DataAccess: getUsuarioPorId: " + pId);
+		TypedQuery<Usuario> query = db.createQuery("SELECT us FROM Usuario us WHERE us.id='" + pId + "'", Usuario.class);
+		List<Usuario> user = query.getResultList();
+		if (!user.isEmpty()){
+			return user.get(0);
+		}
+		return null;
+	}
 }

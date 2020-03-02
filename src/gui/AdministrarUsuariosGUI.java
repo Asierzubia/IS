@@ -46,11 +46,10 @@ public class AdministrarUsuariosGUI extends JFrame {
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowActivated(WindowEvent arg0) {
+				modeloUsuarios.clear();
 				BLFacade facade = Inicio.getBusinessLogic();
 				Collection<Usuario> lista = facade.getAllUsers();
-				for (Usuario u : lista) {
-					modeloUsuarios.addElement(u);
-				}
+				for (Usuario u : lista) modeloUsuarios.addElement(u);
 				listaUsuarios.setModel(modeloUsuarios);
 			}
 		});

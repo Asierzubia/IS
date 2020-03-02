@@ -6,6 +6,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import businessLogic.BLFacade;
 import domain.Usuario;
 
 import javax.swing.JLabel;
@@ -149,7 +150,7 @@ public class UsuarioGUI extends JFrame {
 	private JSpinner getModificadorSaldo() {
 		if (modificadorSaldo == null) {
 			modificadorSaldo = new JSpinner();
-			modificadorSaldo.setModel(new SpinnerNumberModel(new Integer(1), new Integer(1), null, new Integer(1)));
+			modificadorSaldo.setModel(new SpinnerNumberModel(new Double(1), new Double(1), null, new Double(1)));
 			modificadorSaldo.setBounds(10, 83, 127, 22);
 		}
 		return modificadorSaldo;
@@ -160,7 +161,9 @@ public class UsuarioGUI extends JFrame {
 			botonAumentarSaldo = new JButton("Aumentar saldo");
 			botonAumentarSaldo.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
-					SwingUtilities.updateComponentTreeUI(UsuarioGUI.this.contentPane);
+					BLFacade facade = Inicio.getBusinessLogic();
+					Double saldo = (Double) modificadorSaldo.getValue();
+					facade.incrementarSaldo(usuario.getId(), saldo);
 				}
 			});
 			botonAumentarSaldo.setBounds(175, 84, 150, 25);

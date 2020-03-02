@@ -30,4 +30,8 @@ public class Usuario {
 	}
 	
 	public String toString() { return id + " " + password + " " + money;}
+
+	public void aumentarSaldo(Double pSaldo) {
+		money = money + pSaldo;
+	}
 }

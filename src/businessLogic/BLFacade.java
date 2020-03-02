@@ -81,7 +81,7 @@ public interface BLFacade  {
 
 	@WebMethod boolean existeUsuario(String pId, String pPass);
 
-
 	@WebMethod Collection<Usuario> getAllUsers();
-	
+
+	@WebMethod void incrementarSaldo(String id, Double saldo);
 }
