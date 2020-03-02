@@ -58,8 +58,9 @@ public class DataAccess  {
     	   }
 	}
 
-	public DataAccess()  {	
-		 new DataAccess(false);
+	public DataAccess()  {
+		Locale.setDefault(new Locale("es"));
+		new DataAccess(false);
 	}
 	
 	

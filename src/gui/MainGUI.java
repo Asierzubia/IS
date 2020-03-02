@@ -4,7 +4,6 @@ package gui;
  * @author Software Engineering teachers
  */
 
-
 import javax.swing.*;
 
 import domain.Event;
