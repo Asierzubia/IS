@@ -15,7 +15,7 @@ import domain.Admin;
 import domain.Event;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
-import gui.Apuesta;
+import domain.Apuesta;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
@@ -89,4 +89,8 @@ public interface BLFacade  {
 	@WebMethod void deleteUser(Usuario pUsuario);
 
 	@WebMethod Collection<Apuesta> getApuestasUser(String pId);
+	
+	@WebMethod public void generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, Usuario pUsuario);
+	
+	@WebMethod public Collection<Event> getAllEvents();
 }

@@ -14,6 +14,7 @@ import domain.Question;
 import domain.Usuario;
 import domain.Admin;
 import domain.Event;
+import domain.Apuesta;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
 
@@ -154,5 +155,17 @@ public class BLFacadeImplementation  implements BLFacade {
 	public Collection<Apuesta> getApuestasUser(String pId) {
 		DataAccess dBManager=new DataAccess();
 		return dBManager.getApuestasUser(pId);
+	}
+
+	@Override
+	public void generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, Usuario pUsuario) {
+		DataAccess dbManager=new DataAccess();
+		dbManager.generarApuesta(pQuestion,eleccionApuesta,pDinero,pUsuario);
+	}
+
+	@Override
+	public Collection<Event> getAllEvents(){
+		DataAccess dbManager=new DataAccess();
+		return dbManager.getAllEvents();
 	}
 }

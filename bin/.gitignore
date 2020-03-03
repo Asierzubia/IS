@@ -1,4 +1,6 @@
-/gui/
 /businessLogic/
+/configuration/
 /dataAccess/
 /domain/
+/exceptions/
+/gui/

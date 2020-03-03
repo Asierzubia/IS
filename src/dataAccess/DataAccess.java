@@ -16,7 +16,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 
-import businessLogic.Apuesta;
+import domain.Apuesta;
 import configuration.ConfigXML;
 import configuration.UtilDate;
 import domain.Admin;
@@ -366,8 +366,26 @@ public class DataAccess  {
 
 	public Collection<Apuesta> getApuestasUser(String pId) {
 		System.out.println(">> DataAccess: getApuestasUser de " + pId);
-		TypedQuery<Apuesta> query = db.createQuery("SELECT ap FROM Apuesta ap WHERE ap.idUsuario=" + pId + "'", Apuesta.class);
+		TypedQuery<Apuesta> query = db.createQuery("SELECT ap FROM Apuesta ap WHERE ap.usuario.id='" + pId + "'", Apuesta.class);
 		List<Apuesta> apuestas = query.getResultList();
 		return apuestas;
+	}
+	
+	public Vector<Event> getAllEvents() {
+		System.out.println(">> DataAccess: getAllEvents");
+		Vector<Event> res = new Vector<Event>();	
+		TypedQuery<Event> query = db.createQuery("SELECT ev FROM Event ev ",Event.class); 
+		List<Event> events = query.getResultList();
+	 	 for (Event ev:events){		 
+		   res.add(ev);
+		  }
+	 	return res;
+	}
+	
+	public void generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, Usuario pUsuario) {
+		System.out.println(">> DataAccess: registrarApuesta");
+		db.getTransaction().begin();
+		db.persist(new Apuesta(pQuestion, eleccionApuesta,pDinero,pUsuario));
+		db.getTransaction().commit();
 	}
 }

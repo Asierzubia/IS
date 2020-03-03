@@ -7,7 +7,6 @@ package gui;
 import javax.swing.*;
 
 import domain.Event;
-import businessLogic.BLFacade;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -104,7 +103,7 @@ public class MainGUI extends JFrame {
 			jButtonCreateQuery.setText(ResourceBundle.getBundle("Etiquetas").getString("CreateQuery"));
 			jButtonCreateQuery.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
-					BLFacade facade=Inicio.getBusinessLogic();
+					//BLFacade facade=Inicio.getBusinessLogic();
 					//Vector<Event> events=facade.getAllEvents();
 					JFrame a = new CreateQuestionGUI(new Vector<Event>());
 					a.setVisible(true);

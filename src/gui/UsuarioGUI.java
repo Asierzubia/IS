@@ -135,6 +135,13 @@ public class UsuarioGUI extends JFrame {
 		if (botonApostar == null) {
 			botonApostar = new JButton("Apostar");
 			botonApostar.setBounds(11, 146, 97, 25);
+			botonApostar.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {					
+					ApostarGUI a = new ApostarGUI();
+					a.setVisible(true);
+					UsuarioGUI.this.dispose();
+				}
+			});
 		}
 		return botonApostar;
 	}
@@ -142,6 +149,12 @@ public class UsuarioGUI extends JFrame {
 	private JButton getBotonVerApuestas() {
 		if (botonVerApuestas == null) {
 			botonVerApuestas = new JButton("Ver tus apuestas");
+			botonVerApuestas.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					VerApuestasGUI a = new VerApuestasGUI();
+					a.setVisible(true);
+				}
+			});
 			botonVerApuestas.setBounds(127, 146, 150, 25);
 		}
 		return botonVerApuestas;

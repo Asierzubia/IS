@@ -11,6 +11,7 @@ import javax.swing.table.DefaultTableModel;
 
 import businessLogic.BLFacade;
 import domain.Usuario;
+import domain.Apuesta;
 
 import javax.swing.JList;
 import java.awt.event.WindowAdapter;
@@ -57,7 +58,7 @@ public class VerApuestasGUI extends JFrame {
 			}
 		});
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 652, 356);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -82,7 +83,7 @@ public class VerApuestasGUI extends JFrame {
 		for (Apuesta a : listaApuestas) {
 			Object [] fila = new Object[4];
 			fila[0] = a.getIdUsuario();
-			fila[1] = a.getQuestion();
+			fila[1] = a.getQuestionQuestion();
 			fila[2] = a.getApostado();
 			fila[3] = a.getDineroApostado();
 			modelo.addRow(fila);
@@ -91,7 +92,7 @@ public class VerApuestasGUI extends JFrame {
 	private JScrollPane getScrollPane() {
 		if (scrollPane == null) {
 			scrollPane = new JScrollPane();
-			scrollPane.setBounds(12, 13, 408, 208);
+			scrollPane.setBounds(12, 13, 610, 283);
 			scrollPane.setViewportView(getTablaApuestas());
 		}
 		return scrollPane;
