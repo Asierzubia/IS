@@ -15,18 +15,18 @@ public class Apuesta {
 	private Question question;
 	private String apostada;
 	private Double dinero;
-	private Usuario usuario;
+	private String usuarioId;
 	
-	public Apuesta(Question pQuestion, String eleccionApuesta, Double pDinero, Usuario pUsuario) {
+	public Apuesta(Question pQuestion, String eleccionApuesta, Double pDinero, String pUsuario) {
 		this.id = count.incrementAndGet();
 		this.question = pQuestion;
 		this.apostada = eleccionApuesta;
 		this.dinero=pDinero;
-		this.usuario = pUsuario;
+		this.usuarioId = pUsuario;
 	}
 
 	public String getIdUsuario() {
-		return usuario.getId();
+		return usuarioId;
 	}
 	
 	public String getQuestionQuestion() {

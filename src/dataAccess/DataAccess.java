@@ -366,7 +366,7 @@ public class DataAccess  {
 
 	public Collection<Apuesta> getApuestasUser(String pId) {
 		System.out.println(">> DataAccess: getApuestasUser de " + pId);
-		TypedQuery<Apuesta> query = db.createQuery("SELECT ap FROM Apuesta ap WHERE ap.usuario.id='" + pId + "'", Apuesta.class);
+		TypedQuery<Apuesta> query = db.createQuery("SELECT ap FROM Apuesta ap WHERE ap.usuarioId='" + pId + "'", Apuesta.class);
 		List<Apuesta> apuestas = query.getResultList();
 		return apuestas;
 	}
@@ -382,7 +382,7 @@ public class DataAccess  {
 	 	return res;
 	}
 	
-	public void generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, Usuario pUsuario) {
+	public void generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, String pUsuario) {
 		System.out.println(">> DataAccess: registrarApuesta");
 		db.getTransaction().begin();
 		db.persist(new Apuesta(pQuestion, eleccionApuesta,pDinero,pUsuario));

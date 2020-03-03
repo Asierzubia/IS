@@ -196,7 +196,7 @@ public class ApostarGUI extends JDialog {
 								 coments.setText("Sube la apuesta al menos a" + selectedQuestion.getBetMinimum());
 							 }
 							 else {
-								 Inicio.getBusinessLogic().generarApuesta(selectedQuestion, txt_respuesta.getText(), (Double) spinner.getValue(), UsuarioGUI.getUsuario());
+								 Inicio.getBusinessLogic().generarApuesta(selectedQuestion, txt_respuesta.getText(), (Double) spinner.getValue(), UsuarioGUI.getUsuario().getId());
 								 Inicio.getBusinessLogic().incrementarSaldo(UsuarioGUI.getUsuario().getId(), (-(Double) spinner.getValue()));
 								 UsuarioGUI.setUsuario(Inicio.getBusinessLogic().tryUser(UsuarioGUI.getUsuario().getId(), UsuarioGUI.getUsuario().getPass()));
 								 coments.setText("Gracias por apostar con nosotros");

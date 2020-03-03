@@ -158,7 +158,7 @@ public class BLFacadeImplementation  implements BLFacade {
 	}
 
 	@Override
-	public void generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, Usuario pUsuario) {
+	public void generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, String pUsuario) {
 		DataAccess dbManager=new DataAccess();
 		dbManager.generarApuesta(pQuestion,eleccionApuesta,pDinero,pUsuario);
 	}

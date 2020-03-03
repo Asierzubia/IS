@@ -50,7 +50,7 @@ public class VerApuestasGUI extends JFrame {
 	 * Create the frame.
 	 */
 	public VerApuestasGUI() {
-		setTitle("AdministrarUsuarios");
+		setTitle("VerApuestas");
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowActivated(WindowEvent arg0) {		

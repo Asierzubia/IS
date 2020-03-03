@@ -90,7 +90,7 @@ public interface BLFacade  {
 
 	@WebMethod Collection<Apuesta> getApuestasUser(String pId);
 	
-	@WebMethod public void generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, Usuario pUsuario);
+	@WebMethod public void generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, String pUsuario);
 	
 	@WebMethod public Collection<Event> getAllEvents();
 }
