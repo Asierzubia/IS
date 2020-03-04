@@ -34,6 +34,7 @@ public class UsuarioGUI extends JFrame {
 	private JSpinner modificadorSaldo;
 	private JButton botonAumentarSaldo;
 	private static Usuario usuario;
+	private JButton botonChangePassword;
 
 	/**
 	 * Launch the application.
@@ -81,6 +82,8 @@ public class UsuarioGUI extends JFrame {
 		contentPane.add(getBotonVerApuestas());
 		contentPane.add(getModificadorSaldo());
 		contentPane.add(getBotonAumentarSaldo());
+		contentPane.add(getBotonChangePassword());
+		contentPane.add(getBotonChangePassword());
 	}
 	
 	private JLabel getMensajeEstandar1() {
@@ -193,4 +196,18 @@ public class UsuarioGUI extends JFrame {
 	public static Usuario getUsuario() {
 		return usuario;
 	}
+	private JButton getBotonChangePassword() {
+		if (botonChangePassword == null) {
+			botonChangePassword = new JButton("Cambiar Contraseña");
+			botonChangePassword.setBounds(105, 215, 172, 24);
+			botonChangePassword.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg2) {
+					CambiarContrasena a = new CambiarContrasena();
+					a.setVisible(true);
+				}
+			});
+		}
+		return botonChangePassword;
+	}
+	
 }

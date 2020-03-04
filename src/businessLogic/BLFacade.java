@@ -93,4 +93,7 @@ public interface BLFacade  {
 	@WebMethod public void generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, String pUsuario);
 	
 	@WebMethod public Collection<Event> getAllEvents();
+
+
+	void cambiarContrasena(Usuario usuario, String password);
 }

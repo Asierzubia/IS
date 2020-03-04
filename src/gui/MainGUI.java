@@ -26,6 +26,7 @@ public class MainGUI extends JFrame {
 	private JPanel jContentPane = null;
 	private JButton jButtonCreateQuery = null;
 	private JButton jButtonQueryQueries = null;
+	private JButton botonCerrarSesion;
 
 	protected JLabel jLabelSelectOption;
 	private JRadioButton rdbtnNewRadioButton;
@@ -190,10 +191,11 @@ public class MainGUI extends JFrame {
 	private JPanel getPanel() {
 		if (panel == null) {
 			panel = new JPanel();
-			panel.setBounds(0, 196, 477, 60);
+			panel.setBounds(0, 192, 477, 72);
 			panel.add(getRdbtnNewRadioButton_1());
 			panel.add(getRdbtnNewRadioButton_2());
 			panel.add(getRdbtnNewRadioButton());
+			panel.add(getBotonCerrarSesion());
 		}
 		return panel;
 	}
@@ -218,6 +220,20 @@ public class MainGUI extends JFrame {
 			jButtonAdministrarUsuarios.setBounds(0, 145, 477, 52);
 		}
 		return jButtonAdministrarUsuarios;
+	}
+	
+	private JButton getBotonCerrarSesion() {
+		if (botonCerrarSesion == null) {
+			botonCerrarSesion = new JButton("Cerrar Sesión");
+			botonCerrarSesion.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					MainGUI.this.dispose();
+					Inicio a = new Inicio();
+					a.setVisible(true);
+				}
+			});
+		}
+		return botonCerrarSesion;
 	}
 } // @jve:decl-index=0:visual-constraint="0,0"
 

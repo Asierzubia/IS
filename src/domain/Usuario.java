@@ -21,6 +21,9 @@ public class Usuario {
 		return money;
 	}
 	
+	public void setPassword(String pass) {
+		this.password = pass;
+	}
 	public String getId() {
 		return id;
 	}

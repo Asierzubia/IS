@@ -168,4 +168,10 @@ public class BLFacadeImplementation  implements BLFacade {
 		DataAccess dbManager=new DataAccess();
 		return dbManager.getAllEvents();
 	}
+
+	@Override
+	public void cambiarContrasena(Usuario usuario, String password) {
+		DataAccess dBManager = new DataAccess();
+		dBManager.cambiarContrasena(usuario,password);
+	}
 }

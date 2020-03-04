@@ -388,4 +388,14 @@ public class DataAccess  {
 		db.persist(new Apuesta(pQuestion, eleccionApuesta,pDinero,pUsuario));
 		db.getTransaction().commit();
 	}
+
+	public void cambiarContrasena(Usuario usuario, String password) {
+		System.out.println(">> DataAccess: registrarApuesta");
+		TypedQuery<Usuario> query = db.createQuery("SELECT us FROM Usuario us WHERE us.id='" + usuario.getId() + "'", Usuario.class);
+		List<Usuario> user = query.getResultList();
+		Usuario usu = user.get(0);
+		db.getTransaction().begin();
+		usu.setPassword(password);
+		db.getTransaction().commit();
+	}
 }

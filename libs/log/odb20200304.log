@@ -1,0 +1,1581 @@
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 08:20:58 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 28805@asier-XPS-15-9560
+
+[2020-03-04 08:20:58 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 08:20:58 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 08:20:58 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 08:20:58 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 08:20:58 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 08:20:58 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 08:20:58 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 08:20:58 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 08:20:58 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 08:20:58 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 17:34:48 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 21751@asier-XPS-15-9560
+
+[2020-03-04 17:34:48 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 17:34:48 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 17:34:48 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 17:34:48 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 17:34:48 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 17:34:48 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 17:34:48 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 17:34:48 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 17:34:48 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 17:34:48 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 17:37:15 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 21960@asier-XPS-15-9560
+
+[2020-03-04 17:37:15 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 17:37:15 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 17:37:15 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 17:37:15 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 17:37:15 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 17:37:15 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 17:37:15 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 17:37:15 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 17:37:15 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 17:37:15 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 17:37:57 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 22017@asier-XPS-15-9560
+
+[2020-03-04 17:37:57 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 17:37:57 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 17:37:57 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 17:37:57 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 17:37:57 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 17:37:57 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 17:37:57 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 17:37:57 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 17:37:57 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 17:37:57 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 18:09:52 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 24690@asier-XPS-15-9560
+
+[2020-03-04 18:09:52 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 18:09:52 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 18:09:52 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 18:09:52 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 18:09:52 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 18:09:52 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 18:09:52 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 18:09:52 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 18:09:52 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 18:09:52 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2020-03-04 18:10:06 #12 type.registry] 
+New type domain.Apuesta
+
+[2020-03-04 18:10:06 #13 type] 
+Type domain.Apuesta is not enhanced.
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 18:59:40 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 27811@asier-XPS-15-9560
+
+[2020-03-04 18:59:40 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 18:59:40 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 18:59:40 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 18:59:40 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 18:59:40 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 18:59:40 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 18:59:40 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 18:59:40 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 18:59:40 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 18:59:40 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:02:51 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 28008@asier-XPS-15-9560
+
+[2020-03-04 19:02:51 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:02:51 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:02:51 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:02:51 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:02:51 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:02:51 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:02:51 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:02:51 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:02:51 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:02:51 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:05:34 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 28221@asier-XPS-15-9560
+
+[2020-03-04 19:05:34 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:05:34 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:05:34 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:05:34 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:05:34 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:05:34 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:05:34 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:05:34 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:05:34 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:05:34 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:05:50 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 28253@asier-XPS-15-9560
+
+[2020-03-04 19:05:50 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:05:50 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:05:50 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:05:50 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:05:50 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:05:50 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:05:50 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:05:50 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:05:50 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:05:50 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:07:46 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 28376@asier-XPS-15-9560
+
+[2020-03-04 19:07:46 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:07:46 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:07:47 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:07:47 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:07:47 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:07:47 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:07:47 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:07:47 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:07:47 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:07:47 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:09:16 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 29018@asier-XPS-15-9560
+
+[2020-03-04 19:09:16 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:09:16 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:09:16 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:09:16 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:09:16 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:09:16 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:09:16 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:09:16 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:09:16 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:09:16 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:13:13 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 29271@asier-XPS-15-9560
+
+[2020-03-04 19:13:13 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:13:13 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:13:13 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:13:13 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:13:13 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:13:13 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:13:13 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:13:13 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:13:13 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:13:13 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:16:20 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 29434@asier-XPS-15-9560
+
+[2020-03-04 19:16:20 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:16:20 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:16:20 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:16:20 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:16:20 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:16:20 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:16:20 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:16:20 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:16:20 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:16:20 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:17:27 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 29532@asier-XPS-15-9560
+
+[2020-03-04 19:17:27 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:17:27 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:17:27 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:17:27 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:17:27 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:17:27 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:17:27 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:17:27 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:17:27 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:17:27 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:18:09 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 29574@asier-XPS-15-9560
+
+[2020-03-04 19:18:09 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:18:09 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:18:09 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:18:09 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:18:09 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:18:09 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:18:09 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:18:09 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:18:09 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:18:09 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:19:19 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 29639@asier-XPS-15-9560
+
+[2020-03-04 19:19:19 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:19:19 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:19:19 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:19:19 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:19:19 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:19:19 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:19:19 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:19:19 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:19:19 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:19:19 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:20:50 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 29760@asier-XPS-15-9560
+
+[2020-03-04 19:20:50 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:20:50 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:20:50 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:20:50 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:20:50 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:20:50 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:20:50 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:20:50 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:20:50 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:20:50 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:22:23 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 29809@asier-XPS-15-9560
+
+[2020-03-04 19:22:23 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:22:23 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:22:23 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:22:23 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:22:23 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:22:23 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:22:23 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:22:23 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:22:23 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:22:23 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:23:49 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 29919@asier-XPS-15-9560
+
+[2020-03-04 19:23:50 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:23:50 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:23:50 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:23:50 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:23:50 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:23:50 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:23:50 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:23:50 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:23:50 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:23:50 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:25:13 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 29979@asier-XPS-15-9560
+
+[2020-03-04 19:25:13 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:25:13 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:25:13 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:25:13 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:25:13 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:25:13 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:25:13 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:25:13 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:25:13 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:25:13 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:26:01 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 30044@asier-XPS-15-9560
+
+[2020-03-04 19:26:01 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:26:01 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:26:01 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:26:01 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:26:01 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:26:01 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:26:01 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:26:01 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:26:01 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:26:01 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:26:56 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 30098@asier-XPS-15-9560
+
+[2020-03-04 19:26:56 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:26:56 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:26:56 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:26:56 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:26:56 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:26:56 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:26:56 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:26:56 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:26:56 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:26:56 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:27:56 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 30184@asier-XPS-15-9560
+
+[2020-03-04 19:27:56 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:27:56 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:27:56 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:27:56 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:27:56 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:27:56 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:27:56 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:27:56 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:27:56 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:27:56 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:28:53 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 30252@asier-XPS-15-9560
+
+[2020-03-04 19:28:53 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:28:53 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:28:53 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:28:53 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:28:53 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:28:53 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:28:53 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:28:53 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:28:53 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:28:53 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:30:47 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 30360@asier-XPS-15-9560
+
+[2020-03-04 19:30:47 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:30:47 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:30:47 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:30:47 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:30:47 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:30:47 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:30:47 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:30:47 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:30:47 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:30:47 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:47:20 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 30676@asier-XPS-15-9560
+
+[2020-03-04 19:47:21 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:47:21 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:47:21 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:47:21 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:47:21 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:47:21 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:47:21 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:47:21 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:47:21 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:47:21 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:48:10 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 30728@asier-XPS-15-9560
+
+[2020-03-04 19:48:11 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:48:11 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:48:11 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:48:11 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:48:11 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:48:11 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:48:11 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:48:11 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:48:11 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:48:11 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:55:52 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 31174@asier-XPS-15-9560
+
+[2020-03-04 19:55:52 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:55:52 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:55:52 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:55:52 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:55:52 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:55:52 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:55:52 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:55:52 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:55:52 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:55:52 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:56:50 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 31237@asier-XPS-15-9560
+
+[2020-03-04 19:56:50 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:56:50 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:56:50 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:56:50 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:56:50 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:56:50 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:56:50 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:56:50 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:56:50 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:56:50 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 19:59:31 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 31346@asier-XPS-15-9560
+
+[2020-03-04 19:59:31 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 19:59:31 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 19:59:31 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 19:59:31 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 19:59:31 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 19:59:31 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 19:59:31 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 19:59:31 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 19:59:31 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 19:59:31 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 20:19:02 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 32700@asier-XPS-15-9560
+
+[2020-03-04 20:19:02 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 20:19:02 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 20:19:02 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 20:19:02 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 20:19:02 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 20:19:02 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 20:19:02 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 20:19:02 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 20:19:02 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 20:19:02 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 20:24:52 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 721@asier-XPS-15-9560
+
+[2020-03-04 20:24:52 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 20:24:52 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 20:24:52 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 20:24:52 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 20:24:52 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 20:24:52 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 20:24:52 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 20:24:52 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 20:24:52 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 20:24:52 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 20:25:56 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 790@asier-XPS-15-9560
+
+[2020-03-04 20:25:56 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 20:25:56 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 20:25:56 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 20:25:56 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 20:25:56 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 20:25:56 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 20:25:56 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 20:25:56 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 20:25:56 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 20:25:56 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 20:30:33 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 995@asier-XPS-15-9560
+
+[2020-03-04 20:30:33 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 20:30:33 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 20:30:33 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 20:30:33 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 20:30:33 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 20:30:33 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 20:30:33 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 20:30:33 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 20:30:33 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 20:30:33 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 20:33:17 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 1228@asier-XPS-15-9560
+
+[2020-03-04 20:33:17 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 20:33:17 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 20:33:17 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 20:33:17 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 20:33:17 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 20:33:17 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 20:33:17 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 20:33:17 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 20:33:17 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 20:33:17 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 20:36:35 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 1557@asier-XPS-15-9560
+
+[2020-03-04 20:36:35 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 20:36:35 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 20:36:35 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 20:36:35 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 20:36:35 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 20:36:35 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 20:36:35 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 20:36:35 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 20:36:35 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 20:36:35 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 20:39:55 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 2017@asier-XPS-15-9560
+
+[2020-03-04 20:39:55 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 20:39:55 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 20:39:55 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 20:39:55 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 20:39:55 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 20:39:55 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 20:39:55 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 20:39:55 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 20:39:55 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 20:39:55 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 20:41:03 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 2169@asier-XPS-15-9560
+
+[2020-03-04 20:41:03 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 20:41:03 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 20:41:03 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 20:41:03 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 20:41:03 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 20:41:03 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 20:41:03 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 20:41:03 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 20:41:03 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 20:41:03 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 20:42:20 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 2556@asier-XPS-15-9560
+
+[2020-03-04 20:42:20 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 20:42:20 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 20:42:20 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 20:42:20 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 20:42:20 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 20:42:20 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 20:42:20 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 20:42:20 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 20:42:20 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 20:42:20 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 20:43:19 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 2710@asier-XPS-15-9560
+
+[2020-03-04 20:43:19 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 20:43:19 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 20:43:19 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 20:43:19 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 20:43:19 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 20:43:19 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 20:43:19 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 20:43:19 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 20:43:19 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 20:43:19 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 20:44:02 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 2745@asier-XPS-15-9560
+
+[2020-03-04 20:44:02 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 20:44:02 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 20:44:02 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 20:44:02 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 20:44:02 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 20:44:02 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 20:44:02 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 20:44:02 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 20:44:02 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 20:44:02 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 20:44:52 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 2791@asier-XPS-15-9560
+
+[2020-03-04 20:44:52 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 20:44:52 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 20:44:52 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 20:44:52 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 20:44:52 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 20:44:52 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 20:44:52 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 20:44:52 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 20:44:52 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 20:44:52 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 20:46:11 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 2885@asier-XPS-15-9560
+
+[2020-03-04 20:46:11 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 20:46:11 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 20:46:11 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 20:46:11 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 20:46:11 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 20:46:11 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 20:46:11 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 20:46:11 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 20:46:11 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 20:46:11 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 20:47:39 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 2966@asier-XPS-15-9560
+
+[2020-03-04 20:47:39 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 20:47:39 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 20:47:39 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 20:47:39 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 20:47:39 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 20:47:39 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 20:47:39 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 20:47:39 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 20:47:39 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 20:47:39 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-04 20:48:07 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 2998@asier-XPS-15-9560
+
+[2020-03-04 20:48:07 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-04 20:48:07 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-04 20:48:07 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-04 20:48:07 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-04 20:48:07 #6 type.registry] 
+New type domain.Question
+
+[2020-03-04 20:48:07 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-04 20:48:07 #8 type.registry] 
+New type domain.Event
+
+[2020-03-04 20:48:07 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-04 20:48:07 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-04 20:48:07 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+

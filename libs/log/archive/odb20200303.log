@@ -560,3 +560,44 @@ New type domain.Apuesta
 [2020-03-03 15:45:18 #13 type] 
 Type domain.Apuesta is not enhanced.
 
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-03-03 20:20:55 #1 store] 
+Database '/home/asier/pCloudDrive/Ingenieria/IS/Proyecto/resources/bets.temp' is opened by 21163@asier-XPS-15-9560
+
+[2020-03-03 20:20:55 #2 type.registry] 
+New type domain.Admin
+
+[2020-03-03 20:20:55 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-03-03 20:20:55 #4 type.registry] 
+New type domain.Usuario
+
+[2020-03-03 20:20:55 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-03-03 20:20:55 #6 type.registry] 
+New type domain.Question
+
+[2020-03-03 20:20:55 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-03-03 20:20:55 #8 type.registry] 
+New type domain.Event
+
+[2020-03-03 20:20:55 #9 type] 
+Type domain.Event is not enhanced.
+
+[2020-03-03 20:20:55 #10 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-03-03 20:20:55 #11 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+[2020-03-03 20:29:03 #12 type.registry] 
+New type domain.Apuesta
+
+[2020-03-03 20:29:03 #13 type] 
+Type domain.Apuesta is not enhanced.
+
