@@ -84,7 +84,6 @@ public class CrearEventoGUI extends JFrame {
 						labelError.setText("El año es incorrecto.");
 						labelError.setForeground(Color.RED);
 						error = true;
-
 					}else {
 						fecha = UtilDate.trim(new Date(calendarioEventos.getCalendar().getTime().getTime()));
 					}
@@ -101,8 +100,7 @@ public class CrearEventoGUI extends JFrame {
 							labelError.setText("Rellene todos los campos (descripción y fecha).");
 							labelError.setForeground(Color.RED);
 						}
-						}
-						
+					}	
 				}
 			});
 			botonCrearEvento.setBounds(12, 274, 126, 25);

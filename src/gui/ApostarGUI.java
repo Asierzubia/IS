@@ -1,218 +1,221 @@
 package gui;
 
-import java.awt.BorderLayout;
-import java.awt.FlowLayout;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Vector;
+import java.awt.Color;
+import java.awt.EventQueue;
 
-import javax.swing.JButton;
-import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import businessLogic.BLFacade;
 import domain.Event;
 import domain.Question;
 
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
-import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JComboBox;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.JTextField;
-import java.awt.Color;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JButton;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.Collection;
+import java.util.Vector;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class ApostarGUI extends JDialog {
+public class ApostarGUI extends JFrame {
 
 	private static final long serialVersionUID = 1L;
-	private final JPanel contentPanel = new JPanel();
-	private JTextField txt_respuesta;
-	private JLabel coments;
-	private JComboBox<Event> comboBox;
+	private JPanel contentPane;
+	private JLabel lblEligeUnPartido;
+	private JComboBox<Event> comboEventos;
+	private JLabel lblEligeUnaPregunta;
 	private JComboBox<Question> comboPreguntas;
-	private Vector<Event> model;
-	private Vector<Question> model_preguntas;
-	private Vector<String> model_respuestas;
-	private Question selectedQuestion;
-	private JSpinner spinner;
+	private JLabel lblEligeUnaRespuesta;
+	private JComboBox<String> comboRespuestas;
+	private JLabel lblImporteAApostar;
+	private JButton botonApostar;
+	private JSpinner spinnerDinero;
+	private JLabel labelMensaje;
+	private DefaultComboBoxModel<Event> modeloEventos = new DefaultComboBoxModel<Event>();
+	private DefaultComboBoxModel<Question> modeloPreguntas = new DefaultComboBoxModel<Question>();
+	private DefaultComboBoxModel<String> modeloRespuestas = new DefaultComboBoxModel<String>();
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		try {
-			ApostarGUI dialog = new ApostarGUI();
-			dialog.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-			dialog.setVisible(true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					ApostarGUI frame = new ApostarGUI();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 	}
 
 	/**
-	 * Create the dialog.
+	 * Create the frame.
 	 */
 	public ApostarGUI() {
-		setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-		setTitle("Apuesta Básica");
-		setBounds(100, 100, 554, 349);
-		getContentPane().setLayout(new BorderLayout());
-		contentPanel.setBorder(new EmptyBorder(5, 5, 5, 5));
-		getContentPane().add(contentPanel, BorderLayout.CENTER);
-		
-		
-		model = new Vector<Event>();
-		model_preguntas = new Vector<Question>();
-		model_respuestas = new Vector<String>();
-		Collection<Event> auxmodel = Inicio.getBusinessLogic().getAllEvents();		
-		for (Event ev : auxmodel)  model.addElement(ev);
-		comboBox = new JComboBox<Event>(model);
-		//model_preguntas = model.get(0).getQuestions();
-		comboPreguntas = new JComboBox<Question>(model_preguntas);
-		comboBox.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				comboPreguntas.removeAllItems();
+		addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowActivated(WindowEvent arg0) {
+				BLFacade facade = Inicio.getBusinessLogic();
+				Collection<Event> eventos = facade.getAllEvents();
+				for(Event evento : eventos) modeloEventos.addElement(evento);
 			}
 		});
-		
-		JLabel lblEligeElTipo = new JLabel("Elige un partido");
-		JLabel lblNewLabel = new JLabel("Elige una pregunta");
-		
-		JButton btnBuscarPreguntas = new JButton("Buscar Preguntas ");
-		btnBuscarPreguntas.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				comboPreguntas.removeAllItems();
-				Event aux = (Event) comboBox.getSelectedItem();
-				for (Question q : aux.getQuestions())  model_preguntas.addElement(q);
-				comboPreguntas.updateUI();
-				if (model_preguntas.size()!=0) {
-					comboPreguntas.setSelectedIndex(0);
-				}
-				Question q = (Question) comboPreguntas.getSelectedItem();
-				ArrayList<String> listaRespuestas = q.getRespuestas();
-				for(String respuesta : listaRespuestas) model_respuestas.add(respuesta);
-			}
-		});
-		selectedQuestion = null;
-		spinner = new JSpinner();
-		spinner.setModel(new SpinnerNumberModel(new Double(1), new Double(1), null, new Double(1)));
-		coments = new JLabel("Por favor, rellene todos los campos");
-		coments.setForeground(Color.RED);
-		
-		JLabel lblEscribeTuRespuesta = new JLabel("Escribe tu respuesta");
-		
-		txt_respuesta = new JTextField();
-		txt_respuesta.setColumns(10);
-		
-		JLabel lblImporteAApostar = new JLabel("Importe a Apostar");
-		
-		GroupLayout gl_contentPanel = new GroupLayout(contentPanel);
-		gl_contentPanel.setHorizontalGroup(
-			gl_contentPanel.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPanel.createSequentialGroup()
-					.addGroup(gl_contentPanel.createParallelGroup(Alignment.LEADING)
-						.addComponent(btnBuscarPreguntas)
-						.addGroup(gl_contentPanel.createSequentialGroup()
-							.addContainerGap()
-							.addGroup(gl_contentPanel.createParallelGroup(Alignment.TRAILING)
-								.addComponent(lblImporteAApostar, Alignment.LEADING)
-								.addComponent(lblEligeElTipo, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 161, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblNewLabel, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 133, GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblEscribeTuRespuesta, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 142, GroupLayout.PREFERRED_SIZE))
-							.addGap(18)
-							.addGroup(gl_contentPanel.createParallelGroup(Alignment.LEADING)
-								.addGroup(gl_contentPanel.createSequentialGroup()
-									.addGroup(gl_contentPanel.createParallelGroup(Alignment.LEADING)
-										.addComponent(txt_respuesta, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-										.addGroup(gl_contentPanel.createSequentialGroup()
-											.addPreferredGap(ComponentPlacement.RELATED)
-											.addComponent(spinner, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)))
-									.addPreferredGap(ComponentPlacement.RELATED)
-									.addComponent(coments, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-								.addComponent(comboPreguntas, GroupLayout.PREFERRED_SIZE, 194, GroupLayout.PREFERRED_SIZE)
-								.addComponent(comboBox, GroupLayout.PREFERRED_SIZE, 193, GroupLayout.PREFERRED_SIZE))))
-					.addContainerGap())
-		);
-		gl_contentPanel.setVerticalGroup(
-			gl_contentPanel.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPanel.createSequentialGroup()
-					.addGroup(gl_contentPanel.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_contentPanel.createSequentialGroup()
-							.addContainerGap()
-							.addGroup(gl_contentPanel.createParallelGroup(Alignment.BASELINE)
-								.addComponent(lblEligeElTipo, GroupLayout.PREFERRED_SIZE, 28, GroupLayout.PREFERRED_SIZE)
-								.addComponent(comboBox, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE))
-							.addGap(60)
-							.addGroup(gl_contentPanel.createParallelGroup(Alignment.BASELINE)
-								.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
-								.addComponent(comboPreguntas, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE))
-							.addGap(18)
-							.addGroup(gl_contentPanel.createParallelGroup(Alignment.LEADING)
-								.addGroup(gl_contentPanel.createSequentialGroup()
-									.addGroup(gl_contentPanel.createParallelGroup(Alignment.BASELINE)
-										.addComponent(lblEscribeTuRespuesta, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE)
-										.addComponent(txt_respuesta, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-									.addGap(18)
-									.addGroup(gl_contentPanel.createParallelGroup(Alignment.BASELINE)
-										.addComponent(lblImporteAApostar)
-										.addComponent(spinner, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)))
-								.addComponent(coments, GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)))
-						.addGroup(gl_contentPanel.createSequentialGroup()
-							.addGap(57)
-							.addComponent(btnBuscarPreguntas)))
-					.addGap(17))
-		);
-		contentPanel.setLayout(gl_contentPanel);
-		{
-			JPanel buttonPane = new JPanel();
-			
-			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));
-			getContentPane().add(buttonPane, BorderLayout.SOUTH);
-			{
-				JButton okButton = new JButton("Atras");
-				okButton.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent arg0) {
-						JFrame a = new UsuarioGUI();
-						a.setVisible(true);
-						ApostarGUI.this.dispose();
-					}
-				});
-				JButton btnNewButton = new JButton("APOSTAR");
-				buttonPane.add(btnNewButton);
-				btnNewButton.addActionListener(new ActionListener() {
-					public void actionPerformed(ActionEvent e) {
-						Boolean error = false;
-						if(txt_respuesta.getText().equals("")||model_preguntas.isEmpty()) {
-							coments.setText("Faltan campos por rellenar");
-							error = true;
-						}
-						else if(UsuarioGUI.getUsuario().getMoney()< (Double) spinner.getValue()){
-							coments.setText("No tienes dinero suficiente");
-						}
-						else if(!error && comboPreguntas.getItemCount()!=0) {
-							 selectedQuestion = (Question) comboPreguntas.getSelectedItem();
-							 if (selectedQuestion.getBetMinimum()> (Double) spinner.getValue()) {
-								 coments.setText("Sube la apuesta al menos a" + selectedQuestion.getBetMinimum());
-							 }
-							 else {
-								 Inicio.getBusinessLogic().generarApuesta(selectedQuestion, txt_respuesta.getText(), (Double) spinner.getValue(), UsuarioGUI.getUsuario().getId());
-								 Inicio.getBusinessLogic().incrementarSaldo(UsuarioGUI.getUsuario().getId(), (-(Double) spinner.getValue()));
-								 UsuarioGUI.setUsuario(Inicio.getBusinessLogic().tryUser(UsuarioGUI.getUsuario().getId(), UsuarioGUI.getUsuario().getPass()));
-								 coments.setText("Gracias por apostar con nosotros");
-								 txt_respuesta.setText("");
-							 }
-						}
-					}
-				});
-				okButton.setActionCommand("OK");
-				buttonPane.add(okButton);
-				getRootPane().setDefaultButton(okButton);
-			}
+		setTitle("Apostar");
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		setBounds(100, 100, 440, 271);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		contentPane.add(getLblEligeUnPartido());
+		contentPane.add(getComboEventos());
+		contentPane.add(getLblEligeUnaPregunta());
+		contentPane.add(getComboPreguntas());
+		contentPane.add(getLblEligeUnaRespuesta());
+		contentPane.add(getComboRespuestas());
+		contentPane.add(getLblImporteAApostar());
+		contentPane.add(getBotonApostar());
+		contentPane.add(getSpinnerDinero());
+		contentPane.add(getLabelMensaje());
+	}
+
+	private JLabel getLblEligeUnPartido() {
+		if (lblEligeUnPartido == null) {
+			lblEligeUnPartido = new JLabel("Elige un partido");
+			lblEligeUnPartido.setBounds(12, 13, 99, 16);
 		}
+		return lblEligeUnPartido;
+	}
+	private JComboBox<Event> getComboEventos() {
+		if (comboEventos == null) {
+			comboEventos = new JComboBox<Event>();
+			comboEventos.addActionListener (new ActionListener () {
+			    public void actionPerformed(ActionEvent e) {
+			        modeloPreguntas.removeAllElements();
+			        Event evento = (Event) comboEventos.getSelectedItem();
+			        if(evento != null) {
+			        	Vector<Question> preguntas = evento.getQuestions();
+			        	for(Question pregunta : preguntas) modeloPreguntas.addElement(pregunta);
+			        }
+			    }
+			});
+			comboEventos.setBounds(135, 10, 214, 22);
+			comboEventos.setModel(modeloEventos);
+		}
+		return comboEventos;
+	}
+	private JLabel getLblEligeUnaPregunta() {
+		if (lblEligeUnaPregunta == null) {
+			lblEligeUnaPregunta = new JLabel("Elige una pregunta");
+			lblEligeUnaPregunta.setBounds(12, 58, 116, 16);
+		}
+		return lblEligeUnaPregunta;
+	}
+	private JComboBox<Question> getComboPreguntas() {
+		if (comboPreguntas == null) {
+			comboPreguntas = new JComboBox<Question>();
+			comboPreguntas.addActionListener (new ActionListener () {
+			    public void actionPerformed(ActionEvent e) {
+			        modeloRespuestas.removeAllElements();
+			        Question pregunta = (Question) comboPreguntas.getSelectedItem();
+			        if(pregunta != null) {
+			        	Vector<String> respuestas = pregunta.getRespuestas();
+			        	for(String respuesta : respuestas) modeloRespuestas.addElement(respuesta);
+			        }
+			    }
+			});
+			comboPreguntas.setBounds(135, 55, 214, 22);
+			comboPreguntas.setModel(modeloPreguntas);
+		}
+		return comboPreguntas;
+	}
+	
+	private JLabel getLblEligeUnaRespuesta() {
+		if (lblEligeUnaRespuesta == null) {
+			lblEligeUnaRespuesta = new JLabel("Elige una respuesta");
+			lblEligeUnaRespuesta.setBounds(12, 101, 116, 16);
+		}
+		return lblEligeUnaRespuesta;
+	}
+	
+	private JComboBox<String> getComboRespuestas() {
+		if (comboRespuestas == null) {
+			comboRespuestas = new JComboBox<String>();
+			comboRespuestas.setBounds(135, 98, 214, 22);
+			comboRespuestas.setModel(modeloRespuestas);
+		}
+		return comboRespuestas;
+	}
+	
+	private JLabel getLblImporteAApostar() {
+		if (lblImporteAApostar == null) {
+			lblImporteAApostar = new JLabel("Importe a apostar");
+			lblImporteAApostar.setBounds(12, 140, 116, 16);
+		}
+		return lblImporteAApostar;
+	}
+	
+	private JButton getBotonApostar() {
+		if (botonApostar == null) {
+			botonApostar = new JButton("Apostar");
+			botonApostar.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					Boolean error = false;
+					if(comboRespuestas.getSelectedItem() == null ||modeloPreguntas.getSize() == 0) {
+						labelMensaje.setText("Faltan campos por rellenar");
+						labelMensaje.setForeground(Color.RED);
+						error = true;
+					}
+					else if(UsuarioGUI.getUsuario().getMoney()< (Double) spinnerDinero.getValue()){
+						labelMensaje.setText("No tienes dinero suficiente");
+						labelMensaje.setForeground(Color.RED);
+					}
+					else if(!error && comboPreguntas.getItemCount()!=0) {
+						 Question selectedQuestion = (Question) comboPreguntas.getSelectedItem();
+						 if (selectedQuestion.getBetMinimum()> (Double) spinnerDinero.getValue()) {
+							 labelMensaje.setText("Sube la apuesta al menos a " + selectedQuestion.getBetMinimum());
+							 labelMensaje.setForeground(Color.RED);
+						 }
+						 else {
+							 String respuesta = (String) comboRespuestas.getSelectedItem();
+							 Inicio.getBusinessLogic().generarApuesta(selectedQuestion, respuesta, (Double) spinnerDinero.getValue(), UsuarioGUI.getUsuario().getId());
+							 Inicio.getBusinessLogic().incrementarSaldo(UsuarioGUI.getUsuario().getId(), (-(Double) spinnerDinero.getValue()));
+							 UsuarioGUI.setUsuario(Inicio.getBusinessLogic().tryUser(UsuarioGUI.getUsuario().getId(), UsuarioGUI.getUsuario().getPass()));
+							 labelMensaje.setText("Gracias por apostar con nosotros");
+							 labelMensaje.setForeground(Color.GREEN);
+						 }
+					}
+				}
+			});
+			botonApostar.setBounds(12, 187, 97, 25);
+		}
+		return botonApostar;
+	}
+	
+	private JSpinner getSpinnerDinero() {
+		if (spinnerDinero == null) {
+			spinnerDinero = new JSpinner();
+			spinnerDinero.setModel(new SpinnerNumberModel(new Double(1), new Double(1), null, new Double(1)));
+			spinnerDinero.setBounds(132, 137, 107, 22);
+		}
+		return spinnerDinero;
+	}
+	
+	private JLabel getLabelMensaje() {
+		if (labelMensaje == null) {
+			labelMensaje = new JLabel("");
+			labelMensaje.setBounds(12, 169, 384, 16);
+		}
+		return labelMensaje;
 	}
 }

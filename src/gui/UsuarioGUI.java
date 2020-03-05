@@ -139,7 +139,7 @@ public class UsuarioGUI extends JFrame {
 			botonApostar.setBounds(11, 146, 97, 25);
 			botonApostar.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {					
-					Apostar2GUI a = new Apostar2GUI();
+					ApostarGUI a = new ApostarGUI();
 					a.setVisible(true);
 				}
 			});

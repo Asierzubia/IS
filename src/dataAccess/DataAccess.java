@@ -479,12 +479,19 @@ public class DataAccess  {
 			q.anadirRespuesta(pRespuesta);
 			db.getTransaction().commit();
 			return true;
-		}catch (Exception e) return false;
+		}catch (Exception e) {
+			return false;
+		}
 	}
 	
 	public Question getQuestion(int pQuestionNumber) {
-		TypedQuery<Question> query = db.createQuery("SELECT q FROM Question q WHERE q.questionNumber='" + pQuestionNumber + "'", Question.class);
+		TypedQuery<Question> query = db.createQuery("SELECT q FROM Question q", Question.class);
 		List<Question> questions = query.getResultList();
-		return questions.get(0);
+		for(Question q : questions){
+			if(q.getQuestionNumber() == pQuestionNumber) {
+				return q;
+			}
+		}
+		return null;
 	}
 }

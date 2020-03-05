@@ -23,8 +23,7 @@ public class Question implements Serializable {
 	private String question; 
 	private float betMinimum;
 	private String result;  
-	//private Vector<String> respuestas;
-	private String respuesta;
+	private Vector<String> respuestas;
 	@XmlIDREF
 	private Event event;
 
@@ -38,14 +37,14 @@ public class Question implements Serializable {
 		this.question = query;
 		this.betMinimum=betMinimum;
 		this.event = event;
-		//this.respuestas = new Vector<String>();
+		this.respuestas = new Vector<String>();
 	}
 	
 	public Question(String query, float betMinimum,  Event event) {
 		super();
 		this.question = query;
 		this.betMinimum=betMinimum;
-		//this.respuestas = new Vector<String>();
+		this.respuestas = new Vector<String>();
 		//this.event = event;
 	}
 
@@ -150,19 +149,11 @@ public class Question implements Serializable {
 		return questionNumber+";"+question+";"+Float.toString(betMinimum);
 	}
 
-	/*public void anadirRespuesta(String pRespuesta) {
+	public void anadirRespuesta(String pRespuesta) {
 		this.respuestas.add(pRespuesta);
 	}
 	
 	public Vector<String> getRespuestas(){
 		return respuestas;
-	}*/
-	
-	public void anadirRespuesta(String pRespuesta) {
-		this.respuesta = pRespuesta;
-	}
-
-	public String getRespuestas(){
-		return respuesta;
 	}
 }
