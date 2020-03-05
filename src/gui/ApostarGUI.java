@@ -2,6 +2,7 @@ package gui;
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Vector;
 
@@ -36,6 +37,7 @@ public class ApostarGUI extends JDialog {
 	private JComboBox<Question> comboPreguntas;
 	private Vector<Event> model;
 	private Vector<Question> model_preguntas;
+	private Vector<String> model_respuestas;
 	private Question selectedQuestion;
 	private JSpinner spinner;
 
@@ -66,6 +68,7 @@ public class ApostarGUI extends JDialog {
 		
 		model = new Vector<Event>();
 		model_preguntas = new Vector<Question>();
+		model_respuestas = new Vector<String>();
 		Collection<Event> auxmodel = Inicio.getBusinessLogic().getAllEvents();		
 		for (Event ev : auxmodel)  model.addElement(ev);
 		comboBox = new JComboBox<Event>(model);
@@ -90,6 +93,9 @@ public class ApostarGUI extends JDialog {
 				if (model_preguntas.size()!=0) {
 					comboPreguntas.setSelectedIndex(0);
 				}
+				Question q = (Question) comboPreguntas.getSelectedItem();
+				ArrayList<String> listaRespuestas = q.getRespuestas();
+				for(String respuesta : listaRespuestas) model_respuestas.add(respuesta);
 			}
 		});
 		selectedQuestion = null;
@@ -122,12 +128,12 @@ public class ApostarGUI extends JDialog {
 							.addGroup(gl_contentPanel.createParallelGroup(Alignment.LEADING)
 								.addGroup(gl_contentPanel.createSequentialGroup()
 									.addGroup(gl_contentPanel.createParallelGroup(Alignment.LEADING)
+										.addComponent(txt_respuesta, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 										.addGroup(gl_contentPanel.createSequentialGroup()
 											.addPreferredGap(ComponentPlacement.RELATED)
-											.addComponent(spinner, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE))
-										.addComponent(txt_respuesta, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+											.addComponent(spinner, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)))
 									.addPreferredGap(ComponentPlacement.RELATED)
-									.addComponent(coments, GroupLayout.DEFAULT_SIZE, 237, Short.MAX_VALUE))
+									.addComponent(coments, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 								.addComponent(comboPreguntas, GroupLayout.PREFERRED_SIZE, 194, GroupLayout.PREFERRED_SIZE)
 								.addComponent(comboBox, GroupLayout.PREFERRED_SIZE, 193, GroupLayout.PREFERRED_SIZE))))
 					.addContainerGap())
@@ -145,9 +151,9 @@ public class ApostarGUI extends JDialog {
 							.addGroup(gl_contentPanel.createParallelGroup(Alignment.BASELINE)
 								.addComponent(lblNewLabel, GroupLayout.PREFERRED_SIZE, 22, GroupLayout.PREFERRED_SIZE)
 								.addComponent(comboPreguntas, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE))
+							.addGap(18)
 							.addGroup(gl_contentPanel.createParallelGroup(Alignment.LEADING)
 								.addGroup(gl_contentPanel.createSequentialGroup()
-									.addGap(18)
 									.addGroup(gl_contentPanel.createParallelGroup(Alignment.BASELINE)
 										.addComponent(lblEscribeTuRespuesta, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE)
 										.addComponent(txt_respuesta, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
@@ -155,13 +161,11 @@ public class ApostarGUI extends JDialog {
 									.addGroup(gl_contentPanel.createParallelGroup(Alignment.BASELINE)
 										.addComponent(lblImporteAApostar)
 										.addComponent(spinner, GroupLayout.PREFERRED_SIZE, 23, GroupLayout.PREFERRED_SIZE)))
-								.addGroup(gl_contentPanel.createSequentialGroup()
-									.addGap(18)
-									.addComponent(coments, GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE))))
+								.addComponent(coments, GroupLayout.DEFAULT_SIZE, 98, Short.MAX_VALUE)))
 						.addGroup(gl_contentPanel.createSequentialGroup()
 							.addGap(57)
 							.addComponent(btnBuscarPreguntas)))
-					.addGap(24))
+					.addGap(17))
 		);
 		contentPanel.setLayout(gl_contentPanel);
 		{

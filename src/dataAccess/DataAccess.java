@@ -470,4 +470,21 @@ public class DataAccess  {
 		List<Question> q = query.getResultList();
 		return q.size();
 	}
+
+	public boolean anadirRespuesta(Question pQuestion, String pRespuesta) {
+		System.out.println(">> DataAccess: anadirRespuesta " + pRespuesta + " a la question " + pQuestion.getQuestion());
+		Question q = getQuestion(pQuestion.getQuestionNumber());
+		db.getTransaction().begin();
+		try {
+			q.anadirRespuesta(pRespuesta);
+			db.getTransaction().commit();
+			return true;
+		}catch (Exception e) return false;
+	}
+	
+	public Question getQuestion(int pQuestionNumber) {
+		TypedQuery<Question> query = db.createQuery("SELECT q FROM Question q WHERE q.questionNumber='" + pQuestionNumber + "'", Question.class);
+		List<Question> questions = query.getResultList();
+		return questions.get(0);
+	}
 }

@@ -97,4 +97,6 @@ public interface BLFacade  {
 	@WebMethod void cambiarContrasena(Usuario usuario, String password);
 
 	@WebMethod boolean anadirEvento(String pDescripcion, Date pFecha);
+
+	@WebMethod boolean anadirRespuesta(Question pQuestion, String pRespuesta);
 }
