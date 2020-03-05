@@ -357,6 +357,12 @@ public class DataAccess  {
 		return null;
 	}
 
+	/**
+	 * This method delete an Usuario from the database
+	 * 
+	 * @param an Usuario 
+	 * @return
+	 */
 	public void deleteUser(Usuario pUsuario) {
 		System.out.println(">> DataAccess: deleteUser: " + pUsuario.getId());
 		db.getTransaction().begin();
@@ -364,6 +370,12 @@ public class DataAccess  {
 		db.getTransaction().commit();
 	}
 
+	/**
+	 * This method get all the Apuesta of an Usuario
+	 * 
+	 * @param an Usuario identifier 
+	 * @return a Collection of Apuesta
+	 */
 	public Collection<Apuesta> getApuestasUser(String pId) {
 		System.out.println(">> DataAccess: getApuestasUser de " + pId);
 		TypedQuery<Apuesta> query = db.createQuery("SELECT ap FROM Apuesta ap WHERE ap.usuarioId='" + pId + "'", Apuesta.class);
@@ -371,6 +383,12 @@ public class DataAccess  {
 		return apuestas;
 	}
 	
+	/**
+	 * This method return all the Events of the database
+	 * 
+	 * @param 
+	 * @return a Vector of Event
+	 */
 	public Vector<Event> getAllEvents() {
 		System.out.println(">> DataAccess: getAllEvents");
 		Vector<Event> res = new Vector<Event>();	
@@ -382,6 +400,12 @@ public class DataAccess  {
 	 	return res;
 	}
 	
+	/**
+	 * This method creates an Apuesta for an Usuario
+	 * 
+	 * @param a question, the answer, the money of the bet and the id of the Usuario
+	 * @return
+	 */
 	public void generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, String pUsuario) {
 		System.out.println(">> DataAccess: registrarApuesta");
 		db.getTransaction().begin();
@@ -389,6 +413,12 @@ public class DataAccess  {
 		db.getTransaction().commit();
 	}
 
+	/**
+	 * This method changes the password of an Usuario
+	 * 
+	 * @param usuario and the new password
+	 * @return
+	 */
 	public void cambiarContrasena(Usuario usuario, String password) {
 		System.out.println(">> DataAccess: registrarApuesta");
 		TypedQuery<Usuario> query = db.createQuery("SELECT us FROM Usuario us WHERE us.id='" + usuario.getId() + "'", Usuario.class);
@@ -399,6 +429,12 @@ public class DataAccess  {
 		db.getTransaction().commit();
 	}
 
+	/**
+	 * This method add a new Event to the database, return true if the Event is created, and false if not
+	 * 
+	 * @param a description and a date
+	 * @return a boolean
+	 */
 	public boolean anadirEvento(String pDescripcion, Date pFecha) {
 		db.getTransaction().begin();
 		try {
@@ -411,6 +447,12 @@ public class DataAccess  {
 		}		
 	}
 	
+	/**
+	 *  
+	 * 
+	 * @param 
+	 * @return
+	 */
 	public int getNumeroEventos() {
 		System.out.println(">> DataAccess: getNumeroEventos");
 		TypedQuery<Event> query = db.createQuery("SELECT ev FROM Event ev", Event.class);
@@ -418,6 +460,10 @@ public class DataAccess  {
 		return e.size();
 	}
 	
+	/**
+	 * 
+	 * @return
+	 */
 	public int getNumeroQuestions() {
 		System.out.println(">> DataAccess: getNumeroQuestions");
 		TypedQuery<Question> query = db.createQuery("SELECT q FROM Question q", Question.class);

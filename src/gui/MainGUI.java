@@ -69,7 +69,7 @@ public class MainGUI extends JFrame {
 	 */
 	private void initialize() {
 		// this.setSize(271, 295);
-		this.setSize(513, 340);
+		this.setSize(510, 296);
 		this.setContentPane(getJContentPane());
 		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("MainTitle"));
 	}
@@ -89,6 +89,7 @@ public class MainGUI extends JFrame {
 			jContentPane.add(getJButtonAdministrarUsuarios());
 			jContentPane.add(getBotonCrearEvento());
 			jContentPane.add(getPanel());
+			jContentPane.add(getBotonCerrarSesion());
 		}
 		return jContentPane;
 	}
@@ -196,12 +197,11 @@ public class MainGUI extends JFrame {
 	private JPanel getPanel() {
 		if (panel == null) {
 			panel = new JPanel();
-			panel.setBounds(12, 182, 477, 72);
+			panel.setBounds(0, 181, 319, 36);
 			panel.setLayout(null);
 			panel.add(getRdbtnNewRadioButton_1());
 			panel.add(getRdbtnNewRadioButton_2());
 			panel.add(getRdbtnNewRadioButton());
-			panel.add(getBotonCerrarSesion());
 		}
 		return panel;
 	}
@@ -231,7 +231,7 @@ public class MainGUI extends JFrame {
 	private JButton getBotonCerrarSesion() {
 		if (botonCerrarSesion == null) {
 			botonCerrarSesion = new JButton("Cerrar Sesión");
-			botonCerrarSesion.setBounds(354, 13, 111, 25);
+			botonCerrarSesion.setBounds(331, 192, 145, 25);
 			botonCerrarSesion.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					MainGUI.this.dispose();
