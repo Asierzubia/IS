@@ -36,6 +36,7 @@ public class MainGUI extends JFrame {
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private JButton jButtonAdministrarUsuarios;
 	private JButton botonCrearEvento;
+	private JButton botonAñadirRespuesta;
 	
 	/**
 	 * This is the default constructor
@@ -69,7 +70,7 @@ public class MainGUI extends JFrame {
 	 */
 	private void initialize() {
 		// this.setSize(271, 295);
-		this.setSize(510, 296);
+		this.setSize(516, 334);
 		this.setContentPane(getJContentPane());
 		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("MainTitle"));
 	}
@@ -88,6 +89,7 @@ public class MainGUI extends JFrame {
 			jContentPane.add(getBoton2());
 			jContentPane.add(getJButtonAdministrarUsuarios());
 			jContentPane.add(getBotonCrearEvento());
+			jContentPane.add(getBotonAñadirRespuesta());
 			jContentPane.add(getPanel());
 			jContentPane.add(getBotonCerrarSesion());
 		}
@@ -197,7 +199,7 @@ public class MainGUI extends JFrame {
 	private JPanel getPanel() {
 		if (panel == null) {
 			panel = new JPanel();
-			panel.setBounds(0, 181, 319, 36);
+			panel.setBounds(0, 228, 319, 36);
 			panel.setLayout(null);
 			panel.add(getRdbtnNewRadioButton_1());
 			panel.add(getRdbtnNewRadioButton_2());
@@ -231,7 +233,7 @@ public class MainGUI extends JFrame {
 	private JButton getBotonCerrarSesion() {
 		if (botonCerrarSesion == null) {
 			botonCerrarSesion = new JButton("Cerrar Sesión");
-			botonCerrarSesion.setBounds(331, 192, 145, 25);
+			botonCerrarSesion.setBounds(331, 239, 145, 25);
 			botonCerrarSesion.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					MainGUI.this.dispose();
@@ -255,6 +257,19 @@ public class MainGUI extends JFrame {
 			botonCrearEvento.setBounds(242, 91, 243, 60);
 		}
 		return botonCrearEvento;
+	}
+	private JButton getBotonAñadirRespuesta() {
+		if (botonAñadirRespuesta == null) {
+			botonAñadirRespuesta = new JButton(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.btnNewButton.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			botonAñadirRespuesta.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					AnadirRespuestaGUI a = new AnadirRespuestaGUI();
+					a.setVisible(true);
+				}
+			});
+			botonAñadirRespuesta.setBounds(122, 150, 243, 52);
+		}
+		return botonAñadirRespuesta;
 	}
 } // @jve:decl-index=0:visual-constraint="0,0"
 

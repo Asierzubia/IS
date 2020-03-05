@@ -29,7 +29,8 @@ public class VerApuestasGUI extends JFrame {
 	private JPanel contentPane;
 	private JTable tablaApuestas;
 	private JScrollPane scrollPane;
-
+	private String id;
+	private boolean tipo;
 	/**
 	 * Launch the application.
 	 */
@@ -49,12 +50,14 @@ public class VerApuestasGUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public VerApuestasGUI() {
+	public VerApuestasGUI(String pId, boolean pTipo) {
+		this.id = pId;
+		this.tipo = pTipo;
 		setTitle("VerApuestas");
 		addWindowListener(new WindowAdapter() {
 			@Override
-			public void windowActivated(WindowEvent arg0) {		
-				recargarTabla();
+			public void windowActivated(WindowEvent arg0) {
+				hacerCosas();
 			}
 		});
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -66,6 +69,14 @@ public class VerApuestasGUI extends JFrame {
 		contentPane.add(getScrollPane());
 	}
 	
+	private void hacerCosas() {
+		if(this.tipo == true) {
+			recargarTablaAdmin();
+		}else {
+			recargarTabla(id);
+		}
+	}
+	
 	private JTable getTablaApuestas() {
 		if (tablaApuestas == null) {
 			tablaApuestas = new JTable();
@@ -73,11 +84,11 @@ public class VerApuestasGUI extends JFrame {
 		return tablaApuestas;
 	}
 	
-	private void recargarTabla() {
+	private void recargarTabla(String pId) {
 		BLFacade facade = Inicio.getBusinessLogic();
 		String[] columnNames = {"Usuario", "Question", "Apostado", "Dinero apostado"};
 	    Object[][] data = {};
-		Collection<Apuesta> listaApuestas = facade.getApuestasUser(UsuarioGUI.getUsuario().getId());
+		Collection<Apuesta> listaApuestas = facade.getApuestasUser(pId);
 		DefaultTableModel modelo = new DefaultTableModel(data, columnNames);
 		tablaApuestas.setModel(modelo);
 		for (Apuesta a : listaApuestas) {
@@ -89,6 +100,7 @@ public class VerApuestasGUI extends JFrame {
 			modelo.addRow(fila);
 		}
 	}
+	
 	private JScrollPane getScrollPane() {
 		if (scrollPane == null) {
 			scrollPane = new JScrollPane();
@@ -96,5 +108,25 @@ public class VerApuestasGUI extends JFrame {
 			scrollPane.setViewportView(getTablaApuestas());
 		}
 		return scrollPane;
+	}
+	
+	private void recargarTablaAdmin() {
+		BLFacade facade = Inicio.getBusinessLogic();
+		String[] columnNames = {"Usuario", "Question", "Apostado", "Dinero apostado"};
+	    Object[][] data = {};
+		Collection<Usuario> listaUsuarios = facade.getAllUsers();
+		DefaultTableModel modelo = new DefaultTableModel(data, columnNames);
+		tablaApuestas.setModel(modelo);
+		for (Usuario usu : listaUsuarios){
+			Collection<Apuesta> listaApuestas = facade.getApuestasUser(usu.getId());
+			for (Apuesta a : listaApuestas) {
+				Object [] fila = new Object[4];
+				fila[0] = a.getIdUsuario();
+				fila[1] = a.getQuestionQuestion();
+				fila[2] = a.getApostado();
+				fila[3] = a.getDineroApostado();
+				modelo.addRow(fila);
+			}
+		}	
 	}
 }

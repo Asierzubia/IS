@@ -420,7 +420,7 @@ public class DataAccess  {
 	 * @return
 	 */
 	public void cambiarContrasena(Usuario usuario, String password) {
-		System.out.println(">> DataAccess: registrarApuesta");
+		System.out.println(">> DataAccess: cambiarContraseña de " + usuario.getId());
 		TypedQuery<Usuario> query = db.createQuery("SELECT us FROM Usuario us WHERE us.id='" + usuario.getId() + "'", Usuario.class);
 		List<Usuario> user = query.getResultList();
 		Usuario usu = user.get(0);

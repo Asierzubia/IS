@@ -26,7 +26,9 @@ public class AdministrarUsuariosGUI extends JFrame {
 	private JTable tablaUsuarios;
 	private JButton botonBorrarUsuario;
 	private JScrollPane scrollPane;
-
+	private JButton botonApuestaUsuario;
+	private Usuario usu;
+	private JButton botonApuestasUsuario;
 	/**
 	 * Launch the application.
 	 */
@@ -62,15 +64,25 @@ public class AdministrarUsuariosGUI extends JFrame {
 		contentPane.setLayout(null);
 		contentPane.add(getBotonBorrarUsuario());
 		contentPane.add(getScrollPane());
+		contentPane.add(getBotonApuestasUsuario());
 	}
 	
+	private void setUsuario(int numero) {
+		BLFacade facade = Inicio.getBusinessLogic();
+		ArrayList<Usuario> lista2 =(ArrayList<Usuario>) facade.getAllUsers();
+		Usuario usuario = lista2.get(numero);
+		this.usu = usuario;
+	}
+	
+	private Usuario getUsuario() {
+		return this.usu;
+	}
 	private JTable getTablaUsuarios() {
 		if (tablaUsuarios == null) {
 			tablaUsuarios = new JTable();
 		}
 		return tablaUsuarios;
 	}
-	
 	private JButton getBotonBorrarUsuario() {
 		if (botonBorrarUsuario == null) {
 			botonBorrarUsuario = new JButton("Borrar Usuario");
@@ -111,5 +123,25 @@ public class AdministrarUsuariosGUI extends JFrame {
 			scrollPane.setViewportView(getTablaUsuarios());
 		}
 		return scrollPane;
+	}
+	private JButton getBotonApuestasUsuario() {
+		if (botonApuestasUsuario == null) {
+			botonApuestasUsuario = new JButton("Ver Apuestas Usuario");
+			botonApuestasUsuario.setBounds(222, 192, 170, 24);
+			botonApuestasUsuario.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg1) {
+					if(tablaUsuarios.getSelectedRow() == -1) {
+						VerApuestasGUI a = new VerApuestasGUI("",true);
+						a.setVisible(true);
+					}else {
+						setUsuario(tablaUsuarios.getSelectedRow());
+						VerApuestasGUI a = new VerApuestasGUI(getUsuario().getId(),false);
+						a.setVisible(true);
+					}
+					
+				}
+			});
+		}
+		return botonApuestasUsuario;
 	}
 }

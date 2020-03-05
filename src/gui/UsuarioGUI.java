@@ -13,7 +13,6 @@ import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
-import javax.swing.SwingUtilities;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -154,7 +153,7 @@ public class UsuarioGUI extends JFrame {
 			botonVerApuestas = new JButton("Ver tus apuestas");
 			botonVerApuestas.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					VerApuestasGUI a = new VerApuestasGUI();
+					VerApuestasGUI a = new VerApuestasGUI(usuario.getId(),false);
 					a.setVisible(true);
 				}
 			});
