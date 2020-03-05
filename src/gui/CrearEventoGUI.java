@@ -16,6 +16,7 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.event.ActionListener;
+import java.util.Calendar;
 import java.util.Date;
 import java.awt.event.ActionEvent;
 
@@ -76,8 +77,18 @@ public class CrearEventoGUI extends JFrame {
 				public void actionPerformed(ActionEvent e) {
 					BLFacade facade = Inicio.getBusinessLogic();
 					String descripcion = textoDescripción.getText();
-					Date fecha = UtilDate.trim(new Date(calendarioEventos.getCalendar().getTime().getTime()));
-					if(!descripcion.equals("")) {
+					Date fecha = new Date();
+					boolean error = false;
+					System.out.println(Calendar.getInstance().get(Calendar.YEAR));
+					if(calendarioEventos.getYearChooser().getValue()< Calendar.getInstance().get(Calendar.YEAR) || calendarioEventos.getYearChooser().getValue() == 0) {
+						labelError.setText("El año es incorrecto.");
+						labelError.setForeground(Color.RED);
+						error = true;
+
+					}else {
+						fecha = UtilDate.trim(new Date(calendarioEventos.getCalendar().getTime().getTime()));
+					}
+					if(!descripcion.equals("") && !error) {
 						if(facade.anadirEvento(descripcion, fecha)) {
 							labelError.setText("El evento se ha añadido correctamente.");
 							labelError.setForeground(Color.GREEN);
@@ -86,9 +97,12 @@ public class CrearEventoGUI extends JFrame {
 							labelError.setForeground(Color.RED);
 						}
 					}else {
-						labelError.setText("Rellene todos los campos (descripción y fecha).");
-						labelError.setForeground(Color.RED);
-					}
+						if(!error) {
+							labelError.setText("Rellene todos los campos (descripción y fecha).");
+							labelError.setForeground(Color.RED);
+						}
+						}
+						
 				}
 			});
 			botonCrearEvento.setBounds(12, 274, 126, 25);
