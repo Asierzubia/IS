@@ -44,8 +44,8 @@ public class CambiarContrasena extends JFrame{
 	
 	public CambiarContrasena() {
 		
-		setTitle("Cambiar Contrasena");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setTitle("Cambiar Contraseña");
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 449, 266);
 		panel_1 = new JPanel();
 		panel_1.setBorder(new EmptyBorder(5, 5, 5, 5));

@@ -129,9 +129,10 @@ public class Event implements Serializable {
 			return false;
 		return true;
 	}
-	
-	
-	
-	
 
+	public Question addQuestionConId(int pId, String question, float betMinimum) {
+		Question q=new Question(pId, question,betMinimum, this);
+        questions.add(q);
+        return q;
+	}
 }

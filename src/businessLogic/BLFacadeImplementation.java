@@ -77,8 +77,7 @@ public class BLFacadeImplementation  implements BLFacade {
 		dbManager.close();
 		return events;
 	}
-
-    
+   
 	/**
 	 * This method invokes the data access to retrieve the dates a month for which there are events
 	 * 
@@ -90,10 +89,7 @@ public class BLFacadeImplementation  implements BLFacade {
 		Vector<Date>  dates=dbManager.getEventsMonth(date);
 		dbManager.close();
 		return dates;
-	}
-	
-	
-	
+	}	
 
 	/**
 	 * This method invokes the data access to initialize the database with some events and questions.
@@ -173,5 +169,11 @@ public class BLFacadeImplementation  implements BLFacade {
 	public void cambiarContrasena(Usuario usuario, String password) {
 		DataAccess dBManager = new DataAccess();
 		dBManager.cambiarContrasena(usuario,password);
+	}
+	
+	@Override
+	public boolean anadirEvento(String pDescripcion, Date pFecha) {
+		DataAccess dBManager = new DataAccess();
+		return dBManager.anadirEvento(pDescripcion, pFecha);
 	}
 }

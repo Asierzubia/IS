@@ -94,6 +94,7 @@ public interface BLFacade  {
 	
 	@WebMethod public Collection<Event> getAllEvents();
 
+	@WebMethod void cambiarContrasena(Usuario usuario, String password);
 
-	void cambiarContrasena(Usuario usuario, String password);
+	@WebMethod boolean anadirEvento(String pDescripcion, Date pFecha);
 }

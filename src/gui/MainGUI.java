@@ -35,6 +35,7 @@ public class MainGUI extends JFrame {
 	private JPanel panel;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private JButton jButtonAdministrarUsuarios;
+	private JButton botonCrearEvento;
 	
 	/**
 	 * This is the default constructor
@@ -68,7 +69,7 @@ public class MainGUI extends JFrame {
 	 */
 	private void initialize() {
 		// this.setSize(271, 295);
-		this.setSize(495, 290);
+		this.setSize(513, 340);
 		this.setContentPane(getJContentPane());
 		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("MainTitle"));
 	}
@@ -86,6 +87,7 @@ public class MainGUI extends JFrame {
 			jContentPane.add(getBoton3());
 			jContentPane.add(getBoton2());
 			jContentPane.add(getJButtonAdministrarUsuarios());
+			jContentPane.add(getBotonCrearEvento());
 			jContentPane.add(getPanel());
 		}
 		return jContentPane;
@@ -100,7 +102,7 @@ public class MainGUI extends JFrame {
 	private JButton getBoton2() {
 		if (jButtonCreateQuery == null) {
 			jButtonCreateQuery = new JButton();
-			jButtonCreateQuery.setBounds(0, 91, 477, 60);
+			jButtonCreateQuery.setBounds(0, 91, 243, 60);
 			jButtonCreateQuery.setText(ResourceBundle.getBundle("Etiquetas").getString("CreateQuery"));
 			jButtonCreateQuery.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
@@ -122,7 +124,7 @@ public class MainGUI extends JFrame {
 	private JButton getBoton3() {
 		if (jButtonQueryQueries == null) {
 			jButtonQueryQueries = new JButton();
-			jButtonQueryQueries.setBounds(0, 33, 477, 60);
+			jButtonQueryQueries.setBounds(0, 33, 243, 60);
 			jButtonQueryQueries.setText(ResourceBundle.getBundle("Etiquetas").getString("QueryQueries"));
 			jButtonQueryQueries.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
@@ -148,6 +150,7 @@ public class MainGUI extends JFrame {
 	private JRadioButton getRdbtnNewRadioButton() {
 		if (rdbtnNewRadioButton == null) {
 			rdbtnNewRadioButton = new JRadioButton("English");
+			rdbtnNewRadioButton.setBounds(231, 5, 69, 25);
 			rdbtnNewRadioButton.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					Locale.setDefault(new Locale("en"));
@@ -162,6 +165,7 @@ public class MainGUI extends JFrame {
 	private JRadioButton getRdbtnNewRadioButton_1() {
 		if (rdbtnNewRadioButton_1 == null) {
 			rdbtnNewRadioButton_1 = new JRadioButton("Euskara");
+			rdbtnNewRadioButton_1.setBounds(61, 5, 73, 25);
 			rdbtnNewRadioButton_1.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					Locale.setDefault(new Locale("eus"));
@@ -176,6 +180,7 @@ public class MainGUI extends JFrame {
 	private JRadioButton getRdbtnNewRadioButton_2() {
 		if (rdbtnNewRadioButton_2 == null) {
 			rdbtnNewRadioButton_2 = new JRadioButton("Castellano");
+			rdbtnNewRadioButton_2.setBounds(139, 5, 87, 25);
 			rdbtnNewRadioButton_2.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					Locale.setDefault(new Locale("es"));
@@ -191,7 +196,8 @@ public class MainGUI extends JFrame {
 	private JPanel getPanel() {
 		if (panel == null) {
 			panel = new JPanel();
-			panel.setBounds(0, 192, 477, 72);
+			panel.setBounds(12, 182, 477, 72);
+			panel.setLayout(null);
 			panel.add(getRdbtnNewRadioButton_1());
 			panel.add(getRdbtnNewRadioButton_2());
 			panel.add(getRdbtnNewRadioButton());
@@ -217,7 +223,7 @@ public class MainGUI extends JFrame {
 				}
 			});
 			jButtonAdministrarUsuarios.setText(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.jButtonAdministrarUsuarios.text")); //$NON-NLS-1$ //$NON-NLS-2$
-			jButtonAdministrarUsuarios.setBounds(0, 145, 477, 52);
+			jButtonAdministrarUsuarios.setBounds(242, 33, 243, 60);
 		}
 		return jButtonAdministrarUsuarios;
 	}
@@ -225,6 +231,7 @@ public class MainGUI extends JFrame {
 	private JButton getBotonCerrarSesion() {
 		if (botonCerrarSesion == null) {
 			botonCerrarSesion = new JButton("Cerrar Sesión");
+			botonCerrarSesion.setBounds(354, 13, 111, 25);
 			botonCerrarSesion.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					MainGUI.this.dispose();
@@ -234,6 +241,20 @@ public class MainGUI extends JFrame {
 			});
 		}
 		return botonCerrarSesion;
+	}
+	private JButton getBotonCrearEvento() {
+		if (botonCrearEvento == null) {
+			botonCrearEvento = new JButton();
+			botonCrearEvento.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					CrearEventoGUI a = new CrearEventoGUI();
+					a.setVisible(true);
+				}
+			});
+			botonCrearEvento.setText(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.botonCrearEvento.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			botonCrearEvento.setBounds(242, 91, 243, 60);
+		}
+		return botonCrearEvento;
 	}
 } // @jve:decl-index=0:visual-constraint="0,0"
 

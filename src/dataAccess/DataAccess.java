@@ -196,7 +196,7 @@ public class DataAccess  {
 			if (ev.DoesQuestionExists(question)) throw new QuestionAlreadyExist(ResourceBundle.getBundle("Etiquetas").getString("ErrorQueryAlreadyExist"));
 			
 			db.getTransaction().begin();
-			Question q = ev.addQuestion(question, betMinimum);
+			Question q = ev.addQuestionConId(getNumeroQuestions() + 1, question, betMinimum);
 			//db.persist(q);
 			db.persist(ev); // db.persist(q) not required when CascadeType.PERSIST is added in questions property of Event class
 							// @OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
@@ -397,5 +397,31 @@ public class DataAccess  {
 		db.getTransaction().begin();
 		usu.setPassword(password);
 		db.getTransaction().commit();
+	}
+
+	public boolean anadirEvento(String pDescripcion, Date pFecha) {
+		db.getTransaction().begin();
+		try {
+			int numEvento = getNumeroEventos() + 1;
+			db.persist(new Event(numEvento, pDescripcion, pFecha));
+			db.getTransaction().commit();
+			return true;
+		}catch(Exception e){
+			return false;
+		}		
+	}
+	
+	public int getNumeroEventos() {
+		System.out.println(">> DataAccess: getNumeroEventos");
+		TypedQuery<Event> query = db.createQuery("SELECT ev FROM Event ev", Event.class);
+		List<Event> e = query.getResultList();
+		return e.size();
+	}
+	
+	public int getNumeroQuestions() {
+		System.out.println(">> DataAccess: getNumeroQuestions");
+		TypedQuery<Question> query = db.createQuery("SELECT q FROM Question q", Question.class);
+		List<Question> q = query.getResultList();
+		return q.size();
 	}
 }
