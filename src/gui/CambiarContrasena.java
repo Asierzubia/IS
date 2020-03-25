@@ -1,5 +1,6 @@
 package gui;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -11,6 +12,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
+import javax.swing.JPasswordField;
 
 
 public class CambiarContrasena extends JFrame{
@@ -18,16 +20,15 @@ public class CambiarContrasena extends JFrame{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private JTextField textContrasenaActual;
-	private JTextField textNuevaContrasena;
-	private JTextField textRepetirContrasena;
-	private JButton botonVolverAtras;
 	private JButton botonConfirmar;
 	private JPanel panel_1;
 	private JLabel labelContrasenaActual;
 	private JLabel labelContrasenaNueva;
 	private JLabel labelRepetirContrasena;
-	private JLabel labelAvisoPantalla;
+	private JLabel labelMensajes;
+	private JPasswordField contraActual;
+	private JPasswordField contraNueva1;
+	private JPasswordField contraNueva2;
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -46,7 +47,7 @@ public class CambiarContrasena extends JFrame{
 		
 		setTitle("Cambiar Contraseña");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 449, 266);
+		setBounds(100, 100, 452, 207);
 		panel_1 = new JPanel();
 		panel_1.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(panel_1);
@@ -54,61 +55,16 @@ public class CambiarContrasena extends JFrame{
 		panel_1.add(getLabelContrasenaActual());
 		panel_1.add(getLabelContrasenaNueva());
 		panel_1.add(getLabelRepetirContrasena());
-		panel_1.add(getLabelAvisoPantalla());
-		panel_1.add(getTextContrasenaActual());
-		panel_1.add(getTextNuevaContrasena());
-		panel_1.add(getTextRepetirContrasena());
+		panel_1.add(getLabelMensajes());
 		panel_1.add(getBotonConfirmar());
-		panel_1.add(getBotonVolverAtras());
 		panel_1.add(getLabelContrasenaActual());
 		panel_1.add(getLabelContrasenaNueva());
 		panel_1.add(getLabelRepetirContrasena());
-		panel_1.add(getLabelAvisoPantalla());
+		panel_1.add(getLabelMensajes());
+		panel_1.add(getContraActual());
+		panel_1.add(getContraNueva1());
+		panel_1.add(getContraNueva2());
 		
-	}
-	
-	private JTextField getTextContrasenaActual() {
-		if(textContrasenaActual == null) {
-			textContrasenaActual = new JTextField();
-			textContrasenaActual.setBounds(232, 27, 114, 18);
-			textContrasenaActual.setColumns(10);
-		}
-		return textContrasenaActual;
-	}
-
-	private JTextField getTextNuevaContrasena() {
-		if(textNuevaContrasena == null) {
-			textNuevaContrasena = new JTextField();
-			textNuevaContrasena.setBounds(231, 57, 114, 18);
-			textNuevaContrasena.setColumns(10);
-		}
-		return textNuevaContrasena;
-	}
-	
-
-	private JTextField getTextRepetirContrasena() {
-		if(textRepetirContrasena == null) {
-			textRepetirContrasena = new JTextField();
-			textRepetirContrasena.setBounds(232, 88, 114, 18);
-			textRepetirContrasena.setColumns(10);
-		}
-		return textRepetirContrasena;
-	}
-	
-
-	 private JButton getBotonVolverAtras() { 
-		 if( botonVolverAtras == null) {
-			 botonVolverAtras = new JButton("Volver Atras");
-			 botonVolverAtras.setBounds(242, 153, 104, 24);
-			 botonVolverAtras.addActionListener(new ActionListener() { 
-				 public void actionPerformed(ActionEvent arg0) { 
-					 JFrame a = new UsuarioGUI();
-					 a.setVisible(true);
-					 CambiarContrasena.this.dispose();
-				 }
-			 }); 
-		}
-		return botonVolverAtras;
 	}
 	 
 	
@@ -116,23 +72,31 @@ public class CambiarContrasena extends JFrame{
 	 private JButton getBotonConfirmar() {
 		 if(botonConfirmar == null) {
 			 botonConfirmar = new JButton("Confirmar");
-			 botonConfirmar.setBounds(123, 153, 91, 24);
+			 botonConfirmar.setBounds(25, 117, 91, 24);
 			 botonConfirmar.addActionListener(new ActionListener() {
 				 public void actionPerformed(ActionEvent arg1) {
-					 if(textContrasenaActual.getText().equals(UsuarioGUI.getUsuario().getPass())) {
-						 String nueva = textNuevaContrasena.getText();
-						 String repetida = textRepetirContrasena.getText();
-						 if(nueva.equals(repetida)) {
-							BLFacade facade = Inicio.getBusinessLogic();
-							labelAvisoPantalla.setText(UsuarioGUI.getUsuario().getId());
-							facade.cambiarContrasena(UsuarioGUI.getUsuario(),textNuevaContrasena.getText());
-							CambiarContrasena.this.dispose();
+					 String actual = new String(contraActual.getPassword());
+					 String nueva = new String(contraNueva1.getPassword());
+					 String repetida = new String(contraNueva2.getPassword());
+					 if(!actual.equals("") && !nueva.equals("") && !repetida.equals("")) {
+						 if(actual.equals(UsuarioGUI.getUsuario().getPass())) {
+							 if(nueva.equals(repetida)) {
+								BLFacade facade = Inicio.getBusinessLogic();
+								labelMensajes.setText(UsuarioGUI.getUsuario().getId());
+								facade.cambiarContrasena(UsuarioGUI.getUsuario(), nueva);
+								labelMensajes.setText("La contraseña se ha modificado con éxito.");
+								labelMensajes.setForeground(Color.GREEN);
+							 }else {
+								 labelMensajes.setText("Las contraseñas no coinciden.");
+								 labelMensajes.setForeground(Color.RED);
+							 }
 						 }else {
-							//getLabelAvisoPantalla().setText("Falla segundo if");
-							
+							 labelMensajes.setText("La contraseña actual no es correcta.");
+							 labelMensajes.setForeground(Color.RED);
 						 }
 					 }else {
-						// getLabelAvisoPantalla().setText("falla aqui");
+						 labelMensajes.setText("Hay campos vacíos.");
+						 labelMensajes.setForeground(Color.RED);
 					 }
 				 }
 			 });
@@ -161,11 +125,32 @@ public class CambiarContrasena extends JFrame{
 		}
 		return labelRepetirContrasena;
 	}
-	private JLabel getLabelAvisoPantalla() {
-		if (labelAvisoPantalla == null) {
-			labelAvisoPantalla = new JLabel("");
-			labelAvisoPantalla.setBounds(12, 127, 415, 14);
+	private JLabel getLabelMensajes() {
+		if (labelMensajes == null) {
+			labelMensajes = new JLabel("");
+			labelMensajes.setBounds(128, 127, 299, 14);
 		}
-		return labelAvisoPantalla;
+		return labelMensajes;
+	}
+	private JPasswordField getContraActual() {
+		if (contraActual == null) {
+			contraActual = new JPasswordField();
+			contraActual.setBounds(215, 25, 127, 22);
+		}
+		return contraActual;
+	}
+	private JPasswordField getContraNueva1() {
+		if (contraNueva1 == null) {
+			contraNueva1 = new JPasswordField();
+			contraNueva1.setBounds(215, 56, 127, 22);
+		}
+		return contraNueva1;
+	}
+	private JPasswordField getContraNueva2() {
+		if (contraNueva2 == null) {
+			contraNueva2 = new JPasswordField();
+			contraNueva2.setBounds(215, 86, 127, 22);
+		}
+		return contraNueva2;
 	}
 }

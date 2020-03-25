@@ -252,8 +252,9 @@ public class DataAccess  {
 	/**
 	 * This method retrieves an Usuario from the database
 	 * 
-	 * @param an identifier and a pass 
-	 * @return an Usuario or null
+	 * @param pId the identifier of the Usuario
+	 * @param pPass the pass of the Usuario
+	 * @return the Admin with that pId and pPass, or null
 	 */
 	public Usuario getUser(String pId, String pPass) {
 		System.out.println(">> DataAccess: getUser: " + pId);
@@ -268,8 +269,9 @@ public class DataAccess  {
 	/**
 	 * This method retrieves an Admin from the database 
 	 * 
-	 * @param an identifier and a pass 
-	 * @return an Admin or null
+	 * @param pId the identifier of the Admin
+	 * @param pPass the pass of the Admin
+	 * @return the Admin with that pId and pPass, or null
 	 */
 	public Admin getAdmin(String pId, String pPass) {
 		System.out.println(">> DataAccess: getAdmin: " + pId);
@@ -289,7 +291,8 @@ public class DataAccess  {
 	/**
 	 * This method return True if an Usuario exist in the database, and false if not 
 	 * 
-	 * @param an identifier and a pass 
+	 * @param pId of an Usuario
+	 * @param pPass of an Usuario
 	 * @return an boolean
 	 */
 	public boolean existeUsuario(String pId, String pPass) {
@@ -303,21 +306,26 @@ public class DataAccess  {
 	/**
 	 * This method add an Usuario to the database. Return true if it was possible, false if not
 	 * 
-	 * @param an identifier and a pass 
+	 * @param pId of an Usuario
+	 * @param pPass of an Usuario
 	 * @return an boolean
 	 */
 	public boolean registrarUsuario(String pId, String pPass) {
 		System.out.println(">> DataAccess: registrarUsuario: " + pId + " con contraseña: " + pPass);
 		db.getTransaction().begin();
-		db.persist(new Usuario(pId, pPass));
-		db.getTransaction().commit();
-		return true;
+		try {
+			db.persist(new Usuario(pId, pPass));
+			db.getTransaction().commit();
+			return true;
+		}catch (Exception e) {
+			return false;
+		}
 	}
 
 	/**
 	 * This method return all the Usuario from the database
 	 * 
-	 * @param an identifier and a pass 
+	 * @param 
 	 * @return a Collection of Usuario
 	 */
 	public Collection<Usuario> getAllUsers() {
@@ -330,7 +338,8 @@ public class DataAccess  {
 	/**
 	 * This method increments the money of an Usuario 
 	 * 
-	 * @param an identifier and a double 
+	 * @param pId the identifier of Usuario
+	 * @param pSaldo the money as Double
 	 * @return 
 	 */
 	public void incrementarSaldo(String pId, Double pSaldo) {
@@ -394,9 +403,7 @@ public class DataAccess  {
 		Vector<Event> res = new Vector<Event>();	
 		TypedQuery<Event> query = db.createQuery("SELECT ev FROM Event ev ",Event.class); 
 		List<Event> events = query.getResultList();
-	 	 for (Event ev:events){		 
-		   res.add(ev);
-		  }
+	 	 for (Event ev:events) res.add(ev);
 	 	return res;
 	}
 	

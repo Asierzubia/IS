@@ -107,6 +107,7 @@ public class CrearEventoGUI extends JFrame {
 		}
 		return botonCrearEvento;
 	}
+	
 	private JTextField getTextoDescripción() {
 		if (textoDescripción == null) {
 			textoDescripción = new JTextField();
@@ -115,6 +116,7 @@ public class CrearEventoGUI extends JFrame {
 		}
 		return textoDescripción;
 	}
+	
 	private JLabel getLabelDescripción() {
 		if (labelDescripción == null) {
 			labelDescripción = new JLabel("Descripción del evento");
@@ -122,6 +124,7 @@ public class CrearEventoGUI extends JFrame {
 		}
 		return labelDescripción;
 	}
+	
 	private JLabel getLblNewLabel() {
 		if (lblNewLabel == null) {
 			lblNewLabel = new JLabel("(Los dos equipos que juegan)");
@@ -129,6 +132,7 @@ public class CrearEventoGUI extends JFrame {
 		}
 		return lblNewLabel;
 	}
+	
 	private JLabel getLblequipoaequipob() {
 		if (lblequipoaequipob == null) {
 			lblequipoaequipob = new JLabel("(EquipoA-EquipoB)");
@@ -144,6 +148,7 @@ public class CrearEventoGUI extends JFrame {
 		}
 		return calendarioEventos;
 	}
+	
 	private JLabel getLblFechaDelEvento() {
 		if (lblFechaDelEvento == null) {
 			lblFechaDelEvento = new JLabel("Fecha del evento");
@@ -151,6 +156,7 @@ public class CrearEventoGUI extends JFrame {
 		}
 		return lblFechaDelEvento;
 	}
+	
 	private JLabel getLabelError() {
 		if (labelError == null) {
 			labelError = new JLabel("");

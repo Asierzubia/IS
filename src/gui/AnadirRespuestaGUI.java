@@ -110,14 +110,19 @@ public class AnadirRespuestaGUI extends JFrame {
 					BLFacade facade = Inicio.getBusinessLogic();
 					Question q = (Question) comboQuestion.getSelectedItem();
 					String respuesta = textRespuesta.getText();
-					if(q != null) {
-						if(facade.anadirRespuesta(q, respuesta)) {
-							error.setText("Se ha añadido la respuesta.");
-							error.setForeground(Color.GREEN);
-						}else {
-							error.setText("No se ha podido añadir la respuesta.");
-							error.setForeground(Color.RED);
+					if(!respuesta.equals("")) {
+						if(q != null) {
+							if(facade.anadirRespuesta(q, respuesta)) {
+								error.setText("Se ha añadido la respuesta.");
+								error.setForeground(Color.GREEN);
+							}else {
+								error.setText("No se ha podido añadir la respuesta.");
+								error.setForeground(Color.RED);
+							}
 						}
+					}else {
+						error.setText("Rellene todos los campos.");
+						error.setForeground(Color.RED);
 					}
 				}
 			});
