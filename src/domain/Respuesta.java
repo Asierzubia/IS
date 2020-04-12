@@ -41,7 +41,7 @@ public class Respuesta implements Serializable{
     }
     
     public String toString(){
-		return question.getQuestionNumber() + " ; " + this.textoRespuesta;
+		return this.textoRespuesta;
 	}
     
     public void setTextoRespuesta(String pTexto){ this.textoRespuesta = pTexto; }
