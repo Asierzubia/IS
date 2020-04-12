@@ -84,9 +84,17 @@ public class CrearEventoGUI extends JFrame {
 						labelError.setText("El año es incorrecto.");
 						labelError.setForeground(Color.RED);
 						error = true;
-					}else {
-						fecha = UtilDate.trim(new Date(calendarioEventos.getCalendar().getTime().getTime()));
-					}
+					}else if(calendarioEventos.getMonthChooser().getMonth()< Calendar.getInstance().get(Calendar.MONTH)) { 
+						labelError.setText("El mes introducido no es valido"); 
+						labelError.setForeground(Color.RED); 
+						error = true; 
+					}else if(calendarioEventos.getDayChooser().getDay()< Calendar.getInstance().get(Calendar.DAY_OF_MONTH)) { 
+						labelError.setText("El dia introducido no es valido"); 
+						labelError.setForeground(Color.RED); 
+						error = true; 
+					}else{ 
+						fecha = UtilDate.trim(new Date(calendarioEventos.getCalendar().getTime().getTime())); 
+					} 
 					if(!descripcion.equals("") && !error) {
 						if(facade.anadirEvento(descripcion, fecha)) {
 							labelError.setText("El evento se ha añadido correctamente.");
