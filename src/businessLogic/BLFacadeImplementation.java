@@ -1,22 +1,17 @@
 package businessLogic;
 
+import configuration.ConfigXML;
+import dataAccess.DataAccess;
+import domain.*;
+import exceptions.EventFinished;
+import exceptions.QuestionAlreadyExist;
+
+import javax.jws.WebMethod;
+import javax.jws.WebService;
 import java.util.Collection;
 import java.util.Date;
 import java.util.ResourceBundle;
 import java.util.Vector;
-
-import javax.jws.WebMethod;
-import javax.jws.WebService;
-
-import configuration.ConfigXML;
-import dataAccess.DataAccess;
-import domain.Question;
-import domain.Usuario;
-import domain.Admin;
-import domain.Event;
-import domain.Apuesta;
-import exceptions.EventFinished;
-import exceptions.QuestionAlreadyExist;
 
 /**
  * It implements the business logic as a web service.
@@ -154,9 +149,9 @@ public class BLFacadeImplementation  implements BLFacade {
 	}
 
 	@Override
-	public void generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, String pUsuario) {
+	public boolean generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, Usuario pUsuario) {
 		DataAccess dbManager=new DataAccess();
-		dbManager.generarApuesta(pQuestion,eleccionApuesta,pDinero,pUsuario);
+		return dbManager.generarApuesta(pQuestion,eleccionApuesta,pDinero,pUsuario);
 	}
 
 	@Override
@@ -178,8 +173,8 @@ public class BLFacadeImplementation  implements BLFacade {
 	}
 	
 	@Override
-	public boolean anadirRespuesta(Question pQuestion, String pRespuesta) {
+	public boolean anadirRespuesta(Respuesta pRespuesta) {
 		DataAccess dBManager = new DataAccess();
-		return dBManager.anadirRespuesta(pQuestion, pRespuesta);
+		return dBManager.anadirRespuesta(pRespuesta);
 	}
 }

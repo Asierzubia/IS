@@ -1,29 +1,16 @@
 package dataAccess;
 
 
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.ResourceBundle;
-import java.util.Vector;
+import configuration.ConfigXML;
+import configuration.UtilDate;
+import domain.*;
+import exceptions.QuestionAlreadyExist;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
-
-import domain.Apuesta;
-import configuration.ConfigXML;
-import configuration.UtilDate;
-import domain.Admin;
-import domain.Event;
-import domain.Question;
-import domain.Usuario;
-import exceptions.QuestionAlreadyExist;
+import java.util.*;
 
 /**
  * It implements the data access to the objectDb database
@@ -193,7 +180,7 @@ public class DataAccess  {
 		
 			Event ev = db.find(Event.class, event.getEventNumber());
 			
-			if (ev.DoesQuestionExists(question)) throw new QuestionAlreadyExist(ResourceBundle.getBundle("Etiquetas").getString("ErrorQueryAlreadyExist"));
+			if (ev.doesQuestionExists(question)) throw new QuestionAlreadyExist(ResourceBundle.getBundle("Etiquetas").getString("ErrorQueryAlreadyExist"));
 			
 			db.getTransaction().begin();
 			Question q = ev.addQuestionConId(getNumeroQuestions() + 1, question, betMinimum);
@@ -387,7 +374,7 @@ public class DataAccess  {
 	 */
 	public Collection<Apuesta> getApuestasUser(String pId) {
 		System.out.println(">> DataAccess: getApuestasUser de " + pId);
-		TypedQuery<Apuesta> query = db.createQuery("SELECT ap FROM Apuesta ap WHERE ap.usuarioId='" + pId + "'", Apuesta.class);
+		TypedQuery<Apuesta> query = db.createQuery("SELECT ap FROM Apuesta ap WHERE ap.usuario.id='" + pId + "'", Apuesta.class);
 		List<Apuesta> apuestas = query.getResultList();
 		return apuestas;
 	}
@@ -413,11 +400,16 @@ public class DataAccess  {
 	 * @param a question, the answer, the money of the bet and the id of the Usuario
 	 * @return
 	 */
-	public void generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, String pUsuario) {
+	public boolean generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, Usuario pUsuario) {
 		System.out.println(">> DataAccess: registrarApuesta");
 		db.getTransaction().begin();
-		db.persist(new Apuesta(pQuestion, eleccionApuesta,pDinero,pUsuario));
-		db.getTransaction().commit();
+		try {
+			db.persist(new Apuesta(pQuestion, eleccionApuesta,pDinero,pUsuario));
+			db.getTransaction().commit();
+			return true;
+		}catch (Exception e) {
+			return false;
+		}
 	}
 
 	/**
@@ -478,12 +470,16 @@ public class DataAccess  {
 		return q.size();
 	}
 
-	public boolean anadirRespuesta(Question pQuestion, String pRespuesta) {
-		System.out.println(">> DataAccess: anadirRespuesta " + pRespuesta + " a la question " + pQuestion.getQuestion());
-		Question q = getQuestion(pQuestion.getQuestionNumber());
+	public boolean anadirRespuesta(Respuesta pRespuesta) {
+		System.out.println(">> DataAccess: anadirRespuesta " + pRespuesta + " a la question " + pRespuesta.getQuestionNumber());
+		Question q = getQuestion(pRespuesta.getQuestionNumber());
+		Event ev = getEvent(pRespuesta.getEventNumber());
 		db.getTransaction().begin();
 		try {
-			q.anadirRespuesta(pRespuesta);
+			db.persist(pRespuesta);
+			q.anadirRespuesta(pRespuesta);			
+			db.persist(q);
+			db.persist(ev);
 			db.getTransaction().commit();
 			return true;
 		}catch (Exception e) {
@@ -492,13 +488,22 @@ public class DataAccess  {
 	}
 	
 	public Question getQuestion(int pQuestionNumber) {
-		TypedQuery<Question> query = db.createQuery("SELECT q FROM Question q", Question.class);
+		TypedQuery<Question> query = db.createQuery("SELECT q FROM Question q where q.questionNumber=" + pQuestionNumber, Question.class);
 		List<Question> questions = query.getResultList();
-		for(Question q : questions){
-			if(q.getQuestionNumber() == pQuestionNumber) {
-				return q;
-			}
+		if(!questions.isEmpty()) {
+			return questions.get(0);
+		}else {
+			return null;
 		}
-		return null;
+	}
+	
+	public Event getEvent(int pEventNumber) {
+		TypedQuery<Event> query = db.createQuery("SELECT e FROM Event e where e.eventNumber=" + pEventNumber, Event.class);
+		List<Event> events = query.getResultList();
+		if(!events.isEmpty()) {
+			return events.get(0);
+		}else {
+			return null;
+		}
 	}
 }

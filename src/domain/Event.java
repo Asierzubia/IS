@@ -98,15 +98,13 @@ public class Event implements Serializable {
 	 * @param question that needs to be checked if there exists
 	 * @return true if the question exists and false in other case
 	 */
-	public boolean DoesQuestionExists(String question)  {	
-		for (Question q:this.getQuestions()){
+	public boolean doesQuestionExists(String question)  {
+		for (Question q : this.getQuestions()){
 			if (q.getQuestion().compareTo(question)==0)
 				return true;
 		}
 		return false;
 	}
-		
-
 	
 	@Override
 	public int hashCode() {

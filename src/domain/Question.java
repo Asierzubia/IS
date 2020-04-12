@@ -1,14 +1,14 @@
 package domain;
 
-import java.io.*;
-import java.util.ArrayList;
-import java.util.Vector;
-
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlIDREF;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.io.Serializable;
+import java.util.Vector;
 
 
 @SuppressWarnings("serial")
@@ -23,7 +23,7 @@ public class Question implements Serializable {
 	private String question; 
 	private float betMinimum;
 	private String result;  
-	private Vector<String> respuestas;
+	private Vector<Respuesta> respuestas;
 	@XmlIDREF
 	private Event event;
 
@@ -37,15 +37,15 @@ public class Question implements Serializable {
 		this.question = query;
 		this.betMinimum=betMinimum;
 		this.event = event;
-		this.respuestas = new Vector<String>();
+		this.respuestas = new Vector<Respuesta>();
 	}
 	
 	public Question(String query, float betMinimum,  Event event) {
 		super();
 		this.question = query;
 		this.betMinimum=betMinimum;
-		this.respuestas = new Vector<String>();
-		//this.event = event;
+		this.event = event;
+		this.respuestas = new Vector<Respuesta>();
 	}
 
 	/**
@@ -149,11 +149,11 @@ public class Question implements Serializable {
 		return questionNumber+";"+question+";"+Float.toString(betMinimum);
 	}
 
-	public void anadirRespuesta(String pRespuesta) {
+	public void anadirRespuesta(Respuesta pRespuesta) {	
 		this.respuestas.add(pRespuesta);
 	}
 	
-	public Vector<String> getRespuestas(){
-		return respuestas;
+	public Vector<Respuesta> getRespuestas(){
+		return this.respuestas;
 	}
 }

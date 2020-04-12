@@ -1,24 +1,16 @@
 package businessLogic;
 
-import java.util.Vector;
-import java.util.Collection;
-import java.util.Date;
-
-
-
-
-
-//import domain.Booking;
-import domain.Question;
-import domain.Usuario;
-import domain.Admin;
-import domain.Event;
+import domain.*;
 import exceptions.EventFinished;
 import exceptions.QuestionAlreadyExist;
-import domain.Apuesta;
 
 import javax.jws.WebMethod;
 import javax.jws.WebService;
+import java.util.Collection;
+import java.util.Date;
+import java.util.Vector;
+
+//import domain.Booking;
 
 /**
  * Interface that specifies the business logic.
@@ -90,7 +82,7 @@ public interface BLFacade  {
 
 	@WebMethod Collection<Apuesta> getApuestasUser(String pId);
 	
-	@WebMethod public void generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, String pUsuario);
+	@WebMethod public boolean generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, Usuario pUsuario);
 	
 	@WebMethod public Collection<Event> getAllEvents();
 
@@ -98,5 +90,5 @@ public interface BLFacade  {
 
 	@WebMethod boolean anadirEvento(String pDescripcion, Date pFecha);
 
-	@WebMethod boolean anadirRespuesta(Question pQuestion, String pRespuesta);
+	@WebMethod boolean anadirRespuesta(Respuesta pRespuesta);
 }

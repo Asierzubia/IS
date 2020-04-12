@@ -94,7 +94,7 @@ public class VerApuestasGUI extends JFrame {
 		for (Apuesta a : listaApuestas) {
 			Object [] fila = new Object[4];
 			fila[0] = a.getIdUsuario();
-			fila[1] = a.getQuestionQuestion();
+			fila[1] = a.getQuestion().getQuestion();
 			fila[2] = a.getApostado();
 			fila[3] = a.getDineroApostado();
 			modelo.addRow(fila);
@@ -122,7 +122,7 @@ public class VerApuestasGUI extends JFrame {
 			for (Apuesta a : listaApuestas) {
 				Object [] fila = new Object[4];
 				fila[0] = a.getIdUsuario();
-				fila[1] = a.getQuestionQuestion();
+				fila[1] = a.getQuestion().getQuestion();
 				fila[2] = a.getApostado();
 				fila[3] = a.getDineroApostado();
 				modelo.addRow(fila);
