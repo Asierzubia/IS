@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import businessLogic.BLFacade;
+import configuration.UtilDate;
 import domain.Event;
 import domain.Question;
 
@@ -19,9 +20,13 @@ import javax.swing.JComboBox;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Vector;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import com.toedter.calendar.JCalendar;
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeEvent;
 
 public class AnadirRespuestaGUI extends JFrame {
 
@@ -37,6 +42,8 @@ public class AnadirRespuestaGUI extends JFrame {
 	private DefaultComboBoxModel<Event> listaEventos = new DefaultComboBoxModel<Event>();
 	private DefaultComboBoxModel<Question> listaQuestions = new DefaultComboBoxModel<Question>();
 	private JLabel error;
+	private JCalendar calendarioPartidos;
+	private JLabel label;
 	/**
 	 * Launch the application.
 	 */
@@ -61,13 +68,15 @@ public class AnadirRespuestaGUI extends JFrame {
 			@Override
 			public void windowActivated(WindowEvent arg0) {
 				BLFacade facade = Inicio.getBusinessLogic();
-				Collection<Event> lista = facade.getAllEvents();
-				for(Event e : lista) listaEventos.addElement(e);
+				Date fecha = UtilDate.trim(new Date(calendarioPartidos.getCalendar().getTime().getTime()));
+				listaEventos.removeAllElements();
+				Collection<Event> eventos = facade.getEvents(fecha);
+				for(Event evento : eventos) listaEventos.addElement(evento);
 			}
 		});
 		setTitle("Añadir Respuesta");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 443, 244);
+		setBounds(100, 100, 807, 283);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -80,25 +89,27 @@ public class AnadirRespuestaGUI extends JFrame {
 		contentPane.add(getComboEvento());
 		contentPane.add(getComboQuestion());
 		contentPane.add(getError());
+		contentPane.add(getCalendarioPartidos());
+		contentPane.add(getLabel());
 	}
 	private JLabel getLblEligeElEvento() {
 		if (lblEligeElEvento == null) {
-			lblEligeElEvento = new JLabel("Elige el evento");
-			lblEligeElEvento.setBounds(22, 31, 111, 16);
+			lblEligeElEvento = new JLabel("Elige el partido");
+			lblEligeElEvento.setBounds(380, 50, 111, 16);
 		}
 		return lblEligeElEvento;
 	}
 	private JLabel getLblEligeLaQuestion() {
 		if (lblEligeLaQuestion == null) {
-			lblEligeLaQuestion = new JLabel("Elige la question");
-			lblEligeLaQuestion.setBounds(22, 80, 111, 16);
+			lblEligeLaQuestion = new JLabel("Elige la pregunta");
+			lblEligeLaQuestion.setBounds(380, 99, 111, 16);
 		}
 		return lblEligeLaQuestion;
 	}
 	private JLabel getLblIntroduceLaRespuesta() {
 		if (lblIntroduceLaRespuesta == null) {
 			lblIntroduceLaRespuesta = new JLabel("Introduce la respuesta");
-			lblIntroduceLaRespuesta.setBounds(22, 132, 137, 16);
+			lblIntroduceLaRespuesta.setBounds(380, 151, 137, 16);
 		}
 		return lblIntroduceLaRespuesta;
 	}
@@ -126,14 +137,14 @@ public class AnadirRespuestaGUI extends JFrame {
 					}
 				}
 			});
-			botonAñadir.setBounds(12, 168, 151, 25);
+			botonAñadir.setBounds(370, 187, 151, 25);
 		}
 		return botonAñadir;
 	}
 	private JTextField getTextRespuesta() {
 		if (textRespuesta == null) {
 			textRespuesta = new JTextField();
-			textRespuesta.setBounds(166, 129, 203, 22);
+			textRespuesta.setBounds(524, 148, 203, 22);
 			textRespuesta.setColumns(10);
 		}
 		return textRespuesta;
@@ -152,7 +163,7 @@ public class AnadirRespuestaGUI extends JFrame {
 					}
 			    }
 			});
-			comboEvento.setBounds(165, 28, 204, 22);
+			comboEvento.setBounds(523, 47, 204, 22);
 			comboEvento.setModel(listaEventos);
 		}
 		return comboEvento;
@@ -161,7 +172,7 @@ public class AnadirRespuestaGUI extends JFrame {
 	private JComboBox<Question> getComboQuestion() {
 		if (comboQuestion == null) {
 			comboQuestion = new JComboBox<Question>();
-			comboQuestion.setBounds(165, 77, 204, 22);
+			comboQuestion.setBounds(523, 96, 204, 22);
 			comboQuestion.setModel(listaQuestions);
 		}
 		return comboQuestion;
@@ -169,8 +180,31 @@ public class AnadirRespuestaGUI extends JFrame {
 	private JLabel getError() {
 		if (error == null) {
 			error = new JLabel("");
-			error.setBounds(176, 172, 220, 16);
+			error.setBounds(534, 191, 220, 16);
 		}
 		return error;
+	}
+	private JCalendar getCalendarioPartidos() {
+		if (calendarioPartidos == null) {
+			calendarioPartidos = new JCalendar();
+			calendarioPartidos.addPropertyChangeListener(new PropertyChangeListener() {
+				public void propertyChange(PropertyChangeEvent arg0) {
+					BLFacade facade = Inicio.getBusinessLogic();
+					Date fecha = UtilDate.trim(new Date(calendarioPartidos.getCalendar().getTime().getTime()));
+					listaEventos.removeAllElements();
+					Collection<Event> eventos = facade.getEvents(fecha);
+					for(Event evento : eventos) listaEventos.addElement(evento);
+				}
+			});
+			calendarioPartidos.setBounds(12, 46, 331, 166);
+		}
+		return calendarioPartidos;
+	}
+	private JLabel getLabel() {
+		if (label == null) {
+			label = new JLabel("Elige un día para ver los partidos disponibles");
+			label.setBounds(12, 13, 299, 16);
+		}
+		return label;
 	}
 }

@@ -226,3 +226,41 @@ New type java.util.Vector<domain.Question>
 [2020-04-12 16:36:47 #12 type.registry] 
 New type java.util.Vector<java.lang.Object>
 
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-04-12 16:51:45 #1 store] 
+Database 'C:\Users\unaia\OneDrive\Desktop\ProyectoIS\resources\bets.temp' is opened by 12532@MSI
+
+[2020-04-12 16:51:46 #2 type.registry] 
+New type domain.Admin
+
+[2020-04-12 16:51:46 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-04-12 16:51:46 #4 type.registry] 
+New type domain.Usuario
+
+[2020-04-12 16:51:46 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-04-12 16:51:46 #6 type.registry] 
+New type domain.Question
+
+[2020-04-12 16:51:46 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-04-12 16:51:46 #8 type.registry] 
+New type domain.Event
+
+[2020-04-12 16:51:46 #9 type.registry] 
+New type java.util.Vector<java.lang.String>
+
+[2020-04-12 16:51:46 #10 type] 
+Type domain.Event is not enhanced.
+
+[2020-04-12 16:51:46 #11 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-04-12 16:51:46 #12 type.registry] 
+New type java.util.Vector<java.lang.Object>
+

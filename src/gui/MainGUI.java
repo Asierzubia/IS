@@ -225,7 +225,7 @@ public class MainGUI extends JFrame {
 				}
 			});
 			jButtonAdministrarUsuarios.setText(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.jButtonAdministrarUsuarios.text")); //$NON-NLS-1$ //$NON-NLS-2$
-			jButtonAdministrarUsuarios.setBounds(242, 33, 243, 60);
+			jButtonAdministrarUsuarios.setBounds(125, 150, 243, 52);
 		}
 		return jButtonAdministrarUsuarios;
 	}
@@ -254,7 +254,7 @@ public class MainGUI extends JFrame {
 				}
 			});
 			botonCrearEvento.setText(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.botonCrearEvento.text")); //$NON-NLS-1$ //$NON-NLS-2$
-			botonCrearEvento.setBounds(242, 91, 243, 60);
+			botonCrearEvento.setBounds(243, 33, 243, 60);
 		}
 		return botonCrearEvento;
 	}
@@ -267,7 +267,7 @@ public class MainGUI extends JFrame {
 					a.setVisible(true);
 				}
 			});
-			botonAñadirRespuesta.setBounds(122, 150, 243, 52);
+			botonAñadirRespuesta.setBounds(243, 91, 243, 60);
 		}
 		return botonAñadirRespuesta;
 	}
