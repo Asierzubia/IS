@@ -15,8 +15,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @Entity
 public class Respuesta implements Serializable{
 	
-    private Question question; //meter a pregunta
-    private Event event; //meter evento
+    private Question question;
+    private Event event;
     private String textoRespuesta;
     
     public Respuesta() {};
