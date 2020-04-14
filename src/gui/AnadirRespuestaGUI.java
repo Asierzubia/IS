@@ -39,6 +39,9 @@ public class AnadirRespuestaGUI extends JFrame {
 	private JLabel error;
 	private JCalendar calendarioPartidos;
 	private JLabel lblEligeElDa;
+	private JLabel lblIndicaLaBonificacin;
+	private JLabel lblPorEuroApostado;
+	private JSpinner spinnerBonificacion;
 	/**
 	 * Launch the application.
 	 */
@@ -70,7 +73,7 @@ public class AnadirRespuestaGUI extends JFrame {
 		});
 		setTitle("Añadir Respuesta");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 690, 272);
+		setBounds(100, 100, 707, 333);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -85,6 +88,9 @@ public class AnadirRespuestaGUI extends JFrame {
 		contentPane.add(getError());
 		contentPane.add(getCalendarioPartidos());
 		contentPane.add(getLblEligeElDa());
+		contentPane.add(getLblIndicaLaBonificacin());
+		contentPane.add(getLblPorEuroApostado());
+		contentPane.add(getSpinnerBonificacion());
 	}
 	private JLabel getLblEligeElEvento() {
 		if (lblEligeElEvento == null) {
@@ -117,7 +123,7 @@ public class AnadirRespuestaGUI extends JFrame {
 					Question q = (Question) comboQuestion.getSelectedItem();
 					if(!textRespuesta.getText().equals("")) {
 						if(q != null) {
-							Respuesta respuesta = new Respuesta(q,evento, textRespuesta.getText());
+							Respuesta respuesta = new Respuesta(q,evento, textRespuesta.getText(), (Double) spinnerBonificacion.getValue());
 							if(facade.anadirRespuesta(respuesta)) {
 								error.setText("Se ha añadido la respuesta.");
 								error.setForeground(Color.GREEN);
@@ -132,7 +138,7 @@ public class AnadirRespuestaGUI extends JFrame {
 					}
 				}
 			});
-			botonAñadir.setBounds(258, 185, 151, 25);
+			botonAñadir.setBounds(268, 253, 151, 25);
 		}
 		return botonAñadir;
 	}
@@ -175,7 +181,7 @@ public class AnadirRespuestaGUI extends JFrame {
 	private JLabel getError() {
 		if (error == null) {
 			error = new JLabel("");
-			error.setBounds(422, 189, 220, 16);
+			error.setBounds(433, 263, 220, 16);
 		}
 		return error;
 	}
@@ -202,5 +208,27 @@ public class AnadirRespuestaGUI extends JFrame {
 			lblEligeElDa.setBounds(12, 19, 203, 16);
 		}
 		return lblEligeElDa;
+	}
+	private JLabel getLblIndicaLaBonificacin() {
+		if (lblIndicaLaBonificacin == null) {
+			lblIndicaLaBonificacin = new JLabel("Indica la ganancia");
+			lblIndicaLaBonificacin.setBounds(268, 197, 128, 16);
+		}
+		return lblIndicaLaBonificacin;
+	}
+	private JLabel getLblPorEuroApostado() {
+		if (lblPorEuroApostado == null) {
+			lblPorEuroApostado = new JLabel("por Euro apostado");
+			lblPorEuroApostado.setBounds(268, 215, 121, 16);
+		}
+		return lblPorEuroApostado;
+	}
+	private JSpinner getSpinnerBonificacion() {
+		if (spinnerBonificacion == null) {
+			spinnerBonificacion = new JSpinner();
+			spinnerBonificacion.setModel(new SpinnerNumberModel(new Double(0), new Double(0), null, new Double(1)));
+			spinnerBonificacion.setBounds(412, 197, 121, 22);
+		}
+		return spinnerBonificacion;
 	}
 }

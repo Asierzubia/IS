@@ -400,11 +400,11 @@ public class DataAccess  {
 	 * @param a question, the answer, the money of the bet and the id of the Usuario
 	 * @return
 	 */
-	public boolean generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, Usuario pUsuario) {
+	public boolean generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, Usuario pUsuario, Double pGanancia) {
 		System.out.println(">> DataAccess: registrarApuesta");
 		db.getTransaction().begin();
 		try {
-			db.persist(new Apuesta(pQuestion, eleccionApuesta,pDinero,pUsuario));
+			db.persist(new Apuesta(pQuestion, eleccionApuesta,pDinero,pUsuario,pGanancia));
 			db.getTransaction().commit();
 			return true;
 		}catch (Exception e) {
@@ -471,15 +471,12 @@ public class DataAccess  {
 	}
 
 	public boolean anadirRespuesta(Respuesta pRespuesta) {
-		System.out.println(">> DataAccess: anadirRespuesta " + pRespuesta + " a la question " + pRespuesta.getQuestionNumber());
+		System.out.println(">> DataAccess: anadirRespuesta " + pRespuesta + " a la question  " + pRespuesta.getQuestionNumber() + " con un bono de ganancia de " + pRespuesta.getBonificacion().toString());
 		Question q = getQuestion(pRespuesta.getQuestionNumber());
-		Event ev = getEvent(pRespuesta.getEventNumber());
 		db.getTransaction().begin();
 		try {
 			db.persist(pRespuesta);
-			q.anadirRespuesta(pRespuesta);			
-			db.persist(q);
-			db.persist(ev);
+			q.anadirRespuesta(pRespuesta);
 			db.getTransaction().commit();
 			return true;
 		}catch (Exception e) {

@@ -19,6 +19,8 @@ import java.util.Vector;
 import com.toedter.calendar.JCalendar;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeEvent;
+import javax.swing.event.ChangeListener;
+import javax.swing.event.ChangeEvent;
 
 public class ApostarGUI extends JFrame {
 
@@ -39,6 +41,10 @@ public class ApostarGUI extends JFrame {
 	private DefaultComboBoxModel<Respuesta> modeloRespuestas = new DefaultComboBoxModel<Respuesta>();
 	private JCalendar calendarioPartidos;
 	private JLabel label;
+	private JLabel lblBonificacinPorEuro;
+	private JLabel lblPosiblesGanancias;
+	private JTextField bonificacionEuro;
+	private JTextField posiblesBeneficios;
 
 	/**
 	 * Launch the application.
@@ -71,7 +77,7 @@ public class ApostarGUI extends JFrame {
 		});
 		setTitle("Apostar");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 711, 272);
+		setBounds(100, 100, 710, 352);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -88,6 +94,10 @@ public class ApostarGUI extends JFrame {
 		contentPane.add(getLabelMensaje());
 		contentPane.add(getCalendarioPartidos());
 		contentPane.add(getLabel());
+		contentPane.add(getLblBonificacinPorEuro());
+		contentPane.add(getLblPosiblesGanancias());
+		contentPane.add(getBonificacionEuro());
+		contentPane.add(getPosiblesBeneficios());
 		
 		
 	}
@@ -102,6 +112,16 @@ public class ApostarGUI extends JFrame {
 	private JComboBox<Respuesta> getComboRespuestas(){
 		if(comboRespuestas == null) {
 			comboRespuestas = new JComboBox<Respuesta>();
+			comboRespuestas.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					if(modeloRespuestas.getSize() != 0) {
+						Double boni = ((Respuesta) comboRespuestas.getSelectedItem()).getBonificacion();
+						bonificacionEuro.setText(boni.toString());
+						Double ganancias = boni * (Double) spinnerDinero.getValue();
+						posiblesBeneficios.setText(ganancias.toString());
+					}
+				}
+			});
 			comboRespuestas.setBounds(424, 100, 214, 24);
 			comboRespuestas.setModel(modeloRespuestas);
 		}
@@ -192,7 +212,9 @@ public class ApostarGUI extends JFrame {
 						 }
 						 else {
 							 String respuesta = ((Respuesta) comboRespuestas.getSelectedItem()).getTextoRespuesta();
-							 if(Inicio.getBusinessLogic().generarApuesta(selectedQuestion, respuesta, (Double) spinnerDinero.getValue(), UsuarioGUI.getUsuario())) {
+							 Double boni = ((Respuesta) comboRespuestas.getSelectedItem()).getBonificacion();
+							 Double ganancias = boni * (Double) spinnerDinero.getValue();
+							 if(Inicio.getBusinessLogic().generarApuesta(selectedQuestion, respuesta, (Double) spinnerDinero.getValue(), UsuarioGUI.getUsuario(), ganancias)) {
 								 Inicio.getBusinessLogic().incrementarSaldo(UsuarioGUI.getUsuario().getId(), (-(Double) spinnerDinero.getValue()));
 								 UsuarioGUI.setUsuario(Inicio.getBusinessLogic().tryUser(UsuarioGUI.getUsuario().getId(), UsuarioGUI.getUsuario().getPass()));
 								 labelMensaje.setText("Gracias por apostar con nosotros");
@@ -205,7 +227,7 @@ public class ApostarGUI extends JFrame {
 					}
 				}
 			});
-			botonApostar.setBounds(301, 190, 97, 25);
+			botonApostar.setBounds(301, 267, 97, 25);
 		}
 		return botonApostar;
 	}
@@ -213,8 +235,16 @@ public class ApostarGUI extends JFrame {
 	private JSpinner getSpinnerDinero() {
 		if (spinnerDinero == null) {
 			spinnerDinero = new JSpinner();
+			spinnerDinero.addChangeListener(new ChangeListener() {
+				public void stateChanged(ChangeEvent arg0) {
+					Double boni = ((Respuesta) comboRespuestas.getSelectedItem()).getBonificacion();
+					bonificacionEuro.setText(boni.toString());
+					Double ganancias = boni * (Double) spinnerDinero.getValue();
+					posiblesBeneficios.setText(ganancias.toString());
+				}
+			});
 			spinnerDinero.setModel(new SpinnerNumberModel(new Double(1), new Double(1), null, new Double(1)));
-			spinnerDinero.setBounds(421, 140, 107, 22);
+			spinnerDinero.setBounds(421, 140, 79, 22);
 		}
 		return spinnerDinero;
 	}
@@ -222,7 +252,7 @@ public class ApostarGUI extends JFrame {
 	private JLabel getLabelMensaje() {
 		if (labelMensaje == null) {
 			labelMensaje = new JLabel("");
-			labelMensaje.setBounds(301, 172, 384, 16);
+			labelMensaje.setBounds(301, 249, 384, 16);
 		}
 		return labelMensaje;
 	}
@@ -249,5 +279,37 @@ public class ApostarGUI extends JFrame {
 			label.setBounds(12, 9, 203, 16);
 		}
 		return label;
+	}
+	private JLabel getLblBonificacinPorEuro() {
+		if (lblBonificacinPorEuro == null) {
+			lblBonificacinPorEuro = new JLabel("Bonificación por Euro");
+			lblBonificacinPorEuro.setBounds(301, 183, 131, 16);
+		}
+		return lblBonificacinPorEuro;
+	}
+	private JLabel getLblPosiblesGanancias() {
+		if (lblPosiblesGanancias == null) {
+			lblPosiblesGanancias = new JLabel("Posibles beneficios");
+			lblPosiblesGanancias.setBounds(524, 183, 143, 16);
+		}
+		return lblPosiblesGanancias;
+	}
+	private JTextField getBonificacionEuro() {
+		if (bonificacionEuro == null) {
+			bonificacionEuro = new JTextField();
+			bonificacionEuro.setEditable(false);
+			bonificacionEuro.setBounds(301, 212, 116, 22);
+			bonificacionEuro.setColumns(10);
+		}
+		return bonificacionEuro;
+	}
+	private JTextField getPosiblesBeneficios() {
+		if (posiblesBeneficios == null) {
+			posiblesBeneficios = new JTextField();
+			posiblesBeneficios.setEditable(false);
+			posiblesBeneficios.setBounds(524, 212, 116, 22);
+			posiblesBeneficios.setColumns(10);
+		}
+		return posiblesBeneficios;
 	}
 }

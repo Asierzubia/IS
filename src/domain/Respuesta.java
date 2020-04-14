@@ -18,14 +18,16 @@ public class Respuesta implements Serializable{
     private Question question;
     private Event event;
     private String textoRespuesta;
+    private Double bonificacion;
     
     public Respuesta() {};
   
-    public Respuesta(Question pQuestion, Event pEvent, String pTextoRespuesta){
+    public Respuesta(Question pQuestion, Event pEvent, String pTextoRespuesta, Double pBonificacion){
     	super();
     	this.question = pQuestion;
         this.event = pEvent;
         this.textoRespuesta = pTextoRespuesta;
+        this.bonificacion = pBonificacion;
     }
     
     public String getTextoRespuesta(){ 
@@ -44,5 +46,8 @@ public class Respuesta implements Serializable{
 		return this.textoRespuesta;
 	}
     
+    public Double getBonificacion() {
+    	return this.bonificacion;
+    }
     public void setTextoRespuesta(String pTexto){ this.textoRespuesta = pTexto; }
 }
