@@ -37,6 +37,7 @@ public class MainGUI extends JFrame {
 	private JButton jButtonAdministrarUsuarios;
 	private JButton botonCrearEvento;
 	private JButton botonAñadirRespuesta;
+	private JButton botonResponderApuesta;
 	
 	/**
 	 * This is the default constructor
@@ -92,6 +93,8 @@ public class MainGUI extends JFrame {
 			jContentPane.add(getBotonAñadirRespuesta());
 			jContentPane.add(getPanel());
 			jContentPane.add(getBotonCerrarSesion());
+			jContentPane.add(getBotonResponderApuesta());
+
 		}
 		return jContentPane;
 	}
@@ -225,7 +228,7 @@ public class MainGUI extends JFrame {
 				}
 			});
 			jButtonAdministrarUsuarios.setText(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.jButtonAdministrarUsuarios.text")); //$NON-NLS-1$ //$NON-NLS-2$
-			jButtonAdministrarUsuarios.setBounds(125, 150, 243, 52);
+			jButtonAdministrarUsuarios.setBounds(0, 152, 243, 52);
 		}
 		return jButtonAdministrarUsuarios;
 	}
@@ -270,6 +273,20 @@ public class MainGUI extends JFrame {
 			botonAñadirRespuesta.setBounds(243, 91, 243, 60);
 		}
 		return botonAñadirRespuesta;
+	}
+	
+	private JButton getBotonResponderApuesta() {
+		if (botonResponderApuesta == null) {
+			botonResponderApuesta = new JButton(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.btnResponderApuesta.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			botonResponderApuesta.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					ResponderApuestaGUI a = new ResponderApuestaGUI();
+					a.setVisible(true);
+				}
+			});
+			botonResponderApuesta.setBounds(243, 152, 243, 52);
+		}
+		return botonResponderApuesta;
 	}
 } // @jve:decl-index=0:visual-constraint="0,0"
 

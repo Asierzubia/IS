@@ -1,4 +1,4 @@
-/domain/
-/dataAccess/
 /gui/
 /businessLogic/
+/dataAccess/
+/domain/

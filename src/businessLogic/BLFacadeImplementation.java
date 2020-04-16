@@ -177,4 +177,13 @@ public class BLFacadeImplementation  implements BLFacade {
 		DataAccess dBManager = new DataAccess();
 		return dBManager.anadirRespuesta(pRespuesta);
 	}
+	
+	@Override
+	public Respuesta ResponderApuesta(Question pQuestion, Respuesta pRespuesta) {
+	    DataAccess dBManager=new DataAccess();
+		Respuesta r=null;		
+		r=dBManager.ResponderApuesta(pQuestion,pRespuesta);		
+		dBManager.close();		
+		return r;
+	}
 }

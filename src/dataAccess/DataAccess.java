@@ -469,6 +469,13 @@ public class DataAccess  {
 		List<Question> q = query.getResultList();
 		return q.size();
 	}
+	
+	public int getNumeroRespuestas() {
+		System.out.println(">> DataAccess: getNumeroRespuestas");
+		TypedQuery<Respuesta> query = db.createQuery("SELECT q FROM Respuesta q", Respuesta.class);
+		List<Respuesta> q = query.getResultList();
+		return q.size();
+	}
 
 	public boolean anadirRespuesta(Respuesta pRespuesta) {
 		System.out.println(">> DataAccess: anadirRespuesta " + pRespuesta + " a la question  " + pRespuesta.getQuestionNumber() + " con un bono de ganancia de " + pRespuesta.getBonificacion().toString());
@@ -502,5 +509,19 @@ public class DataAccess  {
 		}else {
 			return null;
 		}
+	}
+	
+	public Respuesta ResponderApuesta(Question pQuestion, Respuesta pRespuesta) {
+		System.out.println(">> DataAccess: Responer Apuesta=> question= "+pQuestion+" Respuesta "+pRespuesta);
+		
+		Question q = db.find(Question.class, pQuestion.getQuestionNumber());	
+		db.getTransaction().begin();
+		Respuesta r = q.setRespuestaCorrecta(pRespuesta);
+		//db.persist(q);
+		db.persist(q);
+		db.persist(r);
+						
+		db.getTransaction().commit();
+		return r;
 	}
 }

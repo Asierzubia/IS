@@ -17,6 +17,7 @@ public class Apuesta {
 	private Double dinero;
 	private Usuario usuario;
 	private Double ganancia;
+
 	
 	public Apuesta(Question pQuestion, String eleccionApuesta, Double pDinero, Usuario pUsuario, Double pGanancia) {
 		this.id = count.incrementAndGet();
@@ -25,6 +26,7 @@ public class Apuesta {
 		this.dinero=pDinero;
 		this.usuario = pUsuario;
 		this.ganancia=pGanancia;
+		
 	}
 
 	public Usuario getIdUsuario() {
@@ -46,4 +48,5 @@ public class Apuesta {
 	public Double getGanancia() {
 		return this.ganancia;
 	}
+	
 }

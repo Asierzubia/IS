@@ -91,4 +91,6 @@ public interface BLFacade  {
 	@WebMethod boolean anadirEvento(String pDescripcion, Date pFecha);
 
 	@WebMethod boolean anadirRespuesta(Respuesta pRespuesta);
+	
+	@WebMethod Respuesta ResponderApuesta(Question pQuestion,Respuesta pRespuesta);
 }

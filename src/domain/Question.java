@@ -26,6 +26,7 @@ public class Question implements Serializable {
 	private String question; 
 	private float betMinimum;
 	private String result;  
+	private Respuesta respuestaCorrecta;
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
 	private Vector<Respuesta> respuestas;
 	@XmlIDREF
@@ -155,6 +156,15 @@ public class Question implements Serializable {
 
 	public void anadirRespuesta(Respuesta pRespuesta) {	
 		this.respuestas.add(pRespuesta);
+	}
+	
+	public Respuesta setRespuestaCorrecta(Respuesta pRespuesta) {	
+		this.respuestaCorrecta = pRespuesta;
+		return pRespuesta;
+	}
+	
+	public Respuesta getRespuestaCorrecta() {	
+		return respuestaCorrecta;
 	}
 	
 	public Vector<Respuesta> getRespuestas(){
