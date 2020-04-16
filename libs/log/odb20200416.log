@@ -42,3 +42,223 @@ Type domain.Respuesta is not enhanced.
 [2020-04-16 12:08:00 #14 type.registry] 
 New type java.util.Vector<java.lang.Object>
 
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-04-16 16:13:27 #1 store] 
+Database 'G:\EspacioTrabajo\IS\resources\bets.temp' is opened by 14096@DESKTOP-9S4RODJ
+
+[2020-04-16 16:13:27 #2 type.registry] 
+New type domain.Admin
+
+[2020-04-16 16:13:27 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-04-16 16:13:27 #4 type.registry] 
+New type domain.Usuario
+
+[2020-04-16 16:13:27 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-04-16 16:13:27 #6 type.registry] 
+New type domain.Question
+
+[2020-04-16 16:13:27 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-04-16 16:13:27 #8 type.registry] 
+New type domain.Event
+
+[2020-04-16 16:13:27 #9 type.registry] 
+New type domain.Respuesta
+
+[2020-04-16 16:13:27 #10 type.registry] 
+New type java.util.Vector<domain.Respuesta>
+
+[2020-04-16 16:13:27 #11 type] 
+Type domain.Event is not enhanced.
+
+[2020-04-16 16:13:27 #12 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-04-16 16:13:27 #13 type] 
+Type domain.Respuesta is not enhanced.
+
+[2020-04-16 16:13:27 #14 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-04-16 16:16:17 #1 store] 
+Database 'G:\EspacioTrabajo\IS\resources\bets.temp' is opened by 10796@DESKTOP-9S4RODJ
+
+[2020-04-16 16:16:17 #2 type.registry] 
+New type domain.Admin
+
+[2020-04-16 16:16:17 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-04-16 16:16:17 #4 type.registry] 
+New type domain.Usuario
+
+[2020-04-16 16:16:17 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-04-16 16:16:17 #6 type.registry] 
+New type domain.Question
+
+[2020-04-16 16:16:17 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-04-16 16:16:17 #8 type.registry] 
+New type domain.Event
+
+[2020-04-16 16:16:17 #9 type.registry] 
+New type domain.Respuesta
+
+[2020-04-16 16:16:17 #10 type.registry] 
+New type java.util.Vector<domain.Respuesta>
+
+[2020-04-16 16:16:17 #11 type] 
+Type domain.Event is not enhanced.
+
+[2020-04-16 16:16:17 #12 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-04-16 16:16:17 #13 type] 
+Type domain.Respuesta is not enhanced.
+
+[2020-04-16 16:16:17 #14 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-04-16 16:19:10 #1 store] 
+Database 'G:\EspacioTrabajo\IS\resources\bets.temp' is opened by 11436@DESKTOP-9S4RODJ
+
+[2020-04-16 16:19:11 #2 type.registry] 
+New type domain.Admin
+
+[2020-04-16 16:19:11 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-04-16 16:19:11 #4 type.registry] 
+New type domain.Usuario
+
+[2020-04-16 16:19:11 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-04-16 16:19:11 #6 type.registry] 
+New type domain.Question
+
+[2020-04-16 16:19:11 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-04-16 16:19:11 #8 type.registry] 
+New type domain.Event
+
+[2020-04-16 16:19:11 #9 type.registry] 
+New type domain.Respuesta
+
+[2020-04-16 16:19:11 #10 type.registry] 
+New type java.util.Vector<domain.Respuesta>
+
+[2020-04-16 16:19:11 #11 type] 
+Type domain.Event is not enhanced.
+
+[2020-04-16 16:19:11 #12 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-04-16 16:19:11 #13 type] 
+Type domain.Respuesta is not enhanced.
+
+[2020-04-16 16:19:11 #14 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-04-16 16:20:42 #1 store] 
+Database 'G:\EspacioTrabajo\IS\resources\bets.temp' is opened by 13224@DESKTOP-9S4RODJ
+
+[2020-04-16 16:20:42 #2 type.registry] 
+New type domain.Admin
+
+[2020-04-16 16:20:42 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-04-16 16:20:42 #4 type.registry] 
+New type domain.Usuario
+
+[2020-04-16 16:20:42 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-04-16 16:20:42 #6 type.registry] 
+New type domain.Question
+
+[2020-04-16 16:20:42 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-04-16 16:20:42 #8 type.registry] 
+New type domain.Event
+
+[2020-04-16 16:20:42 #9 type.registry] 
+New type domain.Respuesta
+
+[2020-04-16 16:20:42 #10 type.registry] 
+New type java.util.Vector<domain.Respuesta>
+
+[2020-04-16 16:20:42 #11 type] 
+Type domain.Event is not enhanced.
+
+[2020-04-16 16:20:42 #12 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-04-16 16:20:42 #13 type] 
+Type domain.Respuesta is not enhanced.
+
+[2020-04-16 16:20:42 #14 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-04-16 16:22:10 #1 store] 
+Database 'G:\EspacioTrabajo\IS\resources\bets.temp' is opened by 9684@DESKTOP-9S4RODJ
+
+[2020-04-16 16:22:10 #2 type.registry] 
+New type domain.Admin
+
+[2020-04-16 16:22:10 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-04-16 16:22:10 #4 type.registry] 
+New type domain.Usuario
+
+[2020-04-16 16:22:10 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-04-16 16:22:10 #6 type.registry] 
+New type domain.Question
+
+[2020-04-16 16:22:10 #7 type] 
+Type domain.Question is not enhanced.
+
+[2020-04-16 16:22:10 #8 type.registry] 
+New type domain.Event
+
+[2020-04-16 16:22:10 #9 type.registry] 
+New type domain.Respuesta
+
+[2020-04-16 16:22:10 #10 type.registry] 
+New type java.util.Vector<domain.Respuesta>
+
+[2020-04-16 16:22:10 #11 type] 
+Type domain.Event is not enhanced.
+
+[2020-04-16 16:22:10 #12 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-04-16 16:22:10 #13 type] 
+Type domain.Respuesta is not enhanced.
+
+[2020-04-16 16:22:10 #14 type.registry] 
+New type java.util.Vector<java.lang.Object>
+

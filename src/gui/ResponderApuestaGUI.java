@@ -69,7 +69,7 @@ public class ResponderApuestaGUI extends JFrame {
 				for(Event e : lista) listaEventos.addElement(e);
 			}
 		});
-		setTitle("Añadir Respuesta");
+		setTitle("Responder Apuesta");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 707, 333);
 		contentPane = new JPanel();
@@ -114,7 +114,7 @@ public class ResponderApuestaGUI extends JFrame {
 	}
 	private JButton getBotonAñadir() {
 		if (botonAñadir == null) {
-			botonAñadir = new JButton("Añadir respuesta");
+			botonAñadir = new JButton("Responder apuesta");
 			botonAñadir.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					BLFacade facade = Inicio.getBusinessLogic();
@@ -124,7 +124,7 @@ public class ResponderApuestaGUI extends JFrame {
 					if (evento!=null) {
 						if(r!=null) {
 							if(q != null) {
-								if(facade.ResponderApuesta(q,r)!=null) {
+								if(facade.ResponderApuesta(q,r)!=null || q.getRespuestaCorrecta()==null) {
 									error.setText("Se ha añadido la respuesta.");
 									error.setForeground(Color.GREEN);
 								}else {
