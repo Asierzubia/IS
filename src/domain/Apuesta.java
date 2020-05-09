@@ -17,7 +17,7 @@ public class Apuesta {
 	private Double dinero;
 	private Usuario usuario;
 	private Double ganancia;
-
+	private boolean cobrada;
 	
 	public Apuesta(Question pQuestion, String eleccionApuesta, Double pDinero, Usuario pUsuario, Double pGanancia) {
 		this.id = count.incrementAndGet();
@@ -26,11 +26,20 @@ public class Apuesta {
 		this.dinero=pDinero;
 		this.usuario = pUsuario;
 		this.ganancia=pGanancia;
+		this.cobrada = false;
 		
 	}
 
 	public Usuario getIdUsuario() {
 		return this.usuario;
+	}
+	
+	public int getId() {
+		return this.id;
+	}
+	
+	public String toString(){
+		return id+";"+question+";"+apostada+";"+dinero+";"+cobrada;
 	}
 	
 	public Question getQuestion() {
@@ -47,6 +56,14 @@ public class Apuesta {
 	
 	public Double getGanancia() {
 		return this.ganancia;
+	}
+	
+	public void setCobrada() {
+		this.cobrada = true;
+	}
+	
+	public boolean getCobrada() {
+		return this.cobrada;
 	}
 	
 }

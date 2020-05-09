@@ -28,6 +28,7 @@ public class Carrera implements Serializable {
 	private Date carreraDate;
 	@OneToMany(fetch=FetchType.EAGER, cascade=CascadeType.PERSIST)
 	private Vector<Galgo> galgos=new Vector<Galgo>();
+	private Galgo respuestaCorrecta;
 
 	public Vector<Galgo> getGalgos() {
 		return galgos;
@@ -143,6 +144,19 @@ public class Carrera implements Serializable {
 		Galgo g=new Galgo(pId, nombreGalgo,betMinimum, this);
         galgos.add(g);
         return g;
+	}
+	
+	public Galgo setRespuestaCorrecta(Galgo pGalgo) {	
+		this.respuestaCorrecta = pGalgo;
+		return pGalgo;
+	}
+	
+	public Galgo getRespuestaCorrecta() {	
+		return respuestaCorrecta;
+	}
+	
+	public Vector<Galgo> getRespuestas(){
+		return this.galgos;
 	}
 
 }

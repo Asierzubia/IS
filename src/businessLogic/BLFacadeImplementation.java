@@ -221,4 +221,43 @@ public class BLFacadeImplementation  implements BLFacade {
 		dBManager.close();		
 		return r;
 	}
+	
+		@Override
+	public Vector<Event> eventosAnterioresAFecha(Date pDate){
+		DataAccess dBManager = new DataAccess();
+		return dBManager.getEventsBeforeDate(pDate);
+	}
+	
+	@Override
+	public Vector<Apuesta> apuestasConQuestion(Question pQuestion){
+		DataAccess dBManager = new DataAccess();
+		return dBManager.getBetsWithQuest(pQuestion);
+	}
+	
+	@Override
+	public void setCobradaApuesta(Apuesta pApuesta) {
+		DataAccess dBManager = new DataAccess();
+		dBManager.setCobradaApuesta(pApuesta);
+	}
+	
+	@Override
+	public void setCobradaApuestaGalgos(ApuestaGalgo pApuesta) {
+		DataAccess dBManager = new DataAccess();
+		dBManager.setCobradaApuestaGalgos(pApuesta);
+	}
+	
+	@Override
+	public Galgo ResponderApuestaGalgos(Carrera pCarrera, Galgo pGalgo) {
+	    DataAccess dBManager=new DataAccess();
+		Galgo g=null;		
+		g=dBManager.ResponderApuestaGalgos(pCarrera,pGalgo);		
+		dBManager.close();		
+		return g;
+	}
+	
+	@Override
+	public Vector<ApuestaGalgo> apuestasCarrera(Carrera pCarrera){
+		DataAccess dbManager=new DataAccess();
+		return dbManager.apuestasCarrera(pCarrera);
+	}
 }

@@ -41,6 +41,7 @@ public class MainGUI extends JFrame {
 	private JButton btnCrearCarrera;
 	private JButton btnCrearGalgo;
 	private JButton btnAnadirGalgoA;
+	private JButton btnCrearCarrera_2;
 	
 	/**
 	 * This is the default constructor
@@ -74,7 +75,7 @@ public class MainGUI extends JFrame {
 	 */
 	private void initialize() {
 		// this.setSize(271, 295);
-		this.setSize(525, 357);
+		this.setSize(589, 417);
 		this.setContentPane(getJContentPane());
 		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("MainTitle"));
 	}
@@ -100,6 +101,17 @@ public class MainGUI extends JFrame {
 			jContentPane.add(getBtnCrearCarrera());
 			jContentPane.add(getBtnCrearGalgo());
 			jContentPane.add(getBtnAnadirGalgoA());
+			
+			JButton btnCrearCarrera_1 = new JButton(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.btnCrearCarrera_1.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			btnCrearCarrera_1.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					PagarApuestasGUI a=new PagarApuestasGUI();
+					a.setVisible(true);
+				}
+			});
+			btnCrearCarrera_1.setBounds(243, 256, 243, 52);
+			jContentPane.add(btnCrearCarrera_1);
+			jContentPane.add(getBtnCrearCarrera_2());
 
 		}
 		return jContentPane;
@@ -208,7 +220,7 @@ public class MainGUI extends JFrame {
 	private JPanel getPanel() {
 		if (panel == null) {
 			panel = new JPanel();
-			panel.setBounds(0, 265, 319, 36);
+			panel.setBounds(0, 331, 319, 36);
 			panel.setLayout(null);
 			panel.add(getRdbtnNewRadioButton_1());
 			panel.add(getRdbtnNewRadioButton_2());
@@ -242,7 +254,7 @@ public class MainGUI extends JFrame {
 	private JButton getBotonCerrarSesion() {
 		if (botonCerrarSesion == null) {
 			botonCerrarSesion = new JButton("Cerrar Sesión");
-			botonCerrarSesion.setBounds(332, 264, 145, 25);
+			botonCerrarSesion.setBounds(332, 342, 145, 25);
 			botonCerrarSesion.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					MainGUI.this.dispose();
@@ -332,6 +344,19 @@ public class MainGUI extends JFrame {
 			btnAnadirGalgoA.setBounds(282, 201, 204, 52);
 		}
 		return btnAnadirGalgoA;
+	}
+	private JButton getBtnCrearCarrera_2() {
+		if (btnCrearCarrera_2 == null) {
+			btnCrearCarrera_2 = new JButton(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.btnCrearCarrera_2.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			btnCrearCarrera_2.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					ResponderApuestaGalgosGUI a = new ResponderApuestaGalgosGUI();
+					a.setVisible(true);
+				}
+			});
+			btnCrearCarrera_2.setBounds(0, 256, 243, 52);
+		}
+		return btnCrearCarrera_2;
 	}
 } // @jve:decl-index=0:visual-constraint="0,0"
 

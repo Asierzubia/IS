@@ -629,4 +629,89 @@ public class DataAccess  {
 		db.getTransaction().commit();
 		return r;
 	}
+	
+	
+	public Vector<Event> getEventsBeforeDate(Date pDate){
+		System.out.println(">> DataAccess: Eventos Fecha=> Fecha= "+pDate);
+		Vector<Event> res = new Vector<Event>();	 
+		TypedQuery<Event> query = db.createQuery("SELECT ev FROM Event ev WHERE ev.eventDate<?1",Event.class);   
+		query.setParameter(1,pDate);
+		List<Event> events = query.getResultList();
+	 	for (Event ev:events) res.add(ev);
+	 	return res;
+	}
+	
+	public Vector<Apuesta> getBetsWithQuest(Question pQuestion){
+		System.out.println(">> DataAccess: Apuestas Question=> Question= "+pQuestion);
+		Vector<Apuesta> apu = new Vector<Apuesta>();	
+		TypedQuery<Apuesta> query = db.createQuery("SELECT ap FROM Apuesta ap WHERE ap.question.questionNumber=" +pQuestion.getQuestionNumber(),Apuesta.class); 
+		List<Apuesta> apuestas = query.getResultList();
+	 	for (Apuesta ap : apuestas) apu.add(ap);
+	 	return apu;
+	}
+	
+	public void setCobradaApuesta(Apuesta pApuesta) {
+		System.out.println(">> DataAccess:  Cobrar Apuesta " + pApuesta);
+		Apuesta ap = getApuestaPorId(pApuesta.getId());
+		db.getTransaction().begin();
+		ap.setCobrada();
+		db.getTransaction().commit();
+	}
+	
+	public void setCobradaApuestaGalgos(ApuestaGalgo pApuesta) {
+		System.out.println(">> DataAccess:  Cobrar Apuesta " + pApuesta);
+		ApuestaGalgo ap = getApuestaGalgosPorId(pApuesta.getId());
+		db.getTransaction().begin();
+		ap.setCobrada();
+		db.getTransaction().commit();
+	}
+	
+	private Apuesta getApuestaPorId(int pId) {
+		System.out.println(">> DataAccess: getApuestaPorId: " + pId);
+		TypedQuery<Apuesta> query = db.createQuery("SELECT ap FROM Apuesta ap WHERE ap.id=?1", Apuesta.class);
+		query.setParameter(1,pId);
+		List<Apuesta> user = query.getResultList();
+		if (!user.isEmpty()){
+			return user.get(0);
+		}
+		else {
+			return null;
+		}
+	}
+	
+	private ApuestaGalgo getApuestaGalgosPorId(int pId) {
+		System.out.println(">> DataAccess: getApuestaGalgoPorId: " + pId);
+		TypedQuery<ApuestaGalgo> query = db.createQuery("SELECT ap FROM ApuestaGalgo ap WHERE ap.id=?1", ApuestaGalgo.class);
+		query.setParameter(1,pId);
+		List<ApuestaGalgo> user = query.getResultList();
+		if (!user.isEmpty()){
+			return user.get(0);
+		}
+		else {
+			return null;
+		}
+	}
+	
+	public Galgo ResponderApuestaGalgos(Carrera pCarrera, Galgo pGalgo) {
+		System.out.println(">> DataAccess: Responder Apuesta Galgo=> carrera= "+pCarrera+" Galgo "+pGalgo);
+		
+		Carrera c = db.find(Carrera.class, pCarrera.getcarreraNumber());	
+		db.getTransaction().begin();
+		Galgo g = c.setRespuestaCorrecta(pGalgo);
+		//db.persist(q);
+		db.persist(c);
+						
+		db.getTransaction().commit();
+		return g;
+	}
+	
+	public Vector<ApuestaGalgo> apuestasCarrera(Carrera pCarrera){
+		System.out.println(">> DataAccess: Apuestas Carrera=> Carrera= "+pCarrera);
+		Vector<ApuestaGalgo> apu = new Vector<ApuestaGalgo>();	
+		TypedQuery<ApuestaGalgo> query = db.createQuery("SELECT ap FROM ApuestaGalgo ap",ApuestaGalgo.class); 
+		List<ApuestaGalgo> apuestas = query.getResultList();
+	 	for (ApuestaGalgo ap : apuestas) apu.add(ap);
+	 	return apu;
+	}
+	
 }

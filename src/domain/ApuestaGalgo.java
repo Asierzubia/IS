@@ -16,6 +16,7 @@ public class ApuestaGalgo {
 	private Double dinero;
 	private Usuario usuario;
 	private Double ganancia;
+	private Boolean cobrada;
 
 	
 	public ApuestaGalgo(Galgo pGalgo, Double pDinero, Usuario pUsuario, Double pGanancia) {
@@ -24,11 +25,16 @@ public class ApuestaGalgo {
 		this.dinero=pDinero;
 		this.usuario = pUsuario;
 		this.ganancia=pGanancia;
+		this.cobrada = false;
 		
 	}
 
 	public Usuario getIdUsuario() {
 		return this.usuario;
+	}
+	
+	public Integer getId() {
+		return this.id;
 	}
 	
 	public Galgo getGalgo() {
@@ -41,6 +47,14 @@ public class ApuestaGalgo {
 	
 	public Double getGanancia() {
 		return this.ganancia;
+	}
+	
+	public void setCobrada() {
+		this.cobrada = true;
+	}
+	
+	public boolean getCobrada() {
+		return this.cobrada;
 	}
 	
 }

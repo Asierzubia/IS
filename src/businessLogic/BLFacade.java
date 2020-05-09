@@ -107,4 +107,16 @@ public interface BLFacade  {
 	@WebMethod boolean actualizarCarreraGalgo(Galgo galgo, Carrera carrera);
 	
 	@WebMethod Respuesta ResponderApuesta(Question pQuestion,Respuesta pRespuesta);
+		
+	@WebMethod Vector<Event> eventosAnterioresAFecha(Date pDate);
+	
+	@WebMethod Vector<Apuesta> apuestasConQuestion(Question pQuestion);
+	
+	@WebMethod void setCobradaApuesta(Apuesta pApuesta);
+	
+	@WebMethod void setCobradaApuestaGalgos(ApuestaGalgo pApuesta);
+	
+	@WebMethod Galgo ResponderApuestaGalgos(Carrera pCarrera,Galgo pGalgo);
+	
+	@WebMethod Vector<ApuestaGalgo> apuestasCarrera(Carrera pCarrera);
 }
