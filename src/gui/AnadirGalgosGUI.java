@@ -92,7 +92,7 @@ public class AnadirGalgosGUI extends JFrame{
 	private JLabel getLblError() {
 		if(lblError == null) {
 			lblError = new JLabel("");
-			lblError.setBounds(114, 200, 254, 15);
+			lblError.setBounds(41, 200, 405, 15);
 		}
 		return lblError;		
 	}

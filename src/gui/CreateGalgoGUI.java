@@ -80,7 +80,7 @@ public class CreateGalgoGUI extends JFrame {
 	private JLabel getLblError() {
 		if(lblError == null) {
 			lblError = new JLabel("");
-			lblError.setBounds(129, 191, 259, 15);
+			lblError.setBounds(55, 191, 333, 15);
 		}
 		return lblError;
 	}

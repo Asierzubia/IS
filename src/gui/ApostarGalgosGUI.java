@@ -247,7 +247,7 @@ public class ApostarGalgosGUI extends JFrame{
 	}
 	private JLabel getLabelMen() {
 		if (labelMen == null) {
-			labelMen = new JLabel("New label");
+			labelMen = new JLabel("");
 			labelMen.setBounds(392, 212, 266, 15);
 		}
 		return labelMen;

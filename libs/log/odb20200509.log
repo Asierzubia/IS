@@ -1639,3 +1639,180 @@ New type domain.Apuesta
 [2020-05-09 18:18:34 #23 type] 
 Type domain.Apuesta is not enhanced.
 
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-05-09 19:42:23 #1 store] 
+Database 'C:\Users\unaia\eclipse-workspace\IS\resources\bets.temp' is opened by 1600@MSI
+
+[2020-05-09 19:42:23 #2 type.registry] 
+New type domain.Admin
+
+[2020-05-09 19:42:23 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-05-09 19:42:23 #4 type.registry] 
+New type domain.Usuario
+
+[2020-05-09 19:42:23 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-05-09 19:42:23 #6 type.registry] 
+New type domain.Galgo
+
+[2020-05-09 19:42:23 #7 type] 
+Type domain.Galgo is not enhanced.
+
+[2020-05-09 19:42:23 #8 type.registry] 
+New type domain.Carrera
+
+[2020-05-09 19:42:23 #9 type] 
+Type domain.Carrera is not enhanced.
+
+[2020-05-09 19:42:23 #10 type.registry] 
+New type java.util.Vector<domain.Galgo>
+
+[2020-05-09 19:42:23 #11 type.registry] 
+New type domain.Question
+
+[2020-05-09 19:42:23 #12 type] 
+Type domain.Question is not enhanced.
+
+[2020-05-09 19:42:23 #13 type.registry] 
+New type domain.Event
+
+[2020-05-09 19:42:23 #14 type.registry] 
+New type domain.Respuesta
+
+[2020-05-09 19:42:23 #15 type.registry] 
+New type java.util.Vector<domain.Respuesta>
+
+[2020-05-09 19:42:23 #16 type] 
+Type domain.Event is not enhanced.
+
+[2020-05-09 19:42:23 #17 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-05-09 19:42:23 #18 type] 
+Type domain.Respuesta is not enhanced.
+
+[2020-05-09 19:42:23 #19 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-05-09 19:45:33 #1 store] 
+Database 'C:\Users\unaia\eclipse-workspace\IS\resources\bets.temp' is opened by 8844@MSI
+
+[2020-05-09 19:45:34 #2 type.registry] 
+New type domain.Admin
+
+[2020-05-09 19:45:34 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-05-09 19:45:34 #4 type.registry] 
+New type domain.Usuario
+
+[2020-05-09 19:45:34 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-05-09 19:45:34 #6 type.registry] 
+New type domain.Galgo
+
+[2020-05-09 19:45:34 #7 type] 
+Type domain.Galgo is not enhanced.
+
+[2020-05-09 19:45:34 #8 type.registry] 
+New type domain.Carrera
+
+[2020-05-09 19:45:34 #9 type] 
+Type domain.Carrera is not enhanced.
+
+[2020-05-09 19:45:34 #10 type.registry] 
+New type java.util.Vector<domain.Galgo>
+
+[2020-05-09 19:45:34 #11 type.registry] 
+New type domain.Question
+
+[2020-05-09 19:45:34 #12 type] 
+Type domain.Question is not enhanced.
+
+[2020-05-09 19:45:34 #13 type.registry] 
+New type domain.Event
+
+[2020-05-09 19:45:34 #14 type.registry] 
+New type domain.Respuesta
+
+[2020-05-09 19:45:34 #15 type.registry] 
+New type java.util.Vector<domain.Respuesta>
+
+[2020-05-09 19:45:34 #16 type] 
+Type domain.Event is not enhanced.
+
+[2020-05-09 19:45:34 #17 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-05-09 19:45:34 #18 type] 
+Type domain.Respuesta is not enhanced.
+
+[2020-05-09 19:45:34 #19 type.registry] 
+New type java.util.Vector<java.lang.Object>
+
+------------------------------------------------------------------------------------------------------------------------
+
+[2020-05-09 19:46:04 #1 store] 
+Database 'C:\Users\unaia\eclipse-workspace\IS\resources\bets.temp' is opened by 14268@MSI
+
+[2020-05-09 19:46:04 #2 type.registry] 
+New type domain.Admin
+
+[2020-05-09 19:46:04 #3 type] 
+Type domain.Admin is not enhanced.
+
+[2020-05-09 19:46:04 #4 type.registry] 
+New type domain.Usuario
+
+[2020-05-09 19:46:04 #5 type] 
+Type domain.Usuario is not enhanced.
+
+[2020-05-09 19:46:04 #6 type.registry] 
+New type domain.Galgo
+
+[2020-05-09 19:46:04 #7 type] 
+Type domain.Galgo is not enhanced.
+
+[2020-05-09 19:46:04 #8 type.registry] 
+New type domain.Carrera
+
+[2020-05-09 19:46:04 #9 type] 
+Type domain.Carrera is not enhanced.
+
+[2020-05-09 19:46:04 #10 type.registry] 
+New type java.util.Vector<domain.Galgo>
+
+[2020-05-09 19:46:04 #11 type.registry] 
+New type domain.Question
+
+[2020-05-09 19:46:04 #12 type] 
+Type domain.Question is not enhanced.
+
+[2020-05-09 19:46:04 #13 type.registry] 
+New type domain.Event
+
+[2020-05-09 19:46:04 #14 type.registry] 
+New type domain.Respuesta
+
+[2020-05-09 19:46:04 #15 type.registry] 
+New type java.util.Vector<domain.Respuesta>
+
+[2020-05-09 19:46:04 #16 type] 
+Type domain.Event is not enhanced.
+
+[2020-05-09 19:46:04 #17 type.registry] 
+New type java.util.Vector<domain.Question>
+
+[2020-05-09 19:46:04 #18 type] 
+Type domain.Respuesta is not enhanced.
+
+[2020-05-09 19:46:04 #19 type.registry] 
+New type java.util.Vector<java.lang.Object>
+

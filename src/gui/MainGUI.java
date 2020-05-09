@@ -74,7 +74,7 @@ public class MainGUI extends JFrame {
 	 */
 	private void initialize() {
 		// this.setSize(271, 295);
-		this.setSize(516, 334);
+		this.setSize(525, 357);
 		this.setContentPane(getJContentPane());
 		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("MainTitle"));
 	}
