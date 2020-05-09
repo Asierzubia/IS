@@ -93,8 +93,8 @@ public class CreateGalgoGUI extends JFrame {
 					BLFacade facade = Inicio.getBusinessLogic();
 					String nombreGalgo = textNombreGalgo.getText();
 					float inputPrice = Float.parseFloat(textFieldPrice.getText());
-					if (inputPrice <= 0) {
-						lblError.setText("Intruduce un numero correcto par la apuesta minima.");
+					if (textFieldPrice.getText().equals("") || nombreGalgo.equals("")) {
+						lblError.setText("Rellene todos los campos");
 						lblError.setForeground(Color.RED);
 					}else if(!nombreGalgo.equals("")) {
 						if(facade.anadirGalgo(nombreGalgo,inputPrice)) {
@@ -104,8 +104,8 @@ public class CreateGalgoGUI extends JFrame {
 							lblError.setText("El galgo no se ha podido añadir.");
 							lblError.setForeground(Color.RED);
 						}
-					}else {
-							lblError.setText("Rellene todos los campos");
+					}else if(inputPrice <= 0){
+							lblError.setText("Introduzca una cantidad mayor a 0.");
 							lblError.setForeground(Color.RED);
 					}	
 				}
