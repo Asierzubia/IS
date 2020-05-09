@@ -60,8 +60,7 @@ public class DataAccess  {
 		
 		db.getTransaction().begin();
 		try {
-
-			
+	
 		   Calendar today = Calendar.getInstance();
 		   
 		   int month=today.get(Calendar.MONTH);
@@ -92,6 +91,7 @@ public class DataAccess  {
 			Event ev18=new Event(18, "Girona-Leganés", UtilDate.newDate(year,month,28));
 			Event ev19=new Event(19, "Real Sociedad-Levante", UtilDate.newDate(year,month,28));
 			Event ev20=new Event(20, "Betis-Real Madrid", UtilDate.newDate(year,month,28));
+			
 			
 			Question q1;
 			Question q2;
@@ -126,9 +126,26 @@ public class DataAccess  {
 				
 			}
 			
+			Carrera c1 = new Carrera(1,"prueba",UtilDate.newDate(year,month,1));
+			Carrera c2 = new Carrera(2,"100 metros",UtilDate.newDate(year,month,1));
+			
+			Galgo g1 = new Galgo(1,"pepe",3,c1);
+			Galgo g2 = new Galgo(2,"juan",4,c1);
+			
+			c1.anadirGalgo(g1);
+			c1.anadirGalgo(g2);
+
+			
 			db.persist(new Admin("admin", "1234"));
 			db.persist(new Usuario("prueba", "1234"));
 			db.persist(new Usuario("prueba2", "1234"));
+			
+			db.persist(g1);
+			db.persist(g2);
+			
+			db.persist(c1);
+			db.persist(c2);
+			
 			
 			db.persist(q1);
 			db.persist(q2);
@@ -322,6 +339,19 @@ public class DataAccess  {
 		return usuarios;
 	}
 
+	public Collection<Carrera> getAllCarreras() {
+		System.out.println(">> DataAccess: getAllCarrera");
+		TypedQuery<Carrera> query = db.createQuery("SELECT ca FROM Carrera ca", Carrera.class);
+		List<Carrera> carreras = query.getResultList();
+		return carreras;
+	}
+	
+	public Collection<Galgo> getAllGalgos() {
+		System.out.println(">> DataAccess: getAllGalgos");
+		TypedQuery<Galgo> query = db.createQuery("SELECT gal FROM Galgo gal", Galgo.class);
+		List<Galgo> galgos = query.getResultList();
+		return galgos;
+	}
 	/**
 	 * This method increments the money of an Usuario 
 	 * 
@@ -379,6 +409,13 @@ public class DataAccess  {
 		return apuestas;
 	}
 	
+	public Collection<ApuestaGalgo> getApuestasGalgosUser(String pId) {
+		System.out.println(">> DataAccess: getApuestasGalgosUser de " + pId);
+		TypedQuery<ApuestaGalgo> query = db.createQuery("SELECT apg FROM ApuestaGalgo apg WHERE apg.usuario.id='" + pId + "'", ApuestaGalgo.class);
+		List<ApuestaGalgo> apuestasGalgo = query.getResultList();
+		return apuestasGalgo;
+	}
+	
 	/**
 	 * This method return all the Events of the database
 	 * 
@@ -412,6 +449,17 @@ public class DataAccess  {
 		}
 	}
 
+	public boolean generarApuestaGalgo(Galgo pGalgo, Double pDinero, Usuario pUsuario, Double pGanancia) {
+		System.out.println(">> DataAccess: registrarApuesta");
+		db.getTransaction().begin();
+		try {
+			db.persist(new ApuestaGalgo(pGalgo,pDinero,pUsuario,pGanancia));
+			db.getTransaction().commit();
+			return true;
+		}catch (Exception e) {
+			return false;
+		}
+	}
 	/**
 	 * This method changes the password of an Usuario
 	 * 
@@ -446,6 +494,29 @@ public class DataAccess  {
 		}		
 	}
 	
+	public boolean anadirCarrera(String pDescripcion, Date pFecha) {
+		db.getTransaction().begin();
+		try {
+			int numCarrera = getNumeroCarreras() + 1;
+			db.persist(new Carrera(numCarrera, pDescripcion, pFecha));
+			db.getTransaction().commit();
+			return true;
+		}catch(Exception e){
+			return false;
+		}		
+	}
+	
+	public boolean anadirGalgo(String pNombreGalgo, float betMin) {
+		db.getTransaction().begin();
+		try {
+			int numGalgo = getNumeroGalgos() + 1;
+			db.persist(new Galgo(numGalgo,pNombreGalgo,betMin));
+			db.getTransaction().commit();
+			return true;
+		}catch(Exception e){
+			return false;
+		}		
+	}
 	/**
 	 *  
 	 * 
@@ -459,6 +530,19 @@ public class DataAccess  {
 		return e.size();
 	}
 	
+	public int getNumeroCarreras() {
+		System.out.println(">> DataAccess: getNumeroCarreras");
+		TypedQuery<Carrera> query = db.createQuery("SELECT ca FROM Carrera ca", Carrera.class);
+		List<Carrera> e = query.getResultList();
+		return e.size();
+	}
+	
+	public int getNumeroGalgos() {
+		System.out.println(">> DataAccess: getNumeroGalgos");
+		TypedQuery<Galgo> query = db.createQuery("SELECT ga FROM Galgo ga", Galgo.class);
+		List<Galgo> e = query.getResultList();
+		return e.size();
+	}
 	/**
 	 * 
 	 * @return
@@ -501,6 +585,27 @@ public class DataAccess  {
 		}
 	}
 	
+	public boolean actualizarCarreraGalgo(Galgo galgo, Carrera carrera) {
+		
+		Carrera car = db.find(Carrera.class, carrera.getcarreraNumber());
+		Galgo gal = db.find(Galgo.class, galgo.getGalgoNumber());
+		if(gal != null){
+			db.getTransaction().begin();
+			try {
+				gal.setCarrera(car);
+				car.anadirGalgo(gal);
+			    db.getTransaction().commit();
+			    return true;
+			}catch (Exception j) {
+				System.out.println("El error es " + j.getMessage());
+				j.printStackTrace();
+				return false;
+			}
+			
+		}else {
+			return false;
+		}
+	}
 	public Event getEvent(int pEventNumber) {
 		TypedQuery<Event> query = db.createQuery("SELECT e FROM Event e where e.eventNumber=" + pEventNumber, Event.class);
 		List<Event> events = query.getResultList();

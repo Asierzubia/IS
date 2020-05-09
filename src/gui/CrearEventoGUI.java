@@ -119,7 +119,7 @@ public class CrearEventoGUI extends JFrame {
 	private JTextField getTextoDescripción() {
 		if (textoDescripción == null) {
 			textoDescripción = new JTextField();
-			textoDescripción.setBounds(203, 47, 166, 22);
+			textoDescripción.setBounds(315, 48, 166, 22);
 			textoDescripción.setColumns(10);
 		}
 		return textoDescripción;
@@ -128,7 +128,7 @@ public class CrearEventoGUI extends JFrame {
 	private JLabel getLabelDescripción() {
 		if (labelDescripción == null) {
 			labelDescripción = new JLabel("Descripción del evento");
-			labelDescripción.setBounds(12, 31, 133, 16);
+			labelDescripción.setBounds(12, 31, 196, 16);
 		}
 		return labelDescripción;
 	}
@@ -136,7 +136,7 @@ public class CrearEventoGUI extends JFrame {
 	private JLabel getLblNewLabel() {
 		if (lblNewLabel == null) {
 			lblNewLabel = new JLabel("(Los dos equipos que juegan)");
-			lblNewLabel.setBounds(12, 50, 179, 16);
+			lblNewLabel.setBounds(12, 50, 241, 16);
 		}
 		return lblNewLabel;
 	}
@@ -144,7 +144,7 @@ public class CrearEventoGUI extends JFrame {
 	private JLabel getLblequipoaequipob() {
 		if (lblequipoaequipob == null) {
 			lblequipoaequipob = new JLabel("(EquipoA-EquipoB)");
-			lblequipoaequipob.setBounds(12, 70, 126, 16);
+			lblequipoaequipob.setBounds(12, 70, 157, 16);
 		}
 		return lblequipoaequipob;
 	}

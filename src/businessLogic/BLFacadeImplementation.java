@@ -149,15 +149,38 @@ public class BLFacadeImplementation  implements BLFacade {
 	}
 
 	@Override
+	public Collection<ApuestaGalgo> getApuestasGalgosUser(String pId) {
+		DataAccess dBManager=new DataAccess();
+		return dBManager.getApuestasGalgosUser(pId);
+	}
+	
+	@Override
 	public boolean generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, Usuario pUsuario, Double pGanancia) {
 		DataAccess dbManager=new DataAccess();
 		return dbManager.generarApuesta(pQuestion,eleccionApuesta,pDinero,pUsuario, pGanancia);
 	}
 
+	public boolean generarApuestaGalgo(Galgo pGalgo, Double pDinero, Usuario pUsuario, Double pGanancia) {
+		DataAccess dbManager=new DataAccess();
+		return dbManager.generarApuestaGalgo(pGalgo,pDinero,pUsuario,pGanancia);
+	}
+	
 	@Override
 	public Collection<Event> getAllEvents(){
 		DataAccess dbManager=new DataAccess();
 		return dbManager.getAllEvents();
+	}
+
+	@Override
+	public Collection<Carrera> getAllCarreras(){
+		DataAccess dbManager=new DataAccess();
+		return dbManager.getAllCarreras();
+	}
+
+	@Override
+	public Collection<Galgo> getAllGalgos(){
+		DataAccess dbManager=new DataAccess();
+		return dbManager.getAllGalgos();
 	}
 
 	@Override
@@ -171,13 +194,25 @@ public class BLFacadeImplementation  implements BLFacade {
 		DataAccess dBManager = new DataAccess();
 		return dBManager.anadirEvento(pDescripcion, pFecha);
 	}
-	
+	public boolean anadirCarrera(String pDescripcion, Date pFecha) {
+		DataAccess dBManager = new DataAccess();
+		return dBManager.anadirCarrera(pDescripcion, pFecha);
+	}
 	@Override
 	public boolean anadirRespuesta(Respuesta pRespuesta) {
 		DataAccess dBManager = new DataAccess();
 		return dBManager.anadirRespuesta(pRespuesta);
 	}
 	
+	public boolean actualizarCarreraGalgo(Galgo galgo, Carrera carrera) {
+		DataAccess dBManager = new DataAccess();
+		return dBManager.actualizarCarreraGalgo(galgo, carrera);
+	}
+
+	public boolean anadirGalgo(String pNombreGalgo, float betMin) {
+		DataAccess dBManager = new DataAccess();
+		return dBManager.anadirGalgo(pNombreGalgo,betMin);
+	}
 	@Override
 	public Respuesta ResponderApuesta(Question pQuestion, Respuesta pRespuesta) {
 	    DataAccess dBManager=new DataAccess();

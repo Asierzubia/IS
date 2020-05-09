@@ -34,7 +34,8 @@ public class UsuarioGUI extends JFrame {
 	private JButton botonAumentarSaldo;
 	private static Usuario usuario;
 	private JButton botonChangePassword;
-
+	private JButton botonApostarGalgos;
+	private JButton btnApostarGalgos;
 	/**
 	 * Launch the application.
 	 */
@@ -67,7 +68,7 @@ public class UsuarioGUI extends JFrame {
 		});
 		setTitle("Usuario");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 450, 298);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -82,9 +83,9 @@ public class UsuarioGUI extends JFrame {
 		contentPane.add(getModificadorSaldo());
 		contentPane.add(getBotonAumentarSaldo());
 		contentPane.add(getBotonChangePassword());
-		contentPane.add(getBotonChangePassword());
+		contentPane.add(getBotonApostarGalgos());
+		contentPane.add(getBtnApostarGalgos());
 	}
-	
 	private JLabel getMensajeEstandar1() {
 		if (mensajeEstandar1 == null) {
 			mensajeEstandar1 = new JLabel("Bienvenido al sistema, ");
@@ -112,7 +113,7 @@ public class UsuarioGUI extends JFrame {
 					a.setVisible(true);
 				}
 			});
-			botonCerrarSesion.setBounds(284, 215, 136, 25);
+			botonCerrarSesion.setBounds(220, 215, 182, 25);
 		}
 		return botonCerrarSesion;
 	}
@@ -132,11 +133,23 @@ public class UsuarioGUI extends JFrame {
 		}
 		return mensajeSaldoUsuario;
 	}
-	
+	private JButton getBotonApostarGalgos() {
+		if (botonApostarGalgos == null) {
+			botonApostarGalgos = new JButton("Apostar");
+			botonApostarGalgos.setBounds(12, 146, 149, 25);
+			botonApostarGalgos.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {					
+					ApostarGalgosGUI a = new ApostarGalgosGUI();
+					a.setVisible(true);
+				}
+			});
+		}
+		return botonApostar;
+	}
 	private JButton getBotonApostar() {
 		if (botonApostar == null) {
 			botonApostar = new JButton("Apostar");
-			botonApostar.setBounds(11, 146, 97, 25);
+			botonApostar.setBounds(11, 146, 149, 25);
 			botonApostar.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {					
 					ApostarGUI a = new ApostarGUI();
@@ -156,7 +169,7 @@ public class UsuarioGUI extends JFrame {
 					a.setVisible(true);
 				}
 			});
-			botonVerApuestas.setBounds(127, 146, 150, 25);
+			botonVerApuestas.setBounds(220, 146, 182, 25);
 		}
 		return botonVerApuestas;
 	}
@@ -182,7 +195,7 @@ public class UsuarioGUI extends JFrame {
 					mensajeSaldoUsuario.setText(Double.toString(usuario.getMoney()));
 				}
 			});
-			botonAumentarSaldo.setBounds(175, 84, 150, 25);
+			botonAumentarSaldo.setBounds(220, 81, 182, 25);
 		}
 		return botonAumentarSaldo;
 	}
@@ -197,7 +210,7 @@ public class UsuarioGUI extends JFrame {
 	private JButton getBotonChangePassword() {
 		if (botonChangePassword == null) {
 			botonChangePassword = new JButton("Cambiar Contraseña");
-			botonChangePassword.setBounds(105, 215, 172, 24);
+			botonChangePassword.setBounds(12, 215, 196, 24);
 			botonChangePassword.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg2) {
 					CambiarContrasena a = new CambiarContrasena();
@@ -207,5 +220,17 @@ public class UsuarioGUI extends JFrame {
 		}
 		return botonChangePassword;
 	}
-	
+	private JButton getBtnApostarGalgos() {
+		if (btnApostarGalgos == null) {
+			btnApostarGalgos = new JButton("Apostar Galgos");
+			btnApostarGalgos.setBounds(11, 178, 149, 25);
+			btnApostarGalgos.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {					
+					ApostarGalgosGUI a = new ApostarGalgosGUI();
+					a.setVisible(true);
+				}
+			});
+		}
+		return btnApostarGalgos;
+	}
 }

@@ -10,8 +10,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
 import businessLogic.BLFacade;
-import domain.Usuario;
-import domain.Apuesta;
+import domain.*;
 
 import javax.swing.JList;
 import java.awt.event.WindowAdapter;
@@ -89,6 +88,7 @@ public class VerApuestasGUI extends JFrame {
 		String[] columnNames = {"Usuario", "Question", "Apostado", "Dinero apostado"};
 	    Object[][] data = {};
 		Collection<Apuesta> listaApuestas = facade.getApuestasUser(pId);
+		Collection<ApuestaGalgo> listaApuestaGalgos = facade.getApuestasGalgosUser(pId);
 		DefaultTableModel modelo = new DefaultTableModel(data, columnNames);
 		tablaApuestas.setModel(modelo);
 		for (Apuesta a : listaApuestas) {
@@ -97,6 +97,14 @@ public class VerApuestasGUI extends JFrame {
 			fila[1] = a.getQuestion().getQuestion();
 			fila[2] = a.getApostado();
 			fila[3] = a.getDineroApostado();
+			modelo.addRow(fila);
+		}
+		for (ApuestaGalgo b : listaApuestaGalgos) {
+			Object [] fila = new Object[4];
+			fila[0] = b.getIdUsuario();
+			fila[1] = b.getGalgo().getCarrera();
+			fila[2] = b.getGalgo().getNombreGalgo();
+			fila[3] = b.getDineroApostado();
 			modelo.addRow(fila);
 		}
 	}
@@ -119,12 +127,21 @@ public class VerApuestasGUI extends JFrame {
 		tablaApuestas.setModel(modelo);
 		for (Usuario usu : listaUsuarios){
 			Collection<Apuesta> listaApuestas = facade.getApuestasUser(usu.getId());
+			Collection<ApuestaGalgo> listaApuestaGalgos = facade.getApuestasGalgosUser(usu.getId());
 			for (Apuesta a : listaApuestas) {
 				Object [] fila = new Object[4];
 				fila[0] = a.getIdUsuario();
 				fila[1] = a.getQuestion().getQuestion();
 				fila[2] = a.getApostado();
 				fila[3] = a.getDineroApostado();
+				modelo.addRow(fila);
+			}
+			for (ApuestaGalgo b : listaApuestaGalgos) {
+				Object [] fila = new Object[4];
+				fila[0] = b.getIdUsuario();
+				fila[1] = b.getGalgo().getCarrera();
+				fila[2] = b.getGalgo().getNombreGalgo();
+				fila[3] = b.getDineroApostado();
 				modelo.addRow(fila);
 			}
 		}	

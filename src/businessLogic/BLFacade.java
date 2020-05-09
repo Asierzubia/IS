@@ -82,15 +82,29 @@ public interface BLFacade  {
 
 	@WebMethod Collection<Apuesta> getApuestasUser(String pId);
 	
+	@WebMethod Collection<ApuestaGalgo> getApuestasGalgosUser(String pId);
+	
 	@WebMethod public boolean generarApuesta(Question pQuestion, String eleccionApuesta, Double pDinero, Usuario pUsuario, Double pGanancia);
 	
+	@WebMethod public boolean generarApuestaGalgo(Galgo pGalgo, Double pDinero, Usuario pUsuario, Double pGanancia);
+	
 	@WebMethod public Collection<Event> getAllEvents();
+	
+	@WebMethod public Collection<Carrera> getAllCarreras();
+	
+	@WebMethod public Collection<Galgo> getAllGalgos();
 
 	@WebMethod void cambiarContrasena(Usuario usuario, String password);
 
 	@WebMethod boolean anadirEvento(String pDescripcion, Date pFecha);
+	
+	@WebMethod boolean anadirCarrera(String pDescripcion, Date pFecha);
 
 	@WebMethod boolean anadirRespuesta(Respuesta pRespuesta);
+	
+	@WebMethod boolean anadirGalgo(String pNombre, float betMin);
+	
+	@WebMethod boolean actualizarCarreraGalgo(Galgo galgo, Carrera carrera);
 	
 	@WebMethod Respuesta ResponderApuesta(Question pQuestion,Respuesta pRespuesta);
 }

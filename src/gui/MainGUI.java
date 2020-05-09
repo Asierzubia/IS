@@ -38,6 +38,9 @@ public class MainGUI extends JFrame {
 	private JButton botonCrearEvento;
 	private JButton botonAñadirRespuesta;
 	private JButton botonResponderApuesta;
+	private JButton btnCrearCarrera;
+	private JButton btnCrearGalgo;
+	private JButton btnAnadirGalgoA;
 	
 	/**
 	 * This is the default constructor
@@ -94,6 +97,9 @@ public class MainGUI extends JFrame {
 			jContentPane.add(getPanel());
 			jContentPane.add(getBotonCerrarSesion());
 			jContentPane.add(getBotonResponderApuesta());
+			jContentPane.add(getBtnCrearCarrera());
+			jContentPane.add(getBtnCrearGalgo());
+			jContentPane.add(getBtnAnadirGalgoA());
 
 		}
 		return jContentPane;
@@ -186,7 +192,7 @@ public class MainGUI extends JFrame {
 	private JRadioButton getRdbtnNewRadioButton_2() {
 		if (rdbtnNewRadioButton_2 == null) {
 			rdbtnNewRadioButton_2 = new JRadioButton("Castellano");
-			rdbtnNewRadioButton_2.setBounds(139, 5, 87, 25);
+			rdbtnNewRadioButton_2.setBounds(140, 5, 87, 25);
 			rdbtnNewRadioButton_2.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					Locale.setDefault(new Locale("es"));
@@ -202,7 +208,7 @@ public class MainGUI extends JFrame {
 	private JPanel getPanel() {
 		if (panel == null) {
 			panel = new JPanel();
-			panel.setBounds(0, 228, 319, 36);
+			panel.setBounds(0, 265, 319, 36);
 			panel.setLayout(null);
 			panel.add(getRdbtnNewRadioButton_1());
 			panel.add(getRdbtnNewRadioButton_2());
@@ -236,7 +242,7 @@ public class MainGUI extends JFrame {
 	private JButton getBotonCerrarSesion() {
 		if (botonCerrarSesion == null) {
 			botonCerrarSesion = new JButton("Cerrar Sesión");
-			botonCerrarSesion.setBounds(331, 239, 145, 25);
+			botonCerrarSesion.setBounds(332, 264, 145, 25);
 			botonCerrarSesion.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					MainGUI.this.dispose();
@@ -287,6 +293,45 @@ public class MainGUI extends JFrame {
 			botonResponderApuesta.setBounds(243, 152, 243, 52);
 		}
 		return botonResponderApuesta;
+	}
+	private JButton getBtnCrearCarrera() {
+		if (btnCrearCarrera == null) {
+			btnCrearCarrera = new JButton(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.btnCrearCarrera.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			btnCrearCarrera.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					CreateCarreraGUI a = new CreateCarreraGUI();
+					a.setVisible(true);
+				}
+			});
+			btnCrearCarrera.setBounds(0, 201, 152, 52);
+		}
+		return btnCrearCarrera;
+	}
+	private JButton getBtnCrearGalgo() {
+		if (btnCrearGalgo == null) {
+			btnCrearGalgo = new JButton(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.btnCrearGalgo.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			btnCrearGalgo.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					CreateGalgoGUI a = new CreateGalgoGUI();
+					a.setVisible(true);
+				}
+			});
+			btnCrearGalgo.setBounds(152, 201, 130, 52);
+		}
+		return btnCrearGalgo;
+	}
+	private JButton getBtnAnadirGalgoA() {
+		if (btnAnadirGalgoA == null) {
+			btnAnadirGalgoA = new JButton(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.btnAnadirGalgoA.text")); //$NON-NLS-1$ //$NON-NLS-2$
+			btnAnadirGalgoA.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					AnadirGalgosGUI a = new AnadirGalgosGUI();
+					a.setVisible(true);
+				}
+			});
+			btnAnadirGalgoA.setBounds(282, 201, 204, 52);
+		}
+		return btnAnadirGalgoA;
 	}
 } // @jve:decl-index=0:visual-constraint="0,0"
 
