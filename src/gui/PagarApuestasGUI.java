@@ -81,9 +81,11 @@ public class PagarApuestasGUI extends JFrame {
 							if (quest.getRespuestaCorrecta()!=null) {
 								Vector<Apuesta> listaApuestas = facade.apuestasConQuestion(quest);
 								for(Apuesta ap : listaApuestas) {
-									if (!ap.getCobrada() && ap.getApostado().toString().equals(quest.getRespuestaCorrecta().getTextoRespuesta().toString())) {
+									if (!ap.getCobrada()) {
 										facade.setCobradaApuesta(ap);
-										facade.incrementarSaldo(ap.getIdUsuario().getId(), ap.getGanancia());
+										if(ap.getApostado().toString().equals(quest.getRespuestaCorrecta().getTextoRespuesta().toString())){
+											facade.incrementarSaldo(ap.getIdUsuario().getId(), ap.getGanancia());
+										}
 									}
 								}
 							}
@@ -93,12 +95,14 @@ public class PagarApuestasGUI extends JFrame {
 					for(Carrera c : listaCarrera) {
 						if(c.getRespuestaCorrecta()!=null) {
 						Vector<ApuestaGalgo>listaApuestasGalgos = facade.apuestasCarrera(c);	
-						for(ApuestaGalgo apg : listaApuestasGalgos) {
-							if (!apg.getCobrada() && apg.getGalgo().getNombreGalgo().equals(c.getRespuestaCorrecta().getNombreGalgo())) {
-								facade.setCobradaApuestaGalgos(apg);
-								facade.incrementarSaldo(apg.getIdUsuario().getId(), apg.getGanancia());
+							for(ApuestaGalgo apg : listaApuestasGalgos) {
+								if (!apg.getCobrada()) {
+									facade.setCobradaApuestaGalgos(apg);
+									if(apg.getGalgo().getNombreGalgo().equals(c.getRespuestaCorrecta().getNombreGalgo())){
+										facade.incrementarSaldo(apg.getIdUsuario().getId(), apg.getGanancia());
+									}
+								}
 							}
-						}
 						}
 					}
 				}
