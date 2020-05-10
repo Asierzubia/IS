@@ -29,7 +29,7 @@ public class CreateGalgoGUI extends JFrame {
 	private JButton btnCrearGalgo; 
 	private JLabel lblIndicaElNombre;
 	private JLabel lblApuestaMinima;
-	private JTextField textFieldPrice;
+	private JSpinner spinner;
 	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -47,7 +47,7 @@ public class CreateGalgoGUI extends JFrame {
 	public CreateGalgoGUI() {
 		setTitle("Crear galgo");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 512, 359);
+		setBounds(100, 100, 487, 250);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -57,14 +57,14 @@ public class CreateGalgoGUI extends JFrame {
 		contentPane.add(getBtnCrearGalgo());
 		contentPane.add(getTextNombreGalgo());
 		contentPane.add(getLblApuestaMinima());
-		contentPane.add(getTextFieldPrice());
+		contentPane.add(getSpinner());
 	
 		
 	}
 	private JTextField getTextNombreGalgo() {
 		if(textNombreGalgo == null) {
 			textNombreGalgo = new JTextField();
-			textNombreGalgo.setBounds(129, 85, 235, 19);
+			textNombreGalgo.setBounds(218, 54, 235, 19);
 			textNombreGalgo.setColumns(10);
 		}
 		return textNombreGalgo;
@@ -72,7 +72,7 @@ public class CreateGalgoGUI extends JFrame {
 	private JLabel getLblIndicaElNombre() {
 		if (lblIndicaElNombre == null) {
 			lblIndicaElNombre = new JLabel("Indica el nombre del galgo");
-			lblIndicaElNombre.setBounds(148, 58, 206, 15);
+			lblIndicaElNombre.setBounds(27, 57, 206, 15);
 		}
 		return lblIndicaElNombre;
 	}
@@ -80,7 +80,7 @@ public class CreateGalgoGUI extends JFrame {
 	private JLabel getLblError() {
 		if(lblError == null) {
 			lblError = new JLabel("");
-			lblError.setBounds(55, 191, 333, 15);
+			lblError.setBounds(47, 117, 333, 15);
 		}
 		return lblError;
 	}
@@ -92,41 +92,37 @@ public class CreateGalgoGUI extends JFrame {
 				public void actionPerformed(ActionEvent e) {
 					BLFacade facade = Inicio.getBusinessLogic();
 					String nombreGalgo = textNombreGalgo.getText();
-					float inputPrice = Float.parseFloat(textFieldPrice.getText());
-					if (textFieldPrice.getText().equals("") || nombreGalgo.equals("")) {
+					if (nombreGalgo.equals("")) {
 						lblError.setText("Rellene todos los campos");
 						lblError.setForeground(Color.RED);
 					}else if(!nombreGalgo.equals("")) {
-						if(facade.anadirGalgo(nombreGalgo,inputPrice)) {
+						if(facade.anadirGalgo(nombreGalgo, (float) spinner.getValue())) {
 							lblError.setText("El galgo se ha añadido correctamente.");
 							lblError.setForeground(Color.GREEN);
 						}else {
 							lblError.setText("El galgo no se ha podido añadir.");
 							lblError.setForeground(Color.RED);
 						}
-					}else if(inputPrice <= 0){
-							lblError.setText("Introduzca una cantidad mayor a 0.");
-							lblError.setForeground(Color.RED);
 					}	
 				}
 			});
-			btnCrearGalgo.setBounds(175, 247, 132, 25);
+			btnCrearGalgo.setBounds(138, 145, 132, 25);
 		}
 		return btnCrearGalgo;
 	}
 	private JLabel getLblApuestaMinima() {
 		if (lblApuestaMinima == null) {
 			lblApuestaMinima = new JLabel("Apuesta minima");
-			lblApuestaMinima.setBounds(175, 116, 132, 15);
+			lblApuestaMinima.setBounds(37, 85, 132, 15);
 		}
 		return lblApuestaMinima;
 	}
-	private JTextField getTextFieldPrice() {
-		if (textFieldPrice == null) {
-			textFieldPrice = new JTextField();
-			textFieldPrice.setBounds(174, 143, 114, 19);
-			textFieldPrice.setColumns(10);
+	private JSpinner getSpinner() {
+		if (spinner == null) {
+			spinner = new JSpinner();
+			spinner.setModel(new SpinnerNumberModel(new Float(1), new Float(1), null, new Float(1)));
+			spinner.setBounds(218, 82, 93, 22);
 		}
-		return textFieldPrice;
+		return spinner;
 	}
 }

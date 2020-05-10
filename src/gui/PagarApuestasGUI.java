@@ -32,7 +32,6 @@ public class PagarApuestasGUI extends JFrame {
 	private JPanel contentPane;
 	private JButton botonAñadir;
 	private DefaultComboBoxModel<Event> listaEventos = new DefaultComboBoxModel<Event>();
-	private DefaultComboBoxModel<Question> listaQuestions = new DefaultComboBoxModel<Question>();
 	private JLabel error;
 	private JCalendar calendarioPartidos;
 	private JLabel lblEligeElDa;
@@ -56,9 +55,9 @@ public class PagarApuestasGUI extends JFrame {
 	 * Create the frame.
 	 */
 	public PagarApuestasGUI() {
-		setTitle("Añadir Respuesta");
+		setTitle("Pagar apuestas");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 707, 333);
+		setBounds(100, 100, 366, 329);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -70,7 +69,7 @@ public class PagarApuestasGUI extends JFrame {
 	}
 	private JButton getBotonPagar() {
 		if (botonAñadir == null) {
-			botonAñadir = new JButton("Añadir respuesta");
+			botonAñadir = new JButton("Pagar apuestas");
 			botonAñadir.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					BLFacade facade = Inicio.getBusinessLogic();
@@ -104,14 +103,14 @@ public class PagarApuestasGUI extends JFrame {
 					}
 				}
 			});
-			botonAñadir.setBounds(268, 253, 151, 25);
+			botonAñadir.setBounds(24, 236, 151, 25);
 		}
 		return botonAñadir;
 	}
 	private JLabel getError() {
 		if (error == null) {
 			error = new JLabel("");
-			error.setBounds(433, 263, 220, 16);
+			error.setBounds(187, 236, 220, 16);
 		}
 		return error;
 	}
@@ -134,8 +133,8 @@ public class PagarApuestasGUI extends JFrame {
 	}
 	private JLabel getLblEligeElDa() {
 		if (lblEligeElDa == null) {
-			lblEligeElDa = new JLabel("Elige el día del partido");
-			lblEligeElDa.setBounds(12, 19, 203, 16);
+			lblEligeElDa = new JLabel("Elige el día a pagar (Se pagarán todas hasta ese día)");
+			lblEligeElDa.setBounds(12, 19, 324, 16);
 		}
 		return lblEligeElDa;
 	}

@@ -67,15 +67,17 @@ public class ApostarGalgosGUI extends JFrame{
 		addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowActivated(WindowEvent arg0) {
-				BLFacade facade = Inicio.getBusinessLogic();
-				//Date fechaEvento = UtilDate.trim(new Date(calendarioPartidos.getCalendar().getTime().getTime()));				
+				BLFacade facade = Inicio.getBusinessLogic();		
 				Collection<Carrera> lista = facade.getAllCarreras();
 				for(Carrera car : lista) modeloCarreras.addElement(car);
+				Double boni = 2.5;
+				Double ganancias = boni * (Double) spinnerDinero.getValue();
+				posiblesBeneficios.setText(ganancias.toString());
 			}
 		});
-		setTitle("Apostar");
+		setTitle("Apostar Galgo");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 710, 352);
+		setBounds(100, 100, 492, 339);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -99,14 +101,14 @@ public class ApostarGalgosGUI extends JFrame{
 	private JLabel getLblElAcertarGalgo() {
 		if(lblAcertarElGalgo == null) {
 			lblAcertarElGalgo = new JLabel("***Acertar el galgo ganador multiplica tus ganancias por 2.5***");
-			lblAcertarElGalgo.setBounds(150, 140, 508, 15);
+			lblAcertarElGalgo.setBounds(30, 129, 508, 15);
 		}
 		return lblAcertarElGalgo;
 	}
 	private JComboBox<Galgo> getComboGalgos(){
 		if(comboBoxGalgo == null) {
 			comboBoxGalgo = new JComboBox<Galgo>();				  
-			comboBoxGalgo.setBounds(436, 63, 116, 24);
+			comboBoxGalgo.setBounds(316, 52, 116, 24);
 			comboBoxGalgo.setModel(modeloGalgo);
 		}
 		return comboBoxGalgo;
@@ -114,7 +116,7 @@ public class ApostarGalgosGUI extends JFrame{
 	private JLabel getLblEligeUnaCarrera() {
 		if (lblEligeUnaCarrera == null) {
 			lblEligeUnaCarrera = new JLabel("Elige una carrera");
-			lblEligeUnaCarrera.setBounds(150, 28, 133, 16);
+			lblEligeUnaCarrera.setBounds(30, 17, 133, 16);
 		}
 		return lblEligeUnaCarrera;
 	}
@@ -133,7 +135,7 @@ public class ApostarGalgosGUI extends JFrame{
 					  }
 				  	} 
 				  });
-			comboBoxCarrera.setBounds(436, 24, 116, 24);
+			comboBoxCarrera.setBounds(316, 13, 116, 24);
 			comboBoxCarrera.setModel(modeloCarreras);
 		}
 		return comboBoxCarrera;
@@ -142,7 +144,7 @@ public class ApostarGalgosGUI extends JFrame{
 	private JLabel getLblEligeUnGalgo() {
 		if (lblEligeUnGalgo == null) {
 			lblEligeUnGalgo = new JLabel("Elige una galgo");
-			lblEligeUnGalgo.setBounds(150, 67, 169, 16);
+			lblEligeUnGalgo.setBounds(30, 56, 169, 16);
 		}
 		return lblEligeUnGalgo;
 	}
@@ -150,7 +152,7 @@ public class ApostarGalgosGUI extends JFrame{
 	private JLabel getLblImporteAApostar() {
 		if (lblImporteAApostar == null) {
 			lblImporteAApostar = new JLabel("Importe a apostar");
-			lblImporteAApostar.setBounds(150, 101, 153, 16);
+			lblImporteAApostar.setBounds(30, 90, 153, 16);
 		}
 		return lblImporteAApostar;
 	}
@@ -191,7 +193,7 @@ public class ApostarGalgosGUI extends JFrame{
 					}
 				}
 			});
-			botonApostar.setBounds(261, 267, 97, 25);
+			botonApostar.setBounds(185, 254, 97, 25);
 		}
 		return botonApostar;
 	}
@@ -207,14 +209,14 @@ public class ApostarGalgosGUI extends JFrame{
 				}
 			});
 			spinnerDinero.setModel(new SpinnerNumberModel(new Double(1), new Double(1), null, new Double(1)));
-			spinnerDinero.setBounds(467, 99, 85, 22);
+			spinnerDinero.setBounds(347, 88, 85, 22);
 		}
 		return spinnerDinero;
 	}
 	private JLabel getLblPosiblesGanancias() {
 		if (lblPosiblesGanancias == null) {
 			lblPosiblesGanancias = new JLabel("Posibles beneficios");
-			lblPosiblesGanancias.setBounds(150, 181, 143, 16);
+			lblPosiblesGanancias.setBounds(30, 170, 143, 16);
 		}
 		return lblPosiblesGanancias;
 	}
@@ -222,7 +224,7 @@ public class ApostarGalgosGUI extends JFrame{
 		if (posiblesBeneficios == null) {
 			posiblesBeneficios = new JTextField();
 			posiblesBeneficios.setEditable(false);
-			posiblesBeneficios.setBounds(150, 209, 116, 22);
+			posiblesBeneficios.setBounds(30, 198, 116, 22);
 			posiblesBeneficios.setColumns(10);
 		}
 		return posiblesBeneficios;
@@ -248,7 +250,7 @@ public class ApostarGalgosGUI extends JFrame{
 	private JLabel getLabelMen() {
 		if (labelMen == null) {
 			labelMen = new JLabel("");
-			labelMen.setBounds(392, 212, 266, 15);
+			labelMen.setBounds(213, 205, 266, 15);
 		}
 		return labelMen;
 	}

@@ -75,7 +75,7 @@ public class MainGUI extends JFrame {
 	 */
 	private void initialize() {
 		// this.setSize(271, 295);
-		this.setSize(589, 417);
+		this.setSize(854, 407);
 		this.setContentPane(getJContentPane());
 		this.setTitle(ResourceBundle.getBundle("Etiquetas").getString("MainTitle"));
 	}
@@ -109,7 +109,7 @@ public class MainGUI extends JFrame {
 					a.setVisible(true);
 				}
 			});
-			btnCrearCarrera_1.setBounds(243, 256, 243, 52);
+			btnCrearCarrera_1.setBounds(60, 171, 243, 52);
 			jContentPane.add(btnCrearCarrera_1);
 			jContentPane.add(getBtnCrearCarrera_2());
 
@@ -126,7 +126,7 @@ public class MainGUI extends JFrame {
 	private JButton getBoton2() {
 		if (jButtonCreateQuery == null) {
 			jButtonCreateQuery = new JButton();
-			jButtonCreateQuery.setBounds(0, 91, 243, 60);
+			jButtonCreateQuery.setBounds(330, 33, 165, 60);
 			jButtonCreateQuery.setText(ResourceBundle.getBundle("Etiquetas").getString("CreateQuery"));
 			jButtonCreateQuery.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
@@ -148,7 +148,7 @@ public class MainGUI extends JFrame {
 	private JButton getBoton3() {
 		if (jButtonQueryQueries == null) {
 			jButtonQueryQueries = new JButton();
-			jButtonQueryQueries.setBounds(0, 33, 243, 60);
+			jButtonQueryQueries.setBounds(0, 33, 165, 60);
 			jButtonQueryQueries.setText(ResourceBundle.getBundle("Etiquetas").getString("QueryQueries"));
 			jButtonQueryQueries.addActionListener(new java.awt.event.ActionListener() {
 				public void actionPerformed(java.awt.event.ActionEvent e) {
@@ -163,7 +163,7 @@ public class MainGUI extends JFrame {
 	private JLabel getLblNewLabel() {
 		if (jLabelSelectOption == null) {
 			jLabelSelectOption = new JLabel(ResourceBundle.getBundle("Etiquetas").getString("SelectOption"));
-			jLabelSelectOption.setBounds(0, -15, 477, 60);
+			jLabelSelectOption.setBounds(151, -13, 477, 60);
 			jLabelSelectOption.setFont(new Font("Tahoma", Font.BOLD, 13));
 			jLabelSelectOption.setForeground(Color.BLACK);
 			jLabelSelectOption.setHorizontalAlignment(SwingConstants.CENTER);
@@ -220,7 +220,7 @@ public class MainGUI extends JFrame {
 	private JPanel getPanel() {
 		if (panel == null) {
 			panel = new JPanel();
-			panel.setBounds(0, 331, 319, 36);
+			panel.setBounds(10, 283, 319, 36);
 			panel.setLayout(null);
 			panel.add(getRdbtnNewRadioButton_1());
 			panel.add(getRdbtnNewRadioButton_2());
@@ -246,7 +246,7 @@ public class MainGUI extends JFrame {
 				}
 			});
 			jButtonAdministrarUsuarios.setText(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.jButtonAdministrarUsuarios.text")); //$NON-NLS-1$ //$NON-NLS-2$
-			jButtonAdministrarUsuarios.setBounds(0, 152, 243, 52);
+			jButtonAdministrarUsuarios.setBounds(433, 171, 243, 52);
 		}
 		return jButtonAdministrarUsuarios;
 	}
@@ -254,7 +254,7 @@ public class MainGUI extends JFrame {
 	private JButton getBotonCerrarSesion() {
 		if (botonCerrarSesion == null) {
 			botonCerrarSesion = new JButton("Cerrar Sesión");
-			botonCerrarSesion.setBounds(332, 342, 145, 25);
+			botonCerrarSesion.setBounds(462, 283, 145, 25);
 			botonCerrarSesion.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					MainGUI.this.dispose();
@@ -275,7 +275,7 @@ public class MainGUI extends JFrame {
 				}
 			});
 			botonCrearEvento.setText(ResourceBundle.getBundle("Etiquetas").getString("MainGUI.botonCrearEvento.text")); //$NON-NLS-1$ //$NON-NLS-2$
-			botonCrearEvento.setBounds(243, 33, 243, 60);
+			botonCrearEvento.setBounds(165, 33, 165, 60);
 		}
 		return botonCrearEvento;
 	}
@@ -288,7 +288,7 @@ public class MainGUI extends JFrame {
 					a.setVisible(true);
 				}
 			});
-			botonAñadirRespuesta.setBounds(243, 91, 243, 60);
+			botonAñadirRespuesta.setBounds(495, 33, 165, 60);
 		}
 		return botonAñadirRespuesta;
 	}
@@ -302,7 +302,7 @@ public class MainGUI extends JFrame {
 					a.setVisible(true);
 				}
 			});
-			botonResponderApuesta.setBounds(243, 152, 243, 52);
+			botonResponderApuesta.setBounds(660, 33, 165, 60);
 		}
 		return botonResponderApuesta;
 	}
@@ -315,7 +315,7 @@ public class MainGUI extends JFrame {
 					a.setVisible(true);
 				}
 			});
-			btnCrearCarrera.setBounds(0, 201, 152, 52);
+			btnCrearCarrera.setBounds(10, 106, 160, 52);
 		}
 		return btnCrearCarrera;
 	}
@@ -328,7 +328,7 @@ public class MainGUI extends JFrame {
 					a.setVisible(true);
 				}
 			});
-			btnCrearGalgo.setBounds(152, 201, 130, 52);
+			btnCrearGalgo.setBounds(175, 106, 160, 52);
 		}
 		return btnCrearGalgo;
 	}
@@ -341,7 +341,7 @@ public class MainGUI extends JFrame {
 					a.setVisible(true);
 				}
 			});
-			btnAnadirGalgoA.setBounds(282, 201, 204, 52);
+			btnAnadirGalgoA.setBounds(347, 106, 180, 52);
 		}
 		return btnAnadirGalgoA;
 	}
@@ -354,7 +354,7 @@ public class MainGUI extends JFrame {
 					a.setVisible(true);
 				}
 			});
-			btnCrearCarrera_2.setBounds(0, 256, 243, 52);
+			btnCrearCarrera_2.setBounds(539, 106, 243, 52);
 		}
 		return btnCrearCarrera_2;
 	}

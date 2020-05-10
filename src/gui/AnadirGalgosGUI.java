@@ -75,7 +75,7 @@ public class AnadirGalgosGUI extends JFrame{
 		
 		setTitle("Anadir Galgo a Carrera");
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		setBounds(100, 100, 512, 359);
+		setBounds(100, 100, 512, 231);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -92,7 +92,7 @@ public class AnadirGalgosGUI extends JFrame{
 	private JLabel getLblError() {
 		if(lblError == null) {
 			lblError = new JLabel("");
-			lblError.setBounds(41, 200, 405, 15);
+			lblError.setBounds(45, 122, 405, 15);
 		}
 		return lblError;		
 	}
@@ -143,7 +143,7 @@ public class AnadirGalgosGUI extends JFrame{
 					}	
 				}
 			});
-			btnAnadir.setBounds(175, 243, 117, 25);
+			btnAnadir.setBounds(178, 150, 117, 25);
 
 		}
 		return btnAnadir;

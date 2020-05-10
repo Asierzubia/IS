@@ -93,7 +93,7 @@ public class VerApuestasGUI extends JFrame {
 		tablaApuestas.setModel(modelo);
 		for (Apuesta a : listaApuestas) {
 			Object [] fila = new Object[4];
-			fila[0] = a.getIdUsuario();
+			fila[0] = a.getIdUsuario().getId();
 			fila[1] = a.getQuestion().getQuestion();
 			fila[2] = a.getApostado();
 			fila[3] = a.getDineroApostado();
@@ -101,8 +101,8 @@ public class VerApuestasGUI extends JFrame {
 		}
 		for (ApuestaGalgo b : listaApuestaGalgos) {
 			Object [] fila = new Object[4];
-			fila[0] = b.getIdUsuario();
-			fila[1] = b.getGalgo().getCarrera();
+			fila[0] = b.getIdUsuario().getId();
+			fila[1] = b.getGalgo().getCarrera().getDescription();
 			fila[2] = b.getGalgo().getNombreGalgo();
 			fila[3] = b.getDineroApostado();
 			modelo.addRow(fila);
